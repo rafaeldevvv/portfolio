@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rafael Maia" />
+    <meta
+      name="description"
+      content="Rafael Maia's portfolio provides you with information about 
+               his skills to make amazing responsive web pages for you.
+               Here you can see his knowledge, projects, contact information and more."
+    />
+    <title>Rafael Maia's Portfolio</title>
+
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/134d9c6f51.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <!-- MDN PAGES REFERENCE -->
+
+    <header>
+      <div class="container">
+        <div class="logo">Rafael</div>
+        <!-- this is supposed to be something nice made with photoshop -->
+        <!-- make it lowercase and with a game-style font like Space Mono -->
+
+        <!-- title and aria-expanded javascript -->
+        <button
+          class="mobile-only"
+          aria-haspopup="menu"
+          type="button"
+          id="main-menu-toggle"
+          aria-expanded="false"
+          aria-label="Open main menu"
+          title="Open main menu"
+          aria-controls="main-nav"
+        >
+          <!-- The text inside this span will be written by javascript -->
+          <i class="fa-solid fa-bars icon" aria-hidden="true"></i>
+          <span class="sr-only">Open main menu</span>
+        </button>
+
+        <!-- The links are describing possible sections you will include in your portfolio -->
+        <nav id="main-nav" aria-label="Main menu">
+          <ul id="main-menu">
+            <li>
+              <a href="#intro-heading" title="Go to the introduction section"> Introduction </a>  
+            </li>
+            <li>
+              <a href="#about-heading" title="Go to the about section"> About </a>  
+            </li>
+            <li>
+              <a href="#skills-heading" title="Go to the skills section"> Skills </a>
+            </li>
+            <li>
+              <a href="#projects-heading" title="Go to the projects section"> Projects </a>
+            </li>
+            <li>
+              <a href="#contact-heading" title="Go to the contact section"> Contact </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section id="intro">
+          <h1 id="intro-heading">Hi, I am Rafael Maia</h1>
+          <p>
+            I am a front end developer working as a freelancer 
+            specialized in creating responsive and accessible web pages.
+            My portfolio shows you my skills, projects and how you can reach me!
+          </p>
+          <a href="#contact-heading" class="btn primary-btn">Contact me now</a>
+        </section>
+        <section id="about">
+          <h2 id="about-heading">About</h2>
+        </section>
+        <section id="skills">
+          <h2 id="skills-heading">Skills</h2>
+        </section>
+        <section id="projects">
+          <h2 id="projects-heading">Projects</h2>
+        </section>
+        <section id="contact">
+          <h2 id="contact-heading">Contact</h2>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
+  </body>
+</html>
