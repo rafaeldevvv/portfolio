@@ -90,6 +90,7 @@ header .logo {
           backdrop-filter: blur(5px);
   padding: 6rem 2rem 0;
   transition: left 0.5s ease;
+  z-index: 999;
 }
 
 header.show-nav #main-nav {
@@ -125,9 +126,62 @@ section {
   margin-block: 2rem;
 }
 
+/* ################ intro ################ */
 section#intro h1 {
   margin-bottom: 1rem;
 }
 section#intro p {
   margin-bottom: 1rem;
+}
+
+/* ################ Skills ################ */
+section#skills h2 {
+  margin-bottom: 1.2rem;
+}
+
+#skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 1rem;
+}
+#skills-list .skill-item {
+  position: relative;
+  bottom: 0px;
+  width: min(100%, 150px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transition-property: bottom, left, top, right, box-shadow;
+  transition-duration: 0.3s;
+  box-shadow: 0 0 black;
+  cursor: pointer;
+}
+#skills-list .skill-item .icon {
+  font-size: 320%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#skills-list .skill-item:hover {
+  bottom: 10px;
+  box-shadow: 0 15px black;
+}
+#skills-list .html {
+  background-color: red;
+}
+#skills-list .css {
+  background-color: blue;
+}
+#skills-list .javascript {
+  background-color: yellow;
+}
+#skills-list .react {
+  background-color: aqua;
+}
+#skills-list .sass {
+  background-color: pink;
+}
+#skills-list .git {
+  background-color: tomato;
 }/*# sourceMappingURL=main.css.map */

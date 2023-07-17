@@ -28,4 +28,9 @@ mainMenuToggle.addEventListener("click", () => {
    const isExpanded = expanded === 'true';
 
    toggleMainMenu(!isExpanded);
+});
+
+const mainMenuLinks = document.querySelectorAll("#main-menu a");
+mainMenuLinks.forEach(l => {
+   l.addEventListener("click", () => toggleMainMenu(false));
 })
