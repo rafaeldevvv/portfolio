@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --heading-height: 80px;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -7,14 +11,14 @@ body {
 
 body {
   font-size: 18px;
-  font-family: "Inconsolata", Helvetica, Arial, sans-serif;
+  font-family: "Inconsolata", Courier, monospace;
   font-weight: 700;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-family: "Space Mono", Courier, monospace;
   line-height: 1.1;
 }
 
@@ -57,10 +61,29 @@ h3 {
   border: 0;
 }
 
+.fragment-father {
+  position: relative;
+}
+
+.fragment {
+  position: absolute;
+  top: calc(var(--heading-height, 80px) * 2);
+  aspect-ratio: 1;
+  width: 30px;
+  background-color: red;
+  display: block;
+}
+
 /* MAIN ELEMENTS */
 /* ############ header ############ */
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 999;
+  background-color: rgb(0, 0, 0);
+}
 header .container {
-  height: 80px;
+  height: var(--heading-height, 80px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,11 +91,16 @@ header .container {
 header .logo {
   font-weight: bold;
   font-size: 26px;
+  font-family: "Space Mono", monospace;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  color: white;
 }
 
 /* button to toggle nav */
 #main-menu-toggle {
   position: relative;
+  color: white;
   z-index: 9999;
   aspect-ratio: 1;
   width: 40px;
@@ -90,14 +118,11 @@ header .logo {
           backdrop-filter: blur(5px);
   padding: 6rem 2rem 0;
   transition: left 0.5s ease;
-  z-index: 999;
+  z-index: 99;
 }
 
 header.show-nav #main-nav {
   left: 40vw;
-}
-header.show-nav #main-menu-toggle {
-  color: white;
 }
 
 /* list inside nav */
@@ -111,14 +136,46 @@ header.show-nav #main-menu-toggle {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding-bottom: 0.1rem;
+  padding-block: 0.3rem;
   display: block;
-  border-bottom: 3px transparent solid;
-  transition-property: border-color;
-  transition-duration: 0.5s;
+  position: relative;
 }
-#main-menu a:hover {
-  border-bottom-color: white;
+#main-menu a::before {
+  content: "";
+  position: absolute;
+  bottom: 0.05rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0px;
+  background-color: currentColor;
+  transition-property: width;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+#main-menu a:hover::before {
+  width: 100%;
+}
+
+@media (min-width: 580px) {
+  #main-nav {
+    position: static;
+    background: none;
+    padding: 0;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+  }
+  #main-menu {
+    flex-direction: row;
+  }
+  #main-menu-toggle {
+    display: none;
+  }
+}
+/* Main */
+main {
+  margin-top: 80px;
+  padding-block: 1rem;
 }
 
 /* Sections */

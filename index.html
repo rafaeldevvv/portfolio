@@ -50,7 +50,7 @@
         <nav id="main-nav" aria-label="Main menu">
           <ul id="main-menu">
             <li>
-              <a href="#intro-heading" title="Go to the introduction section"> Introduction </a>  
+              <a href="#intro-fragment" title="Go to the introduction section"> Introduction </a>  
             </li>
             <li>
               <a href="#about-heading" title="Go to the about section"> About </a>  
@@ -61,17 +61,17 @@
             <li>
               <a href="#projects-heading" title="Go to the projects section"> Projects </a>
             </li>
-            <li>
-              <a href="#contact-heading" title="Go to the contact section"> Contact </a>
-            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="container">
+      <article class="container">
         <section id="intro">
-          <h1 id="intro-heading">Hi, I am Rafael Maia</h1>
+          <h1 id="intro-heading fragment-father">
+            Hi, I am Rafael Maia
+            <span class="fragment" id="intro-fragment"></span>
+          </h1>
           <p>
             I am a front end developer working as a freelancer 
             specialized in creating responsive and accessible web pages.
@@ -114,10 +114,7 @@
         <section id="projects">
           <h2 id="projects-heading">Projects</h2>
         </section>
-        <section id="contact">
-          <h2 id="contact-heading">Contact</h2>
-        </section>
-      </div>
+      </article>
     </main>
     <footer>
       <div class="container"></div>

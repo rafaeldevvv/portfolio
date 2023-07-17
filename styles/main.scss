@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --heading-height: 80px;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -9,7 +13,7 @@ body {
 body {
   font: {
     size: 18px;
-    family: "Inconsolata", Helvetica, Arial, sans-serif;
+    family: "Inconsolata", Courier, monospace;
     weight: 700;
   }
 }
@@ -17,7 +21,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Space Mono", Helvetica, Arial, sans-serif;
+  font-family: "Space Mono", Courier, monospace;
   line-height: 1.1;
 }
 
@@ -61,25 +65,51 @@ h3 {
   border: 0;
 }
 
+.fragment-father {
+  position: relative;
+}
+.fragment {
+  position: absolute;
+  top: calc(var(--heading-height, 80px) * 2);
+  aspect-ratio: 1;
+  width: 30px;
+  background-color: red;
+  display: block;
+}
+
 /* MAIN ELEMENTS */
 /* ############ header ############ */
 header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 999;
+  background-color: rgba(0,0,0,1);
+
   .container {
-    height: 80px;
+    height: var(--heading-height, 80px);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .logo {
-    font-weight: bold;
-    font-size: 26px;
+    font: {
+      weight: bold;
+      size: 26px;
+      family: "Space Mono", monospace;
+    }
+    text: {
+      transform: lowercase;
+    }
+    letter-spacing: 3px;
+    color: white;
   }
 }
 
 /* button to toggle nav */
 #main-menu-toggle {
   position: relative;
+  color: white;
   z-index: 9999;
   aspect-ratio: 1;
   width: 40px;
@@ -97,16 +127,12 @@ header {
   backdrop-filter: blur(5px);
   padding: 6rem 2rem 0;
   transition: left 0.5s ease;
-  z-index: 999;
+  z-index: 99;
 }
 
 header.show-nav {
   #main-nav {
     left: 40vw;
-  }
-
-  #main-menu-toggle {
-    color: white;
   }
 }
 
@@ -121,16 +147,53 @@ header.show-nav {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding-bottom: 0.1rem;
+    padding-block: 0.3rem;
     display: block;
+    position: relative;
+  }
+  a::before {
+    content: '';
 
-    border-bottom: 3px transparent solid;
-    transition-property: border-color;
-    transition-duration: 0.5s;
+    position: absolute;
+    bottom: .05rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 3px;
+    width: 0px;
+
+    background-color: currentColor;
+
+    transition-property: width;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
   }
-  a:hover {
-    border-bottom-color: white;
+  a:hover::before {
+    width: 100%;
   }
+}
+
+@media (min-width: 580px) {
+  #main-nav {
+    position: static;
+    background: none;
+    padding: 0;
+    backdrop-filter: none;
+  }
+
+  #main-menu {
+    flex-direction: row;
+  }
+
+  #main-menu-toggle {
+    display: none;
+  }
+}
+
+/* Main */
+main {
+  margin-top: 80px;
+  padding-block: 1rem;
 }
 
 /* Sections */
