@@ -67,11 +67,7 @@ h3 {
 
 .fragment {
   position: absolute;
-  top: calc(var(--heading-height, 80px) * 2);
-  aspect-ratio: 1;
-  width: 30px;
-  background-color: red;
-  display: block;
+  top: calc(0px - var(--heading-height, 80px));
 }
 
 /* MAIN ELEMENTS */
