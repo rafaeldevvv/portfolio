@@ -30,18 +30,16 @@
         <!-- this is supposed to be something nice made with photoshop -->
         <!-- make it lowercase and with a game-style font like Space Mono -->
 
-        <!-- title and aria-expanded javascript -->
         <button
           class="mobile-only"
-          aria-haspopup="menu"
           type="button"
           id="main-menu-toggle"
+          title="Open main menu"
+          aria-haspopup="menu"
           aria-expanded="false"
           aria-label="Open main menu"
-          title="Open main menu"
           aria-controls="main-nav"
         >
-          <!-- The text inside this span will be written by javascript -->
           <i class="fa-solid fa-bars icon" aria-hidden="true"></i>
           <span class="sr-only">Open main menu</span>
         </button>
@@ -67,6 +65,7 @@
     </header>
     <main>
       <article class="container">
+        <!-- ################ INTRO ################ -->
         <section id="intro">
           <h1 id="intro-heading" class="fragment-father">
             Hi, I am Rafael Maia
@@ -79,38 +78,87 @@
           </p>
           <a href="#contact-heading" class="btn primary-btn">Contact me now</a>
         </section>
+
+        <!-- ################ ABOUT ################ -->
         <section id="about">
           <h2 id="about-heading">About</h2>
         </section>
+
+        <!-- ################ SKILLS ################ -->
         <section id="skills">
           <h2 id="skills-heading">Skills</h2>
+          <p>Click on one of the boxes to see more information about its correspondent skill:</p>
           <ul id="skills-list">
-            <li class="skill-item html dashed-border-animation">
-              <i class="fa-brands icon fa-html5" aria-hidden="true"></i>
-              <span class="sr-only">HTML5</span>
+            <li class="skill-item">
+              <button 
+                class="skill-button html"
+                type="button" 
+                aria-label="Click to see more information about Rafael Maia's skill with HTML5"
+                title="Click to see more information about Rafael Maia's skill with HTML5"
+              >
+                <i class="fa-brands icon fa-html5" aria-hidden="true"></i>
+                <span class="sr-only">HTML5</span>
+              </button>
             </li>
-            <li class="skill-item css">
-              <i class="fa-brands icon fa-css3" aria-hidden="true"></i>
-              <span class="sr-only">CSS3</span>
+            <li class="skill-item">
+              <button
+                class="skill-button css"
+                type="button" 
+                aria-label="Click to see more information about Rafael Maia's skill with CSS3"
+                title="Click to see more information about Rafael Maia's skill with CSS3"
+              >
+                <i class="fa-brands icon fa-css3" aria-hidden="true"></i>
+                <span class="sr-only">CSS3</span>
+              </button>
             </li>
-            <li class="skill-item javascript">
-              <i class="fa-brands icon fa-js" aria-hidden="true"></i>
-              <span class="sr-only">JavaScript</span>
+            <li class="skill-item">
+              <button
+                class="skill-button javascript"
+                type="button" 
+                aria-label="Click to see more information about Rafael Maia's skill with JavaScript"
+                title="Click to see more information about Rafael Maia's skill with JavaScript"
+              >
+                <i class="fa-brands icon fa-js" aria-hidden="true"></i>
+                <span class="sr-only">JavaScript</span>
+              </button>
             </li>
-            <li class="skill-item react">
-              <i class="fa-brands icon fa-react" aria-hidden="true"></i>
-              <span class="sr-only">React.js</span>
+            <li class="skill-item">
+              <button 
+                class="skill-button react"
+                type="button" 
+                aria-label="Click to see more information about Rafael Maia's skill with React.js"
+                title="Click to see more information about Rafael Maia's skill with React.js"
+              >
+                <i class="fa-brands icon fa-react" aria-hidden="true"></i>
+                <span class="sr-only">React.js</span>
+              </button>
             </li>
-            <li class="skill-item sass">
-              <i class="fa-brands icon fa-sass" aria-hidden="true"></i>
-              <span class="sr-only">SASS/SCSS</span>
+            <li class="skill-item">
+              <button
+                class="skill-button sass"
+                type="button" 
+                aria-label="Click to see more information about Rafael Maia's skill with SASS"
+                title="Click to see more information about Rafael Maia's skill with SASS"
+              >
+                <i class="fa-brands icon fa-sass" aria-hidden="true"></i>
+                <span class="sr-only">SASS/SCSS</span>
+              </button>
             </li>
-            <li class="skill-item git">
-              <i class="fa-brands icon fa-github" aria-hidden="true"></i>
-              <span class="sr-only">Git/GitHub</span>
+            <li class="skill-item">
+              <button 
+                class="skill-button github"
+                type="button" 
+                aria-label="Click to see more information about Rafael Maia's skill with GitHub"
+                title="Click to see more information about Rafael Maia's skill with GitHub"
+              >
+                <i class="fa-brands icon fa-github" aria-hidden="true"></i>
+                <span class="sr-only">Git/GitHub</span>
+              </button>
             </li>
           </ul>
         </section>
+
+        <!-- ################ PROJECTS ################ -->
         <section id="projects">
           <h2 id="projects-heading">Projects</h2>
         </section>
