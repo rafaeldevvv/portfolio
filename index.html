@@ -51,13 +51,13 @@
               <a href="#intro-fragment" title="Go to the introduction section"> Introduction </a>  
             </li>
             <li>
-              <a href="#about-heading" title="Go to the about section"> About </a>  
+              <a href="#about-fragment" title="Go to the about section"> About </a>  
             </li>
             <li>
-              <a href="#skills-heading" title="Go to the skills section"> Skills </a>
+              <a href="#skills-fragment" title="Go to the skills section"> Skills </a>
             </li>
             <li>
-              <a href="#projects-heading" title="Go to the projects section"> Projects </a>
+              <a href="#projects-fragment" title="Go to the projects section"> Projects </a>
             </li>
           </ul>
         </nav>
@@ -81,20 +81,26 @@
 
         <!-- ################ ABOUT ################ -->
         <section id="about">
-          <h2 id="about-heading">About</h2>
+          <h2 id="about-heading" class="fragment-father">
+            About
+            <span class="fragment" id="about-fragment"></span>
+          </h2>
         </section>
 
         <!-- ################ SKILLS ################ -->
         <section id="skills">
-          <h2 id="skills-heading">Skills</h2>
+          <h2 id="skills-heading" class="fragment-father">
+            Skills
+            <span class="fragment" id="skills-fragment"></span>
+          </h2>
           <p>Click on one of the boxes to see more information about its correspondent skill:</p>
           <ul id="skills-list">
             <li class="skill-item">
               <button 
                 class="skill-button html"
                 type="button" 
-                aria-label="Click to see more information about Rafael Maia's skill with HTML5"
-                title="Click to see more information about Rafael Maia's skill with HTML5"
+                aria-label="Open modal with information about Rafael Maia's skills with HTML5"
+                title="Open modal with information about Rafael Maia's skills with HTML5"
               >
                 <i class="fa-brands icon fa-html5" aria-hidden="true"></i>
                 <span class="sr-only">HTML5</span>
@@ -104,8 +110,8 @@
               <button
                 class="skill-button css"
                 type="button" 
-                aria-label="Click to see more information about Rafael Maia's skill with CSS3"
-                title="Click to see more information about Rafael Maia's skill with CSS3"
+                aria-label="Open modal with information about Rafael Maia's skills with CSS3"
+                title="Open modal with information about Rafael Maia's skills with CSS3"
               >
                 <i class="fa-brands icon fa-css3" aria-hidden="true"></i>
                 <span class="sr-only">CSS3</span>
@@ -115,8 +121,8 @@
               <button
                 class="skill-button javascript"
                 type="button" 
-                aria-label="Click to see more information about Rafael Maia's skill with JavaScript"
-                title="Click to see more information about Rafael Maia's skill with JavaScript"
+                aria-label="Open modal with information about Rafael Maia's skills with JavaScript"
+                title="Open modal with information about Rafael Maia's skills with JavaScript"
               >
                 <i class="fa-brands icon fa-js" aria-hidden="true"></i>
                 <span class="sr-only">JavaScript</span>
@@ -126,8 +132,8 @@
               <button 
                 class="skill-button react"
                 type="button" 
-                aria-label="Click to see more information about Rafael Maia's skill with React.js"
-                title="Click to see more information about Rafael Maia's skill with React.js"
+                aria-label="Open modal with information about Rafael Maia's skills with React.js"
+                title="Open modal with information about Rafael Maia's skills with React.js"
               >
                 <i class="fa-brands icon fa-react" aria-hidden="true"></i>
                 <span class="sr-only">React.js</span>
@@ -137,8 +143,8 @@
               <button
                 class="skill-button sass"
                 type="button" 
-                aria-label="Click to see more information about Rafael Maia's skill with SASS"
-                title="Click to see more information about Rafael Maia's skill with SASS"
+                aria-label="Open modal with information about Rafael Maia's skills with SASS"
+                title="Open modal with information about Rafael Maia's skills with SASS"
               >
                 <i class="fa-brands icon fa-sass" aria-hidden="true"></i>
                 <span class="sr-only">SASS/SCSS</span>
@@ -148,8 +154,8 @@
               <button 
                 class="skill-button github"
                 type="button" 
-                aria-label="Click to see more information about Rafael Maia's skill with GitHub"
-                title="Click to see more information about Rafael Maia's skill with GitHub"
+                aria-label="Open modal with information about Rafael Maia's skills with Git and GitHub"
+                title="Open modal with information about Rafael Maia's skills with Git and GitHub"
               >
                 <i class="fa-brands icon fa-github" aria-hidden="true"></i>
                 <span class="sr-only">Git/GitHub</span>
@@ -160,7 +166,12 @@
 
         <!-- ################ PROJECTS ################ -->
         <section id="projects">
-          <h2 id="projects-heading">Projects</h2>
+          <h2 id="projects-heading" class="fragment-father">
+            Projects
+            <span class="fragment" id="projects-fragment"></span>
+          </h2>
+          <p>A list of my projects: </p>
+
         </section>
       </article>
     </main>
