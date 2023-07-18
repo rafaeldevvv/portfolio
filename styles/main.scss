@@ -5,6 +5,14 @@
   --heading-height: 80px;
 }
 
+/* 
+Mobile devices – 320px — 480px.
+iPads, Tablets – 481px — 768px.
+Small screens, laptops – 769px — 1024px.
+Desktops, large screens – 1025px — 1200px.
+Extra large screens, TV – 1201px, and more.
+ */
+
 html,
 body {
   min-height: 100vh;
@@ -71,6 +79,28 @@ h3 {
 .fragment {
   position: absolute;
   top: calc(0px - var(--heading-height, 80px));
+}
+
+.dashed-border-animation {
+  background-image: 
+    linear-gradient(to right, black 50%, transparent 50%),
+    linear-gradient(to right, black 50%, transparent 50%),
+    linear-gradient(to bottom, black 50%, transparent 50%),
+    linear-gradient(to bottom, black 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: left top, right bottom, left bottom, top right;
+  background-size: 10px 5px, 10px 5px, 5px 10px, 5px 10px;
+  animation: dash-border 1s linear 0s infinite;
+}
+
+@keyframes dash-border {
+  from {
+    background-position: left top, right bottom, left bottom, top right;
+  }
+  to {
+    background-position: left 20px top, right 20px bottom, left bottom 20px, top 20px right;
+  }
+
 }
 
 /* MAIN ELEMENTS */
@@ -160,9 +190,11 @@ header.show-nav {
 
     background-color: currentColor;
 
-    transition-property: width;
-    transition-duration: .2s;
-    transition-timing-function: ease-in;
+    transition: {
+      property: width;
+      duration: .2s;
+      timing-function: ease-in;
+    }
   }
   a:hover::before {
     width: 100%;
@@ -216,8 +248,10 @@ section#skills {
 }
 
 #skills-list {
+  --column-repeat: 2;
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(var(--column-repeat, 2), 1fr);
   justify-items: center;
   gap: 1rem;
 
@@ -226,14 +260,14 @@ section#skills {
     bottom: 0px;
     width: min(100%, 150px);
     aspect-ratio: 1;
-    border-radius: 50%;
+    border-radius: 20%;
     transition-property: bottom, left, top, right, box-shadow;
     transition-duration: .3s;
     box-shadow: 0 0 black;
     cursor: pointer;
 
     .icon {
-      font-size: 320%;
+      font-size: 440%;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -247,21 +281,32 @@ section#skills {
   }
 
   .html {
-    background-color: red;
+    background-color: hsl(13, 78%, 52%);
   }
   .css {
-    background-color: blue;
+    background-color: hsl(222, 88%, 55%);
   }
   .javascript {
-    background-color: yellow;
+    background-color: hsl(46, 86%, 54%);
   }
   .react {
-    background-color: aqua;
+    background-color: hsl(189, 100%, 50%);
   }
   .sass {
-    background-color: pink;
+    background-color: hsl(330, 51%, 60%);
   }
   .git {
-    background-color: tomato;
+    background-color: hsl(0, 50%, 95%);
+  }
+}
+
+@media (min-width: 580px) {
+  #skills-list {
+    --column-repeat: 3;
+  }
+}
+@media(min-width: 768px) {
+  #skills-list {
+    --column-repeat: 4;
   }
 }
