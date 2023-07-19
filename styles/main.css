@@ -28,6 +28,18 @@ h2,
 h3 {
   font-family: "Space Mono", Courier, monospace;
   line-height: 1.1;
+  position: relative;
+  padding-left: 15px;
+}
+h1::before,
+h2::before,
+h3::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 7px;
+  inset: 0 auto 0 0;
+  background-color: black;
 }
 
 /* UTILITIES */
@@ -206,6 +218,7 @@ section {
 
 /* ################ intro ################ */
 section#intro h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 section#intro p {
@@ -237,6 +250,7 @@ section#skills p {
   box-shadow: 0 10px black;
   transition-property: inset, box-shadow;
   transition-duration: 40ms;
+  will-change: inset, box-shadow;
 }
 #skills-list .skill-button .icon {
   font-size: 440%;

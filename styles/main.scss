@@ -31,6 +31,17 @@ h2,
 h3 {
   font-family: "Space Mono", Courier, monospace;
   line-height: 1.1;
+  position: relative;
+  padding-left: 15px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 7px;
+    inset: 0 auto 0 0;
+    background-color: black;
+  }
 }
 
 /* UTILITIES */
@@ -233,6 +244,7 @@ section {
 /* ################ intro ################ */
 section#intro {
   h1 {
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
 
@@ -273,6 +285,7 @@ section#skills {
 
     transition-property: inset, box-shadow;
     transition-duration: 40ms;
+    will-change: inset, box-shadow;
 
     .icon {
       font-size: 440%;
