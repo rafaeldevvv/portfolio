@@ -33,6 +33,7 @@ h3 {
   line-height: 1.1;
   position: relative;
   padding-left: 15px;
+  color: black;
 
   &::before {
     content: "";
@@ -42,6 +43,10 @@ h3 {
     inset: 0 auto 0 0;
     background-color: black;
   }
+}
+
+p {
+  color: hsl(0,  0%, 24%);
 }
 
 /* UTILITIES */
@@ -64,12 +69,6 @@ h3 {
 }
 .primary-btn:hover, .primary-btn:active {
   background: #111;
-}
-
-.container {
-  padding-inline: min(3rem, 6vw);
-  max-width: 900px;
-  margin-inline: auto;
 }
 
 .sr-only {
@@ -115,6 +114,12 @@ h3 {
 }
 
 /* MAIN ELEMENTS */
+.container {
+  padding-inline: min(3rem, 6vw);
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
 /* ############ header ############ */
 header {
   position: fixed;
@@ -276,7 +281,7 @@ section#skills {
     bottom: 10px;
 
     display: block;
-    width: min(100%, 150px);
+    width: 100%;
     aspect-ratio: 1;
     margin-inline: auto;
 
@@ -327,8 +332,13 @@ section#skills {
     --column-repeat: 3;
   }
 }
-@media(min-width: 768px) {
+@media (min-width: 574px) { 
   #skills-list {
     --column-repeat: 4;
+  }
+}
+@media(min-width: 768px) {
+  #skills-list {
+    --column-repeat: 5;
   }
 }
