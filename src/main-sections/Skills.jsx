@@ -1,6 +1,9 @@
 import React from "react";
+import { useAuthor } from "../AuthorContext.js";
 
-export default function SkillsSection({skills}) {
+export default function SkillsSection() {
+   const {skills} = useAuthor();
+
    return (
       <section id="skills">
          <h2 id="skills-heading" className="fragment-father">
@@ -19,7 +22,9 @@ export default function SkillsSection({skills}) {
 }
 
 function SkillItem({skill}) {
-   const message = `Open modal with information about Rafael Maia's skills with ${skill.name}`;
+   const author = useAuthor();
+
+   const message = `Open modal with information about ${author.shortName}'s skills with ${skill.name}`;
 
    return (
       <li className="skill-item">

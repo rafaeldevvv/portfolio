@@ -1,6 +1,9 @@
 import React from "react";
+import { useAuthor } from "../AuthorContext.js";
 
-export default function ProjectsSection({projects}) {
+export default function ProjectsSection() {
+   const {projects} = useAuthor();
+
    return (
       <section id="projects">
          <h2 id="projects-heading" className="fragment-father">

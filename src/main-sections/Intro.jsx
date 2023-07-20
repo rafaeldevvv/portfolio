@@ -1,6 +1,9 @@
 import React from "react";
+import { useAuthor } from "../AuthorContext.js";
 
-export default function IntroSection({ author }) {
+export default function IntroSection() {
+  const author = useAuthor();
+  
   return (
     <section id="intro">
       <div className="content">
@@ -9,13 +12,8 @@ export default function IntroSection({ author }) {
           <span className="fragment" id="intro-fragment" />
         </h1>
         <p>
-          I am a freelance front-end developer with a highly qualified skill set
-          specialized in creating responsive and accessible web pages. My
-          portfolio shows you my skills, projects and how you can reach me!
+          {author.introduction}
         </p>
-        <a href="#main-footer" className="btn primary-btn">
-          Contact me now
-        </a>
       </div>
       <div className="hero-container">
         {author.hero ? (
