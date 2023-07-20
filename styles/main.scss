@@ -175,7 +175,7 @@ header {
 
 header.show-nav {
   #main-nav {
-    left: 40vw;
+    left: 35vw;
   }
 }
 
@@ -248,6 +248,10 @@ section {
 
 /* ################ intro ################ */
 section#intro {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -255,6 +259,52 @@ section#intro {
 
   p {
     margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .pseudo-hero {
+    aspect-ratio: 1;
+    background-color: black;
+    position: relative;
+    border-radius: 4rem;
+    max-width: 350px;
+    margin-inline: auto;
+  }
+  .pseudo-hero::before {
+    content: "R";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15rem;
+    color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  section#intro {
+    flex-direction: row;
+    align-items: center;
+  
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .pseudo-hero {
+      width: 300px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  section#intro {
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    .pseudo-hero {
+      max-width: 400px;
+      width: 400px;
+    }
   }
 }
 

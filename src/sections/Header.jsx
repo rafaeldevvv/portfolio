@@ -9,14 +9,14 @@ export default function Header() {
         <div className="logo">Rafael</div>
         {/* this is supposed to be something nice made with photoshop */}
         {/* make it lowercase and with a game-style font like Space Mono */}
-        <MainMenuToggle isExpanded={isExpanded} />
+        <MainMenuToggle isExpanded={isExpanded} onClick={() => setIsExpanded(!isExpanded)} />
         <Nav />
       </div>
     </header>
   );
 }
 
-function MainMenuToggle({ isExpanded }) {
+function MainMenuToggle({ isExpanded, onClick }) {
   const message = isExpanded ? "Close main menu" : "Open main menu";
   const icon = isExpanded ? "fa-xmark" : "fa-bars";
 
@@ -30,7 +30,7 @@ function MainMenuToggle({ isExpanded }) {
       aria-expanded={isExpanded}
       aria-label={message}
       aria-controls="main-nav"
-      onClick={() => setIsExpanded(!isExpanded)}
+      onClick={onClick}
     >
       <i className={`fa-solid ${icon} icon`} aria-hidden="true" />
       <span className="sr-only">{message}</span>
