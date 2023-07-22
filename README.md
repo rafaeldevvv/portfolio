@@ -24,6 +24,8 @@
 - [StackOverflow - How to get the user language](https://stackoverflow.com/questions/8199760/how-to-get-the-browser-language-using-javascript)
 - [HTML to JSX](https://transform.tools/html-to-jsx)
 - [ChatGPT](https://chat.openai.com/)
+- [Image Compressor](https://imagecompressor.com/)
+- [Image Resizer](https://imageresizer.com/) - This was very useful as my computer does not have sufficient computing resources to keep photoshop and vs code open at the same time.
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)
