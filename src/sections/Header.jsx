@@ -4,7 +4,7 @@ export default function Header() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <header className={isExpanded ? "show-nav" : ""}>
+    <header className={isExpanded ? "show-nav" : ""} id="main-header">
       <div className="container">
         <div className="logo">Rafael</div>
         {/* this is supposed to be something nice made with photoshop */}
@@ -29,7 +29,6 @@ function MainMenuToggle({ isExpanded, onClick }) {
       aria-haspopup="menu"
       aria-expanded={isExpanded}
       aria-label={message}
-      aria-controls="main-nav"
       onClick={onClick}
     >
       <i className={`fa-solid ${icon} icon`} aria-hidden="true" />

@@ -31,8 +31,8 @@ export function Project({ project }) {
           <span className="hover-text">Open modal</span>
         </button>
       </div>
-      <h3>{project.name}</h3>
-      <p>{project.description}</p>
+      <h3 className="project-title">{project.name}</h3>
+      <p className="project-description">{project.description}</p>
     </article>
   );
 }

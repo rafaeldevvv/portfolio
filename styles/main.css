@@ -113,20 +113,20 @@ p {
 }
 
 /* ############ header ############ */
-header {
+#main-header {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 999;
   background-color: rgb(0, 0, 0);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
 }
-header .container {
+#main-header .container {
   height: var(--heading-height, 80px);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .logo {
+#main-header .logo {
   font-weight: bold;
   font-size: 26px;
   font-family: "Space Mono", monospace;
@@ -159,7 +159,7 @@ header .logo {
   z-index: 99;
 }
 
-header.show-nav #main-nav {
+#main-header.show-nav #main-nav {
   left: 35vw;
 }
 
@@ -222,20 +222,20 @@ section {
 }
 
 /* ################ intro ################ */
-section#intro {
+#main-article-header {
   display: flex;
   flex-direction: column-reverse;
   gap: 2rem;
 }
-section#intro h1 {
+#main-article-header h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-section#intro p {
+#main-article-header p {
   margin-bottom: 1rem;
   line-height: 1.2;
 }
-section#intro .pseudo-hero {
+#main-article-header .pseudo-hero {
   aspect-ratio: 1;
   background-color: black;
   position: relative;
@@ -243,7 +243,7 @@ section#intro .pseudo-hero {
   max-width: 350px;
   margin-inline: auto;
 }
-section#intro .pseudo-hero::before {
+#main-article-header .pseudo-hero::before {
   content: "R";
   position: absolute;
   left: 50%;
@@ -254,22 +254,22 @@ section#intro .pseudo-hero::before {
 }
 
 @media (min-width: 768px) {
-  section#intro {
+  #main-article-header {
     flex-direction: row;
     align-items: center;
   }
-  section#intro h1 {
+  #main-article-header h1 {
     font-size: 2.5rem;
   }
-  section#intro .pseudo-hero {
+  #main-article-header .pseudo-hero {
     width: 300px;
   }
 }
 @media (min-width: 1024px) {
-  section#intro h1 {
+  #main-article-header h1 {
     font-size: 2.8rem;
   }
-  section#intro .pseudo-hero {
+  #main-article-header .pseudo-hero {
     max-width: 400px;
     width: 400px;
   }
@@ -345,4 +345,13 @@ section#skills p {
   #skills-list {
     --column-repeat: 5;
   }
+}
+/* ################ Projects ################ */
+section#projects {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.project {
+  background-color: #111;
 }/*# sourceMappingURL=main.css.map */
