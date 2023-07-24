@@ -1,14 +1,5 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext.js";
-/* 
-##########################################################################################
-##########################################################################################
-##########################################################################################
-###################### CONTINUE HERE, yeah now Sunday, July 23rd 2023 ####################
-##########################################################################################
-##########################################################################################
-##########################################################################################
- */
 
 export default function IntroSection() {
   const author = useAuthor();
@@ -16,7 +7,7 @@ export default function IntroSection() {
   return (
     <header id="main-article-header">
       <div className="content">
-        <h1 id="intro-heading" className="fragment-father">
+        <h1 id="intro-heading" className="fragment-father decorated-heading">
           Hi, I am {author.name}
           <span className="fragment" id="intro-fragment" />
         </h1>

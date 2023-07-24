@@ -6,7 +6,7 @@ export default function SkillsSection() {
 
   return (
     <section id="skills">
-      <h2 id="skills-heading" className="fragment-father">
+      <h2 id="skills-heading" className="fragment-father decorated-heading">
         Skills
         <span className="fragment" id="skills-fragment" />
       </h2>

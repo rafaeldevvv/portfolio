@@ -5,7 +5,7 @@ export default function ServicesSection() {
    const {services} = useAuthor();
    
    return (
-      <section id="services">
+      <section id="services" className="decorated-heading">
          <h2 className="fragment-father">
             Services
             <span className="fragment"></span>

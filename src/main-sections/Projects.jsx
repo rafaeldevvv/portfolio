@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useAuthor } from "../AuthorContext.js";
 
 export default function ProjectsSection() {
@@ -6,33 +6,44 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects">
-      <h2 id="projects-heading" className="fragment-father">
+      <h2 id="projects-heading" className="fragment-father decorated-heading">
         Projects
         <span className="fragment" id="projects-fragment" />
       </h2>
       <p>View my work</p>
       <ul id="projects-list">
-        {projects.map((p) => (
-          <li key={p.name}>
-            <Project project={p} />
-          </li>
-        ))}
+        {projects
+          .slice()
+          .reverse()
+          .map((p) => (
+            <li key={p.name}>
+              <Project project={p} />
+            </li>
+          ))}
       </ul>
     </section>
   );
 }
 
 export function Project({ project }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <article>
-      <div className="image-container">
-        <button type="button" aria-label="Open modal">
-          <img src={project.image.src} alt={project.image.alt} />
-          <span className="hover-text">Open modal</span>
-        </button>
-      </div>
-      <h3 className="project-title">{project.name}</h3>
-      <p className="project-description">{project.description}</p>
-    </article>
+    <button
+      className={`project ${isHovered ? "hover" : ""}`}
+      type="button"
+      aria-label="Open modal"
+      onPointerEnter={() => setIsHovered(true)}
+      onPointerLeave={() => setIsHovered(false)}
+    >
+      <img
+        className="project-image"
+        src={project.image.src}
+        alt={project.image.alt}
+      />
+      <h3 className={`${isHovered ? 'project-name' : 'sr-only'}`}>{project.name}</h3>
+      <i className="fa-regular fa-hand-pointer icon" aria-hidden="true"></i>
+      <span className="sr-only">Open modal</span>
+    </button>
   );
 }

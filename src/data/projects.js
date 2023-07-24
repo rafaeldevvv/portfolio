@@ -67,7 +67,7 @@ export default [
       builtWith: ['html', 'css', 'grid layout']
    },
    {
-      name: "Huddle landing page with a single introductory section",
+      name: "Huddle landing page",
       repository: "https://github.com/rafaeldevvv/huddle-landing-page",
       liveSite: "https://rafaeldevvv.github.io/huddle-landing-page/",
       challenge: "https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0",
@@ -229,7 +229,7 @@ export default [
          "A list of all countries in the world provided by the RESTful countries API. You can click on one of them to see more information about it, search for a specific country, filter the countries and sort them.",
       image: {
          src: "thumbnails/rest-countries.png",
-         alt: "A screenshot of a webpage that displays a list of all countries in the world, showing their flags and some information about them",
+         alt: "A screenshot of a webpage that displays a list of all countries in the world in a grid of four columns, showing their flags and some information about them below the flag",
       },
       fun: true,
       difficulty: "hard",
