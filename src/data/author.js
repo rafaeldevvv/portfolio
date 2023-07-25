@@ -14,6 +14,14 @@ const author = {
                   portfolio shows you my skills, projects and how you can reach me!`,
    profilePicture: "",
    hero: "",
+   email: "rafaelmaiaw@gmail.com",
+   phoneNumber: "+55 27 996904603",
+   socials: {
+      instagram: "https://www.instagram.com/rafaeldevvv",
+      github: "https://github.com/rafaeldevvv",
+      youtube: "https://www.youtube.com/channel/UC_QOvDZdUskTSJ59eMDjuEg",
+      twitter: "https://www.twitter.com/rafaeldevvv"
+   },
    projects,
    skills,
    services

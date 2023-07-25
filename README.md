@@ -26,6 +26,7 @@
 - [ChatGPT](https://chat.openai.com/)
 - [Image Compressor](https://imagecompressor.com/)
 - [Image Resizer](https://imageresizer.com/) - This was very useful as my computer does not have sufficient computing resources to keep photoshop and vs code open at the same time.
+- [HTML element reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) - A huge list of html elements.
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)

@@ -34,7 +34,7 @@ function Skill({ skill }) {
       aria-label={message}
       title={message}
     >
-      <i className={`${skill.icon} icon`} aria-hidden="true" />
+      <i className={`${skill.fontAwesomeIcon} icon`} aria-hidden="true" />
       <span className="sr-only">{skill.name}</span>
     </button>
   );

@@ -40,7 +40,7 @@ function MainMenuToggle({ isExpanded, onClick }) {
 function Nav() {
   return (
     <nav id="main-nav" aria-label="Main menu">
-      <ul id="main-menu">
+      <menu id="main-menu">
         <li>
           <a href="#intro-fragment" title="Go to the introduction section">
             Introduction
@@ -61,7 +61,7 @@ function Nav() {
             Projects
           </a>
         </li>
-      </ul>
+      </menu>
     </nav>
   );
 }

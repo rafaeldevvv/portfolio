@@ -14,7 +14,7 @@ export default function ProjectsSection() {
       <ul id="projects-list">
         {projects
           .slice()
-          .reverse()
+          .reverse() // this is because the greater the index the more recent the project is
           .map((p) => (
             <li key={p.name}>
               <Project project={p} />

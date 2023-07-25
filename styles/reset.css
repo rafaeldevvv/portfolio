@@ -9,9 +9,11 @@ button {
    outline: 0;
    border: 0;
    cursor: pointer;
+   padding: 0;
+   margin: 0;
 }
 
-ul {
+ul, menu {
    list-style-type: none; 
 }
 
