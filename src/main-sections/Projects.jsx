@@ -6,7 +6,7 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects">
-      <h2 id="projects-heading" className="fragment-father decorated-heading">
+      <h2 id="projects-heading" className="fragment-father">
         Projects
         <span className="fragment" id="projects-fragment" />
       </h2>

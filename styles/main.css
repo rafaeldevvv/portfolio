@@ -86,19 +86,6 @@ p {
   animation: dash-border 1s linear 0s infinite;
 }
 
-.decorated-heading {
-  position: relative;
-  padding-left: 15px;
-}
-.decorated-heading::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 7px;
-  inset: 0 auto 0 0;
-  background-color: black;
-}
-
 @keyframes dash-border {
   from {
     background-position: left top, right bottom, left bottom, top right;
@@ -107,6 +94,19 @@ p {
     background-position: left 20px top, right 20px bottom, left bottom 20px, top 20px right;
   }
 }
+.decorated-heading {
+  position: relative;
+  padding-left: 15px;
+}
+.decorated-heading::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 7px;
+  inset: 0 auto 0 0;
+  background-color: black;
+}
+
 /* MAIN ELEMENTS */
 .container {
   padding-inline: min(3rem, 6vw);
@@ -215,12 +215,34 @@ p {
 /* Main */
 main {
   margin-top: 80px;
-  padding-block: 1rem;
+  padding-block: 6rem;
 }
 
 /* Sections */
 section {
   margin-block: 2rem;
+}
+section h2 {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+section h2::before, section h2::after {
+  content: "";
+  background-color: #ccc;
+  display: inline-block;
+  border-top: 4px dashed #999;
+}
+section p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+section + section {
+  margin-top: 10rem;
 }
 
 /* ################ intro ################ */
@@ -277,14 +299,8 @@ section {
   }
 }
 /* ################ Skills ################ */
-section#skills h2 {
-  margin-bottom: 0.5rem;
-}
-section#skills p {
-  margin-bottom: 2rem;
-}
-
 #skills-list {
+  margin-top: 5rem;
   --column-repeat: 2;
   display: grid;
   grid-template-columns: repeat(var(--column-repeat, 2), 1fr);
@@ -350,6 +366,7 @@ section#skills p {
 }
 /* ################ Projects ################ */
 #projects-list {
+  margin-top: 5rem;
   --column-repeat: 1;
   display: grid;
   grid-template-columns: repeat(var(--column-repeat, 1), 1fr);
