@@ -3,14 +3,23 @@ import React, { useState } from "react";
 export default function Header() {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  function handleClickOnLink() {
+    if (isExpanded) {
+      setIsExpanded(false);
+    }
+  }
+
   return (
     <header className={isExpanded ? "show-nav" : ""} id="main-header">
       <div className="container">
         <div className="logo">Rafael</div>
         {/* this is supposed to be something nice made with photoshop */}
         {/* make it lowercase and with a game-style font like Space Mono */}
-        <MainMenuToggle isExpanded={isExpanded} onClick={() => setIsExpanded(!isExpanded)} />
-        <Nav />
+        <MainMenuToggle
+          isExpanded={isExpanded}
+          onClick={() => setIsExpanded(!isExpanded)}
+        />
+        <Nav onClickOnLink={handleClickOnLink} />
       </div>
     </header>
   );
@@ -37,27 +46,43 @@ function MainMenuToggle({ isExpanded, onClick }) {
   );
 }
 
-function Nav() {
+function Nav({ onClickOnLink }) {
   return (
     <nav id="main-nav" aria-label="Main menu">
       <menu id="main-menu">
         <li>
-          <a href="#intro-fragment" title="Go to the introduction section">
+          <a
+            href="#intro-fragment"
+            title="Go to the introduction section"
+            onClick={onClickOnLink}
+          >
             Introduction
           </a>
         </li>
         <li>
-          <a href="#about-fragment" title="Go to the about section">
+          <a
+            href="#about-fragment"
+            title="Go to the about section"
+            onClick={onClickOnLink}
+          >
             About
           </a>
         </li>
         <li>
-          <a href="#skills-fragment" title="Go to the skills section">
+          <a
+            href="#skills-fragment"
+            title="Go to the skills section"
+            onClick={onClickOnLink}
+          >
             Skills
           </a>
         </li>
         <li>
-          <a href="#projects-fragment" title="Go to the projects section">
+          <a
+            href="#projects-fragment"
+            title="Go to the projects section"
+            onClick={onClickOnLink}
+          >
             Projects
           </a>
         </li>
