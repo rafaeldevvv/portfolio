@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useAuthor } from "../AuthorContext.js";
 
 export default function ProjectsSection() {
@@ -29,21 +29,23 @@ export function Project({ project }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <button
+    <div
       className={`project ${isHovered ? "hover" : ""}`}
-      type="button"
-      aria-label="Open modal"
       onPointerEnter={() => setIsHovered(true)}
       onPointerLeave={() => setIsHovered(false)}
     >
-      <img
-        className="project-image"
-        src={project.image.src}
-        alt={project.image.alt}
-      />
-      <h3 className={`${isHovered ? 'project-name' : 'sr-only'}`}>{project.name}</h3>
-      <i className="fa-regular fa-hand-pointer icon" aria-hidden="true"></i>
-      <span className="sr-only">Open modal</span>
-    </button>
+      <h3 className={`${isHovered ? "project-name" : "sr-only"}`}>
+        {project.name}
+      </h3>
+      <button className="project-button" type="button" aria-label="Open modal">
+        <img
+          className="project-image"
+          src={project.image.src}
+          alt={project.image.alt}
+        />
+        <i className="fa-regular fa-hand-pointer icon" aria-hidden="true"></i>
+        <span className="sr-only">Open modal</span>
+      </button>
+    </div>
   );
 }

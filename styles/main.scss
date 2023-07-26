@@ -422,25 +422,30 @@ section + section {
   display: grid;
   grid-template-columns: repeat(var(--column-repeat, 1), 1fr);
   gap: 2rem;
-  grid-auto-flow: dense;
-  grid-auto-rows: max-content;
 }
 
 .project {
-  display: block;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0,0,0,0.4);
   max-width: 430px;
   margin-inline: auto;
 
+  // this is because there was some 
+  // ugly white line at the bottom of the project below
+  // the project's image that was making the 
+  // hovering kind of weird
+  height: calc(100% - 3px);
+
   .project-image {
     transition-property: transform filter;
     transition-duration: .2s;
   }
+
   .project-name {
     position: absolute;
     inset: auto auto 5% 50%;
+    z-index: 1;
     transform: translateX(-50%);
     width: 100%;
     
@@ -448,7 +453,13 @@ section + section {
     text-align: center;
     padding-inline: 1.2rem;
     color: white;
+
+    // this is because hovering over the
+    // project name would cause the script to
+    // remove the hover class from the project
+    pointer-events: none;
   }
+
   .icon {
     display: none;
     position: absolute;

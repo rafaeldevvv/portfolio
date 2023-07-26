@@ -371,17 +371,15 @@ section + section {
   display: grid;
   grid-template-columns: repeat(var(--column-repeat, 1), 1fr);
   gap: 2rem;
-  grid-auto-flow: dense;
-  grid-auto-rows: max-content;
 }
 
 .project {
-  display: block;
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   max-width: 430px;
   margin-inline: auto;
+  height: calc(100% - 3px);
 }
 .project .project-image {
   transition-property: transform filter;
@@ -390,12 +388,14 @@ section + section {
 .project .project-name {
   position: absolute;
   inset: auto auto 5% 50%;
+  z-index: 1;
   transform: translateX(-50%);
   width: 100%;
   font-size: 1.1rem;
   text-align: center;
   padding-inline: 1.2rem;
   color: white;
+  pointer-events: none;
 }
 .project .icon {
   display: none;
