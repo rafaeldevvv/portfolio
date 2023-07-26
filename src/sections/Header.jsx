@@ -61,15 +61,6 @@ function Nav({ onClickOnLink }) {
         </li>
         <li>
           <a
-            href="#about-fragment"
-            title="Go to the about section"
-            onClick={onClickOnLink}
-          >
-            About
-          </a>
-        </li>
-        <li>
-          <a
             href="#skills-fragment"
             title="Go to the skills section"
             onClick={onClickOnLink}
@@ -84,6 +75,15 @@ function Nav({ onClickOnLink }) {
             onClick={onClickOnLink}
           >
             Projects
+          </a>
+        </li>
+        <li>
+          <a
+            href="#services-fragment"
+            title="Go to the services section"
+            onClick={onClickOnLink}
+          >
+            Services
           </a>
         </li>
       </menu>

@@ -8,7 +8,7 @@ export default function ServicesSection() {
       <section id="services">
          <h2 className="fragment-father">
             Services
-            <span className="fragment"></span>
+            <span className="fragment" id="services-fragment"></span>
          </h2>
       </section>
    )
