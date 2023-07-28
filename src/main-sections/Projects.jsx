@@ -1,8 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useAuthor } from "../AuthorContext.js";
 
 export default function ProjectsSection() {
   const { projects } = useAuthor();
+  const [hoveredProjectName, setHoveredProjectName] = useState(null);
+  const projectRefs = useRef(null);
+
+  function getMap() {
+    if (!projectRefs.current) {
+      projectRefs.current = new Map();
+    }
+
+    return projectRefs.current;
+  }
+
+  useEffect(() => {
+    if (matchMedia("(pointer:fine)").matches) return;
+
+    function handleScroll() {
+      const map = getMap();
+      const names = Array.from(map.keys());
+
+      const nameOfLastProjectInMiddle = names.findLast((n) => {
+        const node = map.get(n);
+        const { top } = node.getBoundingClientRect();
+
+        return top < innerHeight / 2 && top > 0 && top < innerHeight;
+      });
+
+      if (nameOfLastProjectInMiddle) {
+        setHoveredProjectName(nameOfLastProjectInMiddle);
+      } else {
+        setHoveredProjectName(null);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section id="projects">
@@ -16,8 +53,26 @@ export default function ProjectsSection() {
           .slice()
           .reverse() // this is because the greater the index the more recent the project is
           .map((p) => (
-            <li key={p.name}>
-              <Project project={p} />
+            <li
+              key={p.name}
+              onPointerEnter={() => {
+                if (matchMedia("(pointer:fine)").matches)
+                  setHoveredProjectName(p.name);
+              }}
+              onPointerLeave={() => {
+                if (matchMedia("(pointer:fine)").matches)
+                  setHoveredProjectName(null);
+              }}
+              ref={(node) => {
+                const map = getMap();
+                if (node) {
+                  map.set(p.name, node);
+                } else {
+                  map.delete(p.name);
+                }
+              }}
+            >
+              <Project project={p} isHovered={p.name === hoveredProjectName} />
             </li>
           ))}
       </ul>
@@ -25,15 +80,9 @@ export default function ProjectsSection() {
   );
 }
 
-export function Project({ project }) {
-  const [isHovered, setIsHovered] = useState(false);
-
+export function Project({ project, isHovered }) {
   return (
-    <div
-      className={`project ${isHovered ? "hover" : ""}`}
-      onPointerEnter={() => setIsHovered(true)}
-      onPointerLeave={() => setIsHovered(false)}
-    >
+    <div className={`project ${isHovered ? "hover" : ""}`}>
       <h3 className={`${isHovered ? "project-name" : "sr-only"}`}>
         {project.name}
       </h3>
