@@ -3,6 +3,21 @@ import { useAuthor } from "../AuthorContext.js";
 
 export default function ProjectsSection() {
   const { projects } = useAuthor();
+
+  return (
+    <section id="projects">
+      <h2 id="projects-heading" className="fragment-father">
+        Projects
+        <span className="fragment" id="projects-fragment" />
+      </h2>
+      <p>View my work</p>
+      <ProjectList projects={projects} />
+    </section>
+  );
+}
+
+export function ProjectList({ projects }) {
+  // const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(4);
   const [hoveredProjectName, setHoveredProjectName] = useState(null);
   const projectRefs = useRef(null);
 
@@ -42,41 +57,34 @@ export default function ProjectsSection() {
   }, []);
 
   return (
-    <section id="projects">
-      <h2 id="projects-heading" className="fragment-father">
-        Projects
-        <span className="fragment" id="projects-fragment" />
-      </h2>
-      <p>View my work</p>
-      <ul id="projects-list">
-        {projects
-          .slice()
-          .reverse() // this is because the greater the index the more recent the project is
-          .map((p) => (
-            <li
-              key={p.name}
-              onPointerEnter={() => {
-                if (matchMedia("(pointer:fine)").matches)
-                  setHoveredProjectName(p.name);
-              }}
-              onPointerLeave={() => {
-                if (matchMedia("(pointer:fine)").matches)
-                  setHoveredProjectName(null);
-              }}
-              ref={(node) => {
-                const map = getMap();
-                if (node) {
-                  map.set(p.name, node);
-                } else {
-                  map.delete(p.name);
-                }
-              }}
-            >
-              <Project project={p} isHovered={p.name === hoveredProjectName} />
-            </li>
-          ))}
-      </ul>
-    </section>
+    <ul id="projects-list">
+      {projects
+        .slice()
+        .reverse() // this is because the greater the index the more recent the project is
+        .map((p, i) => (
+          <li
+            key={p.name}
+            onPointerEnter={() => {
+              if (matchMedia("(pointer:fine)").matches)
+                setHoveredProjectName(p.name);
+            }}
+            onPointerLeave={() => {
+              if (matchMedia("(pointer:fine)").matches)
+                setHoveredProjectName(null);
+            }}
+            ref={(node) => {
+              const map = getMap();
+              if (node) {
+                map.set(p.name, node);
+              } else {
+                map.delete(p.name);
+              }
+            }}
+          >
+            <Project project={p} isHovered={p.name === hoveredProjectName} />
+          </li>
+        ))}
+    </ul>
   );
 }
 
