@@ -415,6 +415,31 @@ section + section {
 }
 
 /* ################ Projects ################ */
+section#projects {
+  .show-button-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    gap: 1rem;
+
+    &::before, &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      background-color: #999;
+      height: 4px;
+    }
+
+    button {
+      padding: .5rem 2rem;
+      border: 1px solid black;
+      border-radius: 2rem;
+      font-size: 2rem;
+    }
+  }
+}
+
 #projects-list {
   margin-top: 5rem;
   --column-repeat: 1;

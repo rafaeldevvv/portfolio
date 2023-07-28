@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { flushSync } from "react-dom";
 import { useAuthor } from "../AuthorContext.js";
 
 export default function ProjectsSection() {
@@ -17,7 +18,7 @@ export default function ProjectsSection() {
 }
 
 export function ProjectList({ projects }) {
-  // const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(4);
+  const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(4);
   const [hoveredProjectName, setHoveredProjectName] = useState(null);
   const projectRefs = useRef(null);
 
@@ -56,35 +57,104 @@ export function ProjectList({ projects }) {
     };
   }, []);
 
+  function handleShowClick() {
+    const scrollOptions = { block: "center", behavior: "smooth" };
+
+    if (numberOfProjectsShown < projects.length) {
+      const nextNumberOfProjectsShown = Math.min(
+        numberOfProjectsShown + 6,
+        projects.length
+      );
+
+      flushSync(() => {
+        setNumberOfProjectsShown(nextNumberOfProjectsShown);
+      });
+
+      const updatedMap = getMap();
+
+      const lastProjectName = Array.from(updatedMap.keys())[
+        nextNumberOfProjectsShown - 1
+      ];
+      const lastProject = updatedMap.get(lastProjectName);
+
+      const lastProjectImage = lastProject.querySelector(".project-image");
+
+      if (lastProjectImage.complete) {
+        lastProject.scrollIntoView(scrollOptions);
+      } else {
+        lastProjectImage.onload = function () {
+          lastProject.scrollIntoView(scrollOptions);
+        };
+      }
+    } else {
+      setNumberOfProjectsShown(4);
+      const map = getMap();
+      const firstProjectName = Array.from(map.keys())[0];
+      const firstProject = map.get(firstProjectName);
+
+      firstProject.scrollIntoView(scrollOptions);
+    }
+  }
+
+  const allProjectsAreShown = numberOfProjectsShown === projects.length;
+  const buttonMessage = allProjectsAreShown
+    ? `Show less projects`
+    : "Show more projects";
+
   return (
-    <ul id="projects-list">
-      {projects
-        .slice()
-        .reverse() // this is because the greater the index the more recent the project is
-        .map((p, i) => (
-          <li
-            key={p.name}
-            onPointerEnter={() => {
-              if (matchMedia("(pointer:fine)").matches)
-                setHoveredProjectName(p.name);
-            }}
-            onPointerLeave={() => {
-              if (matchMedia("(pointer:fine)").matches)
-                setHoveredProjectName(null);
-            }}
-            ref={(node) => {
-              const map = getMap();
-              if (node) {
-                map.set(p.name, node);
-              } else {
-                map.delete(p.name);
-              }
-            }}
-          >
-            <Project project={p} isHovered={p.name === hoveredProjectName} />
-          </li>
-        ))}
-    </ul>
+    <div>
+      <ul id="projects-list">
+        {projects
+          .slice()
+          .reverse() // this is because the greater the index the more recent the project is
+          .map((p, i) => {
+            if (i < numberOfProjectsShown) {
+              return (
+                <li
+                  key={p.name}
+                  onPointerEnter={() => {
+                    if (matchMedia("(pointer:fine)").matches)
+                      setHoveredProjectName(p.name);
+                  }}
+                  onPointerLeave={() => {
+                    if (matchMedia("(pointer:fine)").matches)
+                      setHoveredProjectName(null);
+                  }}
+                  ref={(node) => {
+                    const map = getMap();
+                    if (node) {
+                      map.set(p.name, node);
+                    } else {
+                      map.delete(p.name);
+                    }
+                  }}
+                >
+                  <Project
+                    project={p}
+                    isHovered={p.name === hoveredProjectName}
+                  />
+                </li>
+              );
+            }
+          })}
+      </ul>
+      <div className="show-button-container">
+        <button
+          type="button"
+          aria-label={buttonMessage}
+          onClick={handleShowClick}
+          title={buttonMessage}
+        >
+          <i
+            className={`fa-solid fa-chevron-${
+              allProjectsAreShown ? "up" : "down"
+            } icon`}
+            aria-hidden="true"
+          ></i>
+          <span className="sr-only">{buttonMessage}</span>
+        </button>
+      </div>
+    </div>
   );
 }
 
