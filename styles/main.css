@@ -377,7 +377,7 @@ section#projects .show-button-container::before, section#projects .show-button-c
   display: block;
   width: 100%;
   background-color: #999;
-  height: 4px;
+  height: 2px;
 }
 section#projects .show-button-container button {
   padding: 0.5rem 2rem;

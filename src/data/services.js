@@ -1,30 +1,39 @@
 const services = [
    {
-      name: "Landing Pages & Homepages"
+      name: "Landing Pages & Homepages",
+      description: ""
    },
    {
-      name: "Single Page Applications - Client-side"
+      name: "Single Page Applications - Client-side",
+      description: ""
    },
    {
-      name: "Web Application Development"
+      name: "Web Application Development",
+      description: ""
    },
    {
-      name: "Responsive Design"
+      name: "Responsive Design",
+      description: ""
    }, 
    {
-      name:"Frontend Performance Optimization"
+      name:"Frontend Performance Optimization",
+      description: ""
    },
    {
-      name:"Cross-browser Compatibility"
+      name:"Cross-browser Compatibility",
+      description: ""
    },
    {
-      name:"Web Accessibility"
+      name:"Web Accessibility",
+      description: ""
    },
    {
-      name:"Integration with APIs"
+      name:"Integration with APIs",
+      description: ""
    },
    {
-      name: "Web Animation"
+      name: "Web Animation",
+      description: ""
    }
 ];
 
