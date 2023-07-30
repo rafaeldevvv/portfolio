@@ -5,6 +5,7 @@ const skills = [
       fontAwesomeIcon: "fa-brands fa-html5",
       className: "html",
       knowledgePercentage: 80,
+      tags: ['html']
    },
    {
       name: "CSS3",
@@ -12,6 +13,7 @@ const skills = [
       fontAwesomeIcon: "fa-brands fa-css3",
       className: "css",
       knowledgePercentage: 85,
+      tags: ['css', "sass"]
    },
    {
       name: "JavaScript",
@@ -19,6 +21,7 @@ const skills = [
       fontAwesomeIcon: "fa-brands fa-js",
       className: "javascript",
       knowledgePercentage: 85,
+      tags: ['javascript', 'react']
    },
    {
       name: "React.js",
@@ -26,6 +29,7 @@ const skills = [
       fontAwesomeIcon: "fa-brands fa-react",
       className: "react",
       knowledgePercentage: 95,
+      tags: ['react']
    },
    {
       name: "SASS",
@@ -33,6 +37,7 @@ const skills = [
       fontAwesomeIcon: "fa-brands fa-sass",
       className: "sass",
       knowledgePercentage: 70,
+      tags: ['sass']
    },
    {
       name: "Git/GitHub",
@@ -40,6 +45,7 @@ const skills = [
       fontAwesomeIcon: "fa-brands fa-github",
       className: "github",
       knowledgePercentage: 50,
+      tags: ['git']
    },
 ];
 

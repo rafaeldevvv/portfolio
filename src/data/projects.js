@@ -10,7 +10,9 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      technologiesUsed: ["html", 'css', 'javascript']
+      completionDate: "2023-02-12",
+      technologiesUsed: ["html", 'css', 'javascript'],
+      tags: ['responsive', 'javascript', 'css', 'html', "spa", "static web app"]
    },
    {
       name: "Password Generator",
@@ -23,7 +25,9 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      technologiesUsed: ["html", 'css', 'javascript']
+      completionDate: "2023-01-23",
+      technologiesUsed: ["html", 'css', 'javascript'],
+      tags: ["javascript", 'interactive', "css", "html", "responsive", "static web app", "spa"]
    },
    {
       name: "Matrix Rain Code",
@@ -36,7 +40,9 @@ export default [
       },
       fun: true,
       difficulty: "normal",
-      technologiesUsed: ["html", 'css', 'javascript']
+      completionDate: "2023-05-20",
+      technologiesUsed: ["html", 'css', 'javascript'],
+      tags: ['javascript', "spa", "static web app", "html", 'css']
    },
    {
       name: "Single price grid component",
@@ -49,13 +55,15 @@ export default [
          alt: "A webpage with a light blue background in the middle of which there's a component divided into three sections - a wide one above and two smaller ones below"
       },
       fun: false,
-      difficulty: "easy",
-      technologiesUsed: ['html', 'css', 'grid layout']
+      difficulty: "easy", 
+      completionDate: "2023-02-23",
+      technologiesUsed: ['html', 'css', 'grid layout'],
+      tags: ['html', 'css', 'grid layout', 'responsive', 'accessibility', 'spa', "static web app"]
    },
    {
       name: "Four card feature section",
-      repository: "https://rafaeldevvv.github.io/Four-Card-Feature/",
-      liveSite: "https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca",
+      repository: "https://github.com/rafaeldevvv/Four-Card-Feature",
+      liveSite: "https://rafaeldevvv.github.io/Four-Card-Feature/",
       challenge: "https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK",
       description: "A simple landing page displaying four cards into three columns.",
       image: {
@@ -63,8 +71,10 @@ export default [
          alt: "A webpage containing four card features displayed in three columns - one card on the left, two in the center above and below, and one on the right"
       },
       fun: false,
-      difficulty: "easy",
-      technologiesUsed: ['html', 'css', 'grid layout']
+      difficulty: "easy", 
+      completionDate: "2023-02-23",
+      technologiesUsed: ['html', 'css', 'grid layout'],
+      tags: ['html', 'css', 'grid layout', "responsive", "accessibility", "spa", 'static web app', 'landing page']
    },
    {
       name: "Huddle landing page",
@@ -78,7 +88,9 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      technologiesUsed: ['html', 'css', 'flexbox', 'sass/scss']
+      completionDate: "2023-02-24",
+      technologiesUsed: ['html', 'css', 'flexbox', 'sass/scss'],
+      tags: ['html', 'css', 'flexbox', 'sass/scss', 'responsive', "landing page", 'spa', 'static web app', 'accessibility']
    },
    {
       name: "Base Apparel coming soon page",
@@ -92,7 +104,9 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'javascript', 'grid layout', 'flexbox', 'sass/scss']
+      completionDate: "2023-02-25",
+      technologiesUsed: ["html", "css", 'javascript', 'grid layout', 'flexbox', 'sass/scss'],
+      tags: ["html", "css", 'javascript', 'grid layout', 'flexbox', 'sass/scss', 'responsive', "landing page", 'spa', 'static web app', 'accessibility']
    },
    {
       name: "Intro component with sign-up form",
@@ -106,7 +120,9 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'javascript', 'flexbox', 'sass/scss']
+      completionDate: "2023-02-26",
+      technologiesUsed: ["html", "css", 'javascript', 'flexbox', 'sass/scss'],
+      tags: ["html", "css", 'javascript', 'flexbox', 'sass/scss', 'responsive', 'spa']
    },
    {
       name: "Pricing component with toggle",
@@ -120,7 +136,9 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'flexbox', 'sass/scss']
+      completionDate: "2023-03-01",
+      technologiesUsed: ["html", "css", 'flexbox', 'sass/scss'],
+      tags: ["html", "css", 'flexbox', 'sass/scss', 'responsive', 'spa', 'accessibility']
    },
    {
       name: "Insure landing page",
@@ -134,7 +152,9 @@ export default [
       },
       fun: false,
       difficulty: "normal",
-      technologiesUsed: ["html", "css", 'sass/scss', 'flexbox']
+      completionDate: "2023-03-04",
+      technologiesUsed: ["html", "css", 'sass/scss', 'flexbox'],
+      tags: ['landing page', "html", "css", 'sass/scss', 'flexbox', 'spa', 'static web app', 'responsive', 'cross-browser']
    },
    {
       name: "Fylo dark theme landing page",
@@ -148,7 +168,9 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'sass/scss', 'grid layout', 'flexbox']
+      completionDate: "2023-03-07",
+      technologiesUsed: ["html", "css", 'sass/scss', 'grid layout', 'flexbox'],
+      tags: ['responsive', "html", "css", 'sass/scss', 'grid layout', 'flexbox', 'spa', 'static web app', 'landing page', 'accessibility', 'cross-browser']
    },
    {
       name: "URL shortening API landing page",
@@ -162,7 +184,9 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox']
+      completionDate: "2023-03-14",
+      technologiesUsed: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox'],
+      tags: ['responsive', 'api', 'landing page', "html", "css", 'javascript', 'react', 'sass/scss', 'flexbox', 'spa', 'accessibility', 'performance']
    },
    {
       name: "Manage landing page",
@@ -176,7 +200,9 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout']
+      completionDate: "2023-03-25",
+      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout'],
+      tags: ['landing page', 'responsive', "html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout', 'spa', 'static web app', 'accessibility']
    },
    {
       name: "Bookmark landing page",
@@ -190,7 +216,9 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox']
+      completionDate: "2023-04-15",
+      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox'],
+      tags: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'responsive', 'landing page','accessibility', 'spa', 'cross-browser']
    },
    {
       name: "Job listings with filtering",
@@ -204,7 +232,9 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      technologiesUsed: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox']
+      completionDate: "2023-04-06",
+      technologiesUsed: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox'],
+      tags: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox', 'responsive', 'spa', 'interactive', 'performance', 'accessibility']
    },
    {
       name: "Rock, Paper, Scissors game",
@@ -218,7 +248,9 @@ export default [
       },
       fun: true,
       difficulty: "normal",
-      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout']
+      completionDate: "2023-04-18",
+      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout'],
+      tags: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout', 'responsive', 'spa', 'game', 'performance', 'cross-browser', 'interactive']
    },
    {
       name: "REST Countries API with color theme switcher",
@@ -233,7 +265,9 @@ export default [
       },
       fun: true,
       difficulty: "hard",
-      technologiesUsed: ['html', 'css', 'javascript', 'react', 'react router', 'sass/scss', 'webpack', 'restful api', 'jsx', 'font awesome icons', 'flexbox', 'grid layout']
+      completionDate: "2023-05-20",
+      technologiesUsed: ['html', 'css', 'javascript', 'react', 'react router', 'sass/scss', 'webpack', 'restful api', 'jsx', 'font awesome icons', 'flexbox', 'grid layout'],
+      tags: ['html', 'css', 'javascript', 'react', 'react router', 'sass/scss', 'webpack', 'restful api', 'jsx', 'font awesome icons', 'flexbox', 'grid layout', "api", 'restful api', 'responsive', 'interactive', 'accessibility', 'performance', 'spa', 'cross-browser', 'git']
    },
    {
       name: "Tic Tac Toe",
@@ -247,7 +281,9 @@ export default [
       },
       fun: true,
       difficult: "normal",
-      technologiesUsed: ['html', 'css', 'javascript', 'react', 'jsx', 'sass/scss', 'flexbox', 'webpack', 'grid layout', 'photoshop']
+      completionDate: "2023-06-11",
+      technologiesUsed: ['html', 'css', 'javascript', 'react', 'jsx', 'sass/scss', 'flexbox', 'webpack', 'grid layout', 'photoshop'],
+      tags: ['html', 'css', 'javascript', 'react', 'jsx', 'sass/scss', 'flexbox', 'webpack', 'grid layout', 'photoshop', 'game', 'responsive', 'spa', 'interactive', 'cross-browser', 'performance', 'git']
    },
    {
       name: "Snake Game",
@@ -260,6 +296,8 @@ export default [
       },
       fun: true,
       difficulty: "hard",
-      technologiesUsed: ['html', 'css', 'javascript', 'canvas']
+      completionDate: "2023-07-16",
+      technologiesUsed: ['html', 'css', 'javascript', 'canvas'],
+      tags: ['html', 'css', 'javascript', 'canvas', 'game', 'responsive', 'interactive', 'spa', 'cross-browser', 'performance', 'git']
    },
 ];
