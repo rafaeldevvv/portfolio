@@ -10,7 +10,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ["html", 'css', 'javascript']
+      technologiesUsed: ["html", 'css', 'javascript']
    },
    {
       name: "Password Generator",
@@ -23,7 +23,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ["html", 'css', 'javascript']
+      technologiesUsed: ["html", 'css', 'javascript']
    },
    {
       name: "Matrix Rain Code",
@@ -36,7 +36,7 @@ export default [
       },
       fun: true,
       difficulty: "normal",
-      builtWith: ["html", 'css', 'javascript']
+      technologiesUsed: ["html", 'css', 'javascript']
    },
    {
       name: "Single price grid component",
@@ -50,7 +50,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ['html', 'css', 'grid layout']
+      technologiesUsed: ['html', 'css', 'grid layout']
    },
    {
       name: "Four card feature section",
@@ -64,7 +64,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ['html', 'css', 'grid layout']
+      technologiesUsed: ['html', 'css', 'grid layout']
    },
    {
       name: "Huddle landing page",
@@ -78,7 +78,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ['html', 'css', 'flexbox', 'sass/scss']
+      technologiesUsed: ['html', 'css', 'flexbox', 'sass/scss']
    },
    {
       name: "Base Apparel coming soon page",
@@ -92,7 +92,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ["html", "css", 'javascript', 'grid layout', 'flexbox', 'sass/scss']
+      technologiesUsed: ["html", "css", 'javascript', 'grid layout', 'flexbox', 'sass/scss']
    },
    {
       name: "Intro component with sign-up form",
@@ -106,7 +106,7 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      builtWith: ["html", "css", 'javascript', 'flexbox', 'sass/scss']
+      technologiesUsed: ["html", "css", 'javascript', 'flexbox', 'sass/scss']
    },
    {
       name: "Pricing component with toggle",
@@ -120,7 +120,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ["html", "css", 'flexbox', 'sass/scss']
+      technologiesUsed: ["html", "css", 'flexbox', 'sass/scss']
    },
    {
       name: "Insure landing page",
@@ -134,7 +134,7 @@ export default [
       },
       fun: false,
       difficulty: "normal",
-      builtWith: ["html", "css", 'sass/scss', 'flexbox']
+      technologiesUsed: ["html", "css", 'sass/scss', 'flexbox']
    },
    {
       name: "Fylo dark theme landing page",
@@ -148,7 +148,7 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      builtWith: ["html", "css", 'sass/scss', 'grid layout', 'flexbox']
+      technologiesUsed: ["html", "css", 'sass/scss', 'grid layout', 'flexbox']
    },
    {
       name: "URL shortening API landing page",
@@ -162,7 +162,7 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      builtWith: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox']
+      technologiesUsed: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox']
    },
    {
       name: "Manage landing page",
@@ -176,7 +176,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout']
+      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout']
    },
    {
       name: "Bookmark landing page",
@@ -190,7 +190,7 @@ export default [
       },
       fun: true,
       difficulty: "easy",
-      builtWith: ["html", "css", 'javascript', 'sass/scss', 'flexbox']
+      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox']
    },
    {
       name: "Job listings with filtering",
@@ -204,7 +204,7 @@ export default [
       },
       fun: false,
       difficulty: "easy",
-      builtWith: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox']
+      technologiesUsed: ["html", "css", 'javascript', 'react', 'sass/scss', 'flexbox']
    },
    {
       name: "Rock, Paper, Scissors game",
@@ -218,7 +218,7 @@ export default [
       },
       fun: true,
       difficulty: "normal",
-      builtWith: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout']
+      technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'grid layout']
    },
    {
       name: "REST Countries API with color theme switcher",
@@ -233,7 +233,7 @@ export default [
       },
       fun: true,
       difficulty: "hard",
-      builtWith: ['html', 'css', 'javascript', 'react', 'react router', 'sass/scss', 'webpack', 'restful api', 'jsx', 'font awesome icons', 'flexbox', 'grid layout']
+      technologiesUsed: ['html', 'css', 'javascript', 'react', 'react router', 'sass/scss', 'webpack', 'restful api', 'jsx', 'font awesome icons', 'flexbox', 'grid layout']
    },
    {
       name: "Tic Tac Toe",
@@ -247,7 +247,7 @@ export default [
       },
       fun: true,
       difficult: "normal",
-      builtWith: ['html', 'css', 'javascript', 'react', 'jsx', 'sass/scss', 'flexbox', 'webpack', 'grid layout', 'photoshop']
+      technologiesUsed: ['html', 'css', 'javascript', 'react', 'jsx', 'sass/scss', 'flexbox', 'webpack', 'grid layout', 'photoshop']
    },
    {
       name: "Snake Game",
@@ -260,6 +260,6 @@ export default [
       },
       fun: true,
       difficulty: "hard",
-      builtWith: ['html', 'css', 'javascript', 'canvas']
+      technologiesUsed: ['html', 'css', 'javascript', 'canvas']
    },
 ];
