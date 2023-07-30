@@ -463,7 +463,7 @@ section#projects {
   height: calc(100% - 3px);
 
   .project-image {
-    transition-property: transform filter;
+    transition-property: transform, filter;
     transition-duration: .2s;
   }
 

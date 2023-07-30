@@ -403,7 +403,7 @@ section#projects .show-button-container button {
   height: calc(100% - 3px);
 }
 .project .project-image {
-  transition-property: transform filter;
+  transition-property: transform, filter;
   transition-duration: 0.2s;
 }
 .project .project-name {
