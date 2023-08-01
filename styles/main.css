@@ -33,15 +33,16 @@ h3 {
 
 p {
   color: hsl(0, 0%, 24%);
+  line-height: 1.4;
 }
 
 /* UTILITIES */
 .btn {
   cursor: pointer;
-  padding: 1rem 1.5rem 1.1rem;
+  padding: 1rem 1.5rem;
   text-decoration: none;
-  border-radius: 0.4rem;
   display: inline-block;
+  text-transform: uppercase;
   transition-property: color, background-color;
   transition-duration: 0.2s;
 }
@@ -49,12 +50,6 @@ p {
 .primary-btn {
   background-color: black;
   color: white;
-  box-shadow: 2px 2px 6px black;
-}
-
-.primary-btn:hover,
-.primary-btn:active {
-  background: #111;
 }
 
 .sr-only {
@@ -236,7 +231,7 @@ section h2::before, section h2::after {
   display: inline-block;
   border-top: 4px dashed #999;
 }
-section p {
+section h2 + p {
   font-size: 1.3rem;
   text-align: center;
 }
@@ -508,5 +503,44 @@ footer .copyright-notice {
   }
   #contact-list .contact-item {
     justify-content: start;
+  }
+}
+/* ################ Services ################ */
+section#services h2 {
+  margin-bottom: 3rem;
+}
+
+ul#service-list {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 3rem;
+}
+
+.service {
+  max-width: 350px;
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.service .service-name {
+  font-size: 1.5rem;
+  text-align: left;
+}
+.service .service-description {
+  font-size: 1rem;
+}
+.service .btn {
+  display: block;
+  align-self: start;
+  text-decoration: underline;
+  align-self: start;
+}
+
+@media (min-width: 768px) {
+  ul#service-list {
+    grid-template-columns: 1fr 1fr;
   }
 }/*# sourceMappingURL=main.css.map */

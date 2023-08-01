@@ -36,15 +36,17 @@ h3 {
 
 p {
   color: hsl(0, 0%, 24%);
+  line-height: 1.4;
 }
 
 /* UTILITIES */
 .btn {
   cursor: pointer;
-  padding: 1rem 1.5rem 1.1rem;
+  padding: 1rem 1.5rem;
   text-decoration: none;
-  border-radius: 0.4rem;
   display: inline-block;
+  text-transform: uppercase;
+
   transition: {
     property: color, background-color;
     duration: 0.2s;
@@ -54,11 +56,6 @@ p {
 .primary-btn {
   background-color: black;
   color: white;
-  box-shadow: 2px 2px 6px black;
-}
-.primary-btn:hover,
-.primary-btn:active {
-  background: #111;
 }
 
 .sr-only {
@@ -115,7 +112,6 @@ p {
     background-color: black;
   }
 }
-
 
 /* MAIN ELEMENTS */
 .container {
@@ -253,12 +249,13 @@ section {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     align-items: center;
-    gap: .7rem;
-    margin-bottom: .5rem;
+    gap: 0.7rem;
+    margin-bottom: 0.5rem;
 
     font-size: 2rem;
 
-    &::before, &::after {
+    &::before,
+    &::after {
       content: "";
       background-color: #ccc;
       display: inline-block;
@@ -266,7 +263,7 @@ section {
     }
   }
 
-  p {
+  h2 + p {
     font-size: 1.3rem;
     text-align: center;
   }
@@ -423,8 +420,9 @@ section#projects {
     align-items: center;
     gap: 1rem;
 
-    &::before, &::after {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       display: block;
       width: 100%;
       background-color: #999;
@@ -432,7 +430,7 @@ section#projects {
     }
 
     button {
-      padding: .5rem 2rem;
+      padding: 0.5rem 2rem;
       border: 1px solid black;
       border-radius: 2rem;
       font-size: 2rem;
@@ -452,19 +450,19 @@ section#projects {
 .project {
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   max-width: 430px;
   margin-inline: auto;
 
-  // this is because there was some 
+  // this is because there was some
   // ugly white line at the bottom of the project below
-  // the project's image that was making the 
+  // the project's image that was making the
   // hovering kind of weird
   height: calc(100% - 3px);
 
   .project-image {
     transition-property: transform, filter;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
   }
 
   .project-name {
@@ -473,7 +471,7 @@ section#projects {
     z-index: 1;
     transform: translateX(-50%);
     width: 100%;
-    
+
     font-size: 1.1rem;
     text-align: center;
     padding-inline: 1.2rem;
@@ -498,7 +496,7 @@ section#projects {
 
 .project.hover {
   .project-image {
-    filter: brightness(.4);
+    filter: brightness(0.4);
     transform: scale(1.3);
   }
 
@@ -527,20 +525,19 @@ footer {
   color: #999;
   padding-block: 5rem;
 
-  
   .socials {
     margin-top: 3rem;
     padding-inline: 20%;
-  
+
     display: flex;
     justify-content: space-between;
-  
+
     .social-link {
       display: block;
       color: #999;
       font-size: 1.7rem;
       transition-property: color, transform;
-      transition-duration: .3s;
+      transition-duration: 0.3s;
       transition-timing-function: ease-out;
     }
     .social-link:hover {
@@ -558,14 +555,14 @@ footer {
 
 #contact-list {
   li + li {
-    margin-top: .6rem;
+    margin-top: 0.6rem;
   }
 
   .contact-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .3rem;
+    gap: 0.3rem;
   }
 }
 
@@ -596,5 +593,51 @@ footer {
     .contact-item {
       justify-content: start;
     }
+  }
+}
+
+/* ################ Services ################ */
+section#services {
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+ul#service-list {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: 3rem;
+}
+
+.service {
+  max-width: 350px;
+  height: 100%;
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .service-name {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .service-description {
+    font-size: 1rem;
+  }
+
+  .btn {
+    display: block;
+    align-self: start;
+    text-decoration: underline;
+    align-self: start;
+  }
+}
+
+@media (min-width: 768px) {
+  ul#service-list {
+    grid-template-columns: 1fr 1fr;
   }
 }
