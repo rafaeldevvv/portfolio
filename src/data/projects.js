@@ -40,7 +40,7 @@ export default [
       },
       fun: true,
       difficulty: "normal",
-      completionDate: "2023-05-20",
+      completionDate: "2023-03-20",
       technologiesUsed: ["html", 'css', 'javascript'],
       tags: ['javascript', "spa", "static web app", "html", 'css']
    },

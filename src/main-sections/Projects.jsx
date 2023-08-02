@@ -5,6 +5,16 @@ import { useAuthor } from "../AuthorContext.js";
 export default function ProjectsSection() {
   const { projects } = useAuthor();
 
+  const projectsOrderedByDate = projects
+    .slice()
+    .sort(
+      (a, b) =>
+        -(
+          new Date(a.completionDate).getTime() -
+          new Date(b.completionDate).getTime()
+        )
+    );
+
   return (
     <section id="projects">
       <h2 id="projects-heading" className="fragment-father">
@@ -12,7 +22,7 @@ export default function ProjectsSection() {
         <span className="fragment" id="projects-fragment" />
       </h2>
       <p>View my work</p>
-      <ProjectList projects={projects} />
+      <ProjectList projects={projectsOrderedByDate} />
     </section>
   );
 }
@@ -79,13 +89,9 @@ export function ProjectList({ projects }) {
 
       const lastProjectImage = lastProject.querySelector(".project-image");
 
-      if (lastProjectImage.complete) {
-        lastProject.scrollIntoView(scrollOptions);
-      } else {
-        lastProjectImage.onload = function () {
-          lastProject.scrollIntoView(scrollOptions);
-        };
-      }
+      lastProjectImage.onload = function () {
+      lastProject.scrollIntoView(scrollOptions);
+      };
     } else {
       setNumberOfProjectsShown(4);
       const map = getMap();
@@ -104,39 +110,36 @@ export function ProjectList({ projects }) {
   return (
     <div>
       <ul id="projects-list">
-        {projects
-          .slice()
-          .reverse() // this is because the greater the index the more recent the project is
-          .map((p, i) => {
-            if (i < numberOfProjectsShown) {
-              return (
-                <li
-                  key={p.name}
-                  onPointerEnter={() => {
-                    if (matchMedia("(pointer:fine)").matches)
-                      setHoveredProjectName(p.name);
-                  }}
-                  onPointerLeave={() => {
-                    if (matchMedia("(pointer:fine)").matches)
-                      setHoveredProjectName(null);
-                  }}
-                  ref={(node) => {
-                    const map = getMap();
-                    if (node) {
-                      map.set(p.name, node);
-                    } else {
-                      map.delete(p.name);
-                    }
-                  }}
-                >
-                  <Project
-                    project={p}
-                    isHovered={p.name === hoveredProjectName}
-                  />
-                </li>
-              );
-            }
-          })}
+        {projects.map((p, i) => {
+          if (i < numberOfProjectsShown) {
+            return (
+              <li
+                key={p.name}
+                onPointerEnter={() => {
+                  if (matchMedia("(pointer:fine)").matches)
+                    setHoveredProjectName(p.name);
+                }}
+                onPointerLeave={() => {
+                  if (matchMedia("(pointer:fine)").matches)
+                    setHoveredProjectName(null);
+                }}
+                ref={(node) => {
+                  const map = getMap();
+                  if (node) {
+                    map.set(p.name, node);
+                  } else {
+                    map.delete(p.name);
+                  }
+                }}
+              >
+                <Project
+                  project={p}
+                  isHovered={p.name === hoveredProjectName}
+                />
+              </li>
+            );
+          }
+        })}
       </ul>
       <div className="show-button-container">
         <button
