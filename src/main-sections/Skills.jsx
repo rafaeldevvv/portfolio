@@ -29,7 +29,7 @@ function Skill({ skill }) {
 
   return (
     <button
-      className={`skill-button ${skill.className}`}
+      className={`skill-button ${skill.className}-background`}
       type="button"
       aria-label={message}
       title={message}

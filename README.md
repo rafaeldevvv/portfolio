@@ -6,11 +6,12 @@
    - [Links](#links)
 - [Process](#process)
    - [Built with](#built-with)
-   - [Challenging Problems](#challenging-problems)
+   - [Learning](#learning)
 
 ## Overview
 ### Screenshots
 ### Links
+- [Live Site](https://rafaeldevvv.github.io/portfolio)
 
 ## Process
 ### Built with
@@ -20,8 +21,15 @@
 - SASS/SCSS
 - JavaScript
 - React.js
+- Git/GitHub
 
-### Challenging problems
+### Learning
+Parent select
+```scss
+&::before {
+
+}
+```
 
 ### Useful Resources
 - [How I made my portfolio](https://tekolio.com/how-i-made-my-portfolio-in-react/#:~:text=Making%20a%20portfolio%20in%20HTML,we%20have%20as%20React%20developers.)

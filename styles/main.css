@@ -3,6 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
   --heading-height: 80px;
+  --html-color: hsl(13, 78%, 52%);
+  --css-color: hsl(222, 88%, 55%);
+  --javascript-color: hsl(46, 86%, 54%);
+  --sass-color: hsl(330, 51%, 60%);
+  --react-color: hsl(189, 100%, 50%);
 }
 
 /* 
@@ -59,7 +64,8 @@ p {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
@@ -73,22 +79,6 @@ p {
   top: calc(0px - var(--heading-height, 80px));
 }
 
-.dashed-border-animation {
-  background-image: linear-gradient(to right, black 50%, transparent 50%), linear-gradient(to right, black 50%, transparent 50%), linear-gradient(to bottom, rgb(162, 162, 162) 50%, transparent 50%), linear-gradient(to bottom, black 50%, transparent 50%);
-  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
-  background-position: left top, right bottom, left bottom, top right;
-  background-size: 10px 5px, 10px 5px, 5px 10px, 5px 10px;
-  animation: dash-border 1s linear 0s infinite;
-}
-
-@keyframes dash-border {
-  from {
-    background-position: left top, right bottom, left bottom, top right;
-  }
-  to {
-    background-position: left 20px top, right 20px bottom, left bottom 20px, top 20px right;
-  }
-}
 .decorated-heading {
   position: relative;
   padding-left: 15px;
@@ -100,6 +90,30 @@ p {
   width: 7px;
   inset: 0 auto 0 0;
   background-color: black;
+}
+
+.html-background {
+  background-color: var(--html-color);
+}
+
+.css-background {
+  background-color: var(--css-color);
+}
+
+.javascript-background {
+  background-color: var(--javascript-color);
+}
+
+.react-background {
+  background-color: var(--react-color);
+}
+
+.sass-background {
+  background-color: var(--sass-color);
+}
+
+.github-background {
+  background-color: var(--github-color, hsl(0, 50%, 95%));
 }
 
 /* MAIN ELEMENTS */
@@ -192,7 +206,7 @@ p {
   width: 100%;
 }
 
-@media (min-width: 580px) {
+@media (min-width: 620px) {
   #main-nav {
     position: static;
     background: none;
@@ -245,6 +259,7 @@ section + section {
   display: flex;
   flex-direction: column-reverse;
   gap: 2rem;
+  margin-bottom: 5rem;
 }
 #main-article-header h1 {
   font-size: 2rem;
@@ -308,11 +323,10 @@ section + section {
   width: 100%;
   aspect-ratio: 1;
   margin-inline: auto;
-  border-radius: 20%;
-  box-shadow: 0 10px black;
-  transition-property: inset, box-shadow;
-  transition-duration: 40ms;
-  will-change: inset, box-shadow;
+  box-shadow: 10px 10px black;
+  transition-property: inset, box-shadow, transform;
+  transition-duration: 0.5s;
+  transform: skewX(-6deg);
 }
 #skills-list .skill-button .icon {
   font-size: 440%;
@@ -321,27 +335,13 @@ section + section {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#skills-list .skill-button.html {
-  background-color: hsl(13, 78%, 52%);
-}
-#skills-list .skill-button.css {
-  background-color: hsl(222, 88%, 55%);
-}
-#skills-list .skill-button.javascript {
-  background-color: hsl(46, 86%, 54%);
-}
-#skills-list .skill-button.react {
-  background-color: hsl(189, 100%, 50%);
-}
-#skills-list .skill-button.sass {
-  background-color: hsl(330, 51%, 60%);
-}
-#skills-list .skill-button.github {
-  background-color: hsl(0, 50%, 95%);
+#skills-list .skill-button:hover {
+  bottom: 40px;
+  box-shadow: 10px 40px 0px black;
 }
 #skills-list .skill-button:active {
   bottom: 0px;
-  box-shadow: 0 0px black, 0 5px black inset;
+  box-shadow: 0 0px black;
 }
 
 @media (min-width: 480px) {
@@ -441,6 +441,45 @@ section#projects .show-button-container button {
     --column-repeat: 2;
   }
 }
+/* ################ Services ################ */
+section#services h2 {
+  margin-bottom: 3rem;
+}
+
+ul#service-list {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 3rem;
+}
+
+.service {
+  max-width: 350px;
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.service .service-name {
+  font-size: 1.6rem;
+  text-align: left;
+}
+.service .service-description {
+  font-size: 1.1rem;
+}
+.service .btn {
+  display: block;
+  align-self: start;
+  text-decoration: underline;
+  align-self: start;
+}
+
+@media (min-width: 768px) {
+  ul#service-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 /* ################ Footer ################ */
 footer {
   background-color: black;
@@ -503,44 +542,5 @@ footer .copyright-notice {
   }
   #contact-list .contact-item {
     justify-content: start;
-  }
-}
-/* ################ Services ################ */
-section#services h2 {
-  margin-bottom: 3rem;
-}
-
-ul#service-list {
-  display: grid;
-  grid-auto-rows: min-content;
-  row-gap: 3rem;
-}
-
-.service {
-  max-width: 350px;
-  height: 100%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.service .service-name {
-  font-size: 1.5rem;
-  text-align: left;
-}
-.service .service-description {
-  font-size: 1rem;
-}
-.service .btn {
-  display: block;
-  align-self: start;
-  text-decoration: underline;
-  align-self: start;
-}
-
-@media (min-width: 768px) {
-  ul#service-list {
-    grid-template-columns: 1fr 1fr;
   }
 }/*# sourceMappingURL=main.css.map */
