@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "./sections/Header.jsx";
-import Main from "./sections/Main.jsx";
-import Footer from "./sections/Footer.jsx";
+import Header from "./structural-components/Header.jsx";
+import Main from "./structural-components/Main.jsx";
+import Footer from "./structural-components/Footer.jsx";
 import { AuthorContext } from "./AuthorContext.js";
 
 export default function App({ author }) {

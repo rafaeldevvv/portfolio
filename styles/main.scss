@@ -2,7 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
 :root {
+  font: {
+    size: 18px;
+    family: "Inconsolata", Courier, monospace;
+    weight: 700;
+  }
+
   --heading-height: 80px;
+  --global-padding: min(3rem, 6vw);
+
   --html-color: hsl(13, 78%, 52%);
   --css-color: hsl(222, 88%, 55%);
   --javascript-color: hsl(46, 86%, 54%);
@@ -21,14 +29,6 @@ Extra large screens, TV – 1201px, and more.
 html,
 body {
   min-height: 100vh;
-}
-
-body {
-  font: {
-    size: 18px;
-    family: "Inconsolata", Courier, monospace;
-    weight: 700;
-  }
 }
 
 h1,
@@ -99,19 +99,19 @@ p {
 }
 
 .html-background {
-  background-color: var(--html-color);
+  background-color: var(--html-color, red);
 }
 .css-background {
-  background-color: var(--css-color);
+  background-color: var(--css-color, blue);
 }
 .javascript-background {
-  background-color: var(--javascript-color);
+  background-color: var(--javascript-color, yellow);
 }
 .react-background {
-  background-color: var(--react-color);
+  background-color: var(--react-color, aqua);
 }
 .sass-background {
-  background-color: var(--sass-color);
+  background-color: var(--sass-color, pink);
 }
 .github-background {
   background-color: var(--github-color, hsl(0, 50%, 95%));
@@ -119,13 +119,17 @@ p {
 
 /* MAIN ELEMENTS */
 .container {
-  padding-inline: min(3rem, 6vw);
+  padding-inline: var(--global-padding, 3rem);
   max-width: 1000px;
   margin-inline: auto;
 }
 
-/* ############ header ############ */
-#main-header {
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+header */
+#global-header {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 999;
@@ -139,17 +143,112 @@ p {
     align-items: center;
   }
 
-  .logo {
-    font: {
-      weight: bold;
-      size: 26px;
-      family: "Space Mono", monospace;
+  .profile-picture-container {
+    position: relative;
+  }
+  .fake-profile-picture {
+    width: 50px;
+    background-color: white;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+}
+
+#author-modal {
+  --background: #fff;
+
+  position: absolute;
+  background-color: var(--background, #fff);
+  border-radius: 0.7rem;
+  border: 1px solid #999;
+  padding: 1rem;
+  width: 400px;
+  max-width: calc(100vw - var(--global-padding, 3rem) * 2);
+  top: calc(100% + 20px);
+  font-size: 1rem;
+
+  /*
+    The before pseudo-element is
+    the arrow at the top left corner
+  */
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    aspect-ratio: 1;
+    position: absolute;
+    bottom: 100%;
+    /* 25px because the profile picture is 50px wide */
+    left: 25px;
+
+    transform: translateY(50%) translateX(-50%) rotate(45deg);
+
+    background-color: var(--background, #fff);
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: black;
+  }
+  p:not(.languages-container p) {
+    line-height: .9;
+  
+    margin-bottom: .5rem;
+  }
+
+  hr {
+    margin-block: .7rem;
+  }
+
+  :has(.icon) {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    
+    .icon {
+      justify-self: center;
     }
-    text: {
-      transform: lowercase;
+  }
+
+  .status-hint {
+    display: inline-block;
+    border-radius: 50%;
+    width: 13px;
+    aspect-ratio: 1;
+    margin-inline: auto;
+
+    &.available {
+      background-color: lime;
     }
-    letter-spacing: 3px;
-    color: white;
+    &.working {
+      background-color: yellow;
+    }
+    &.unavailable {
+      background-color: red;
+    }
+  }
+
+  .languages-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .author-languages {
+    display: flex;
+    flex-wrap: wrap;
+
+    .language {
+      background-color: #ddd;
+
+      padding: .2rem .3rem;
+      margin-inline: .2rem;
+    }
   }
 }
 
@@ -166,7 +265,11 @@ p {
   }
 }
 
-/* ############ nav ############ */
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+nav */
 #main-nav {
   position: fixed;
   inset: 0 0 0 100vw;
@@ -177,7 +280,7 @@ p {
   z-index: 99;
 }
 
-#main-header.show-nav {
+#global-header.show-nav {
   #main-nav {
     left: 35vw;
   }
@@ -277,7 +380,11 @@ section + section {
   margin-top: 10rem;
 }
 
-/* ################ intro ################ */
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+intro */
 #main-article-header {
   display: flex;
   flex-direction: column-reverse;
@@ -340,7 +447,11 @@ section + section {
   }
 }
 
-/* ################ Skills ################ */
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+Skills */
 #skills-list {
   margin-top: 5rem;
   --column-repeat: 2;
@@ -361,7 +472,7 @@ section + section {
     box-shadow: 10px 10px black;
 
     transition-property: inset, box-shadow, transform;
-    transition-duration: .5s;
+    transition-duration: 0.5s;
 
     transform: skewX(-6deg);
 
@@ -401,7 +512,11 @@ section + section {
   }
 }
 
-/* ################ Projects ################ */
+/*
+################################################################################################################
+################################################################################################################
+################################################################################################################
+ Projects */
 section#projects {
   .show-button-container {
     margin-top: 2rem;
@@ -509,7 +624,11 @@ section#projects {
   }
 }
 
-/* ################ Services ################ */
+/*
+################################################################################################################
+################################################################################################################
+################################################################################################################
+Services */
 section#services {
   h2 {
     margin-bottom: 3rem;
@@ -533,12 +652,12 @@ ul#service-list {
   gap: 1rem;
 
   .service-name {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: left;
   }
 
   .service-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .btn {
@@ -555,8 +674,11 @@ ul#service-list {
   }
 }
 
-
-/* ################ Footer ################ */
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+Footer */
 footer {
   background-color: black;
   color: #999;
