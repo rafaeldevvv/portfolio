@@ -146,11 +146,17 @@ header */
   .profile-picture-container {
     position: relative;
   }
-  .fake-profile-picture {
+  .profile-picture {
     width: 50px;
-    background-color: white;
     aspect-ratio: 1;
     border-radius: 50%;
+
+    &.fake {
+      background-color: white;
+    }
+    &.hovered {
+      outline: 7px solid hsla(0, 0%, 100%, 0.3);
+    }
   }
 }
 
@@ -196,20 +202,20 @@ header */
     color: black;
   }
   p:not(.languages-container p) {
-    line-height: .9;
-  
-    margin-bottom: .5rem;
+    line-height: 0.9;
+
+    margin-bottom: 0.5rem;
   }
 
   hr {
-    margin-block: .7rem;
+    margin-block: 0.7rem;
   }
 
   :has(.icon) {
     display: grid;
     grid-template-columns: 30px 1fr;
     align-items: center;
-    
+
     .icon {
       justify-self: center;
     }
@@ -246,8 +252,8 @@ header */
     .language {
       background-color: #ddd;
 
-      padding: .2rem .3rem;
-      margin-inline: .2rem;
+      padding: 0.2rem 0.3rem;
+      margin-inline: 0.2rem;
     }
   }
 }

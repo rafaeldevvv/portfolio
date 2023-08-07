@@ -142,11 +142,16 @@ header */
 #global-header .profile-picture-container {
   position: relative;
 }
-#global-header .fake-profile-picture {
+#global-header .profile-picture {
   width: 50px;
-  background-color: white;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+#global-header .profile-picture.fake {
+  background-color: white;
+}
+#global-header .profile-picture.hovered {
+  outline: 7px solid hsla(0, 0%, 100%, 0.3);
 }
 
 #author-modal {
