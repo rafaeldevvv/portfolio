@@ -18,7 +18,7 @@ const author = {
    learning: "Accessibility",
    job: "Freelance front-end developer",
    languages: ["Portuguese", "English"],
-   introduction: "I'm a front-end developer with a passion",
+   introduction: "Welcome to my web world! I create stunning, high-performance sites. As a freelance front-end developer, I craft engaging experiences that work on any device and accessible pages for everyone to enjoy them. Let's bring your vision to life with creativity and cutting-edge tech!",
    profilePicture: null,
    hero: null,
    email: "rafaelmaiaw@gmail.com",

@@ -19,9 +19,9 @@
 }
 
 /* 
-Mobile devices – 320px — 480px.
-iPads, Tablets – 481px — 768px.
-Small screens, laptops – 769px — 1024px.
+Mobile devices – 320px — 480px(30em).
+iPads, Tablets – 481px — 768px(48em).
+Small screens, laptops – 769px — 1024px(64em).
 Desktops, large screens – 1025px — 1200px.
 Extra large screens, TV – 1201px, and more.
  */
@@ -115,7 +115,7 @@ p {
 /* MAIN ELEMENTS */
 .container {
   padding-inline: var(--global-padding, 3rem);
-  max-width: 1000px;
+  max-width: 1100px;
   margin-inline: auto;
 }
 
@@ -326,7 +326,7 @@ nav */
   }
 }
 
-@media (min-width: 620px) {
+@media (min-width: 39em) {
   #main-nav {
     position: static;
     background: none;
@@ -358,31 +358,33 @@ section {
   margin-block: 2rem;
 
   h2 {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    align-items: center;
-    gap: 0.7rem;
     margin-bottom: 0.5rem;
+    font-size: 1.7rem;
 
-    font-size: 2rem;
-
-    &::before,
-    &::after {
-      content: "";
-      background-color: #ccc;
-      display: inline-block;
-      border-top: 4px dashed #999;
-    }
+    border-left: 6px solid gray;
+    border-bottom: 2px solid gray;
+    padding: 0 0 .5rem 1.3rem;
+    max-width: 300px;
   }
 
   h2 + p {
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 1.1rem;
+    border-left: 4px dotted gray;
+    padding-inline-start: .5rem;
+    max-width: 300px;
   }
 }
 
 section + section {
   margin-top: 10rem;
+}
+
+@media (min-width: 30em) {
+  section {
+    h2 {
+      font-size: 2rem;
+    }
+  }
 }
 
 /* 
@@ -425,21 +427,21 @@ intro */
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   #main-article-header {
     flex-direction: row;
     align-items: center;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
     }
 
     .pseudo-hero {
-      width: 300px;
+      width: 320px;
     }
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   #main-article-header {
     h1 {
       font-size: 2.8rem;
@@ -501,17 +503,17 @@ Skills */
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   #skills-list {
     --column-repeat: 3;
   }
 }
-@media (min-width: 574px) {
+@media (min-width: 36em) {
   #skills-list {
     --column-repeat: 4;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   #skills-list {
     --column-repeat: 5;
   }
@@ -615,7 +617,7 @@ section#projects {
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 30em) {
   .project {
     .project-name {
       font-size: 1.2rem;
@@ -623,7 +625,7 @@ section#projects {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48em) {
   #projects-list {
     --column-repeat: 2;
   }
@@ -673,7 +675,7 @@ ul#service-list {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width:  48em) {
   ul#service-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -694,7 +696,8 @@ footer {
     padding-inline: 20%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1rem;
 
     .social-link {
       display: block;
@@ -730,7 +733,7 @@ footer {
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 33em) {
   footer {
     .contact-and-socials-container {
       display: flex;
