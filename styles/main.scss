@@ -26,11 +26,6 @@ Desktops, large screens – 1025px — 1200px.
 Extra large screens, TV – 1201px, and more.
  */
 
-html,
-body {
-  min-height: 100vh;
-}
-
 h1,
 h2,
 h3 {
@@ -85,7 +80,7 @@ p {
 
 .decorated-heading {
   position: relative;
-  padding-left: 15px;
+  padding-left: 20px;
 
   // parent selector, add info about it in readme.md
   &::before {
@@ -211,7 +206,7 @@ header */
     margin-block: 0.7rem;
   }
 
-  :has(.icon) {
+  .icon-and-text {
     display: grid;
     grid-template-columns: 30px 1fr;
     align-items: center;
@@ -231,7 +226,7 @@ header */
     &.available {
       background-color: lime;
     }
-    &.working {
+    &.busy {
       background-color: yellow;
     }
     &.unavailable {
@@ -348,10 +343,14 @@ nav */
   }
 }
 
-/* Main */
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+Main */
 main {
   margin-top: 80px;
-  padding-block: 6rem;
+  padding-block: 5rem;
 }
 
 /* Sections */
@@ -707,7 +706,7 @@ footer {
     }
     .social-link:hover {
       color: white;
-      transform: scale(1.3);
+      transform: scale(1.2);
     }
   }
 

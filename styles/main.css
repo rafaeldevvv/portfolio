@@ -21,11 +21,6 @@ Small screens, laptops – 769px — 1024px.
 Desktops, large screens – 1025px — 1200px.
 Extra large screens, TV – 1201px, and more.
  */
-html,
-body {
-  min-height: 100vh;
-}
-
 h1,
 h2,
 h3 {
@@ -79,7 +74,7 @@ p {
 
 .decorated-heading {
   position: relative;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 .decorated-heading::before {
   content: "";
@@ -197,12 +192,12 @@ header */
 #author-modal hr {
   margin-block: 0.7rem;
 }
-#author-modal :has(.icon) {
+#author-modal .icon-and-text {
   display: grid;
   grid-template-columns: 30px 1fr;
   align-items: center;
 }
-#author-modal :has(.icon) .icon {
+#author-modal .icon-and-text .icon {
   justify-self: center;
 }
 #author-modal .status-hint {
@@ -215,7 +210,7 @@ header */
 #author-modal .status-hint.available {
   background-color: lime;
 }
-#author-modal .status-hint.working {
+#author-modal .status-hint.busy {
   background-color: yellow;
 }
 #author-modal .status-hint.unavailable {
@@ -315,10 +310,14 @@ nav */
     display: none;
   }
 }
-/* Main */
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+Main */
 main {
   margin-top: 80px;
-  padding-block: 6rem;
+  padding-block: 5rem;
 }
 
 /* Sections */
@@ -616,7 +615,7 @@ footer .socials .social-link {
 }
 footer .socials .social-link:hover {
   color: white;
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 footer .copyright-notice {
   text-align: center;

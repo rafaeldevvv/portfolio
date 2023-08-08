@@ -11,16 +11,14 @@ const author = {
       state: "Espírito Santo",
    },
    status: {
-      /* available, working, unavailable */
+      /* available, busy, unavailable */
       className: "available",
       text: "Available to work",
    },
    learning: "Accessibility",
    job: "Freelance front-end developer",
    languages: ["Portuguese", "English"],
-   introduction: `I am a freelance front-end developer with a highly qualified skill set
-                  specialized in creating responsive and accessible web pages. My
-                  portfolio shows you my skills, projects and how you can reach me!`,
+   introduction: "I'm a front-end developer with a passion",
    profilePicture: null,
    hero: null,
    email: "rafaelmaiaw@gmail.com",
