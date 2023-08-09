@@ -33,7 +33,7 @@ export default function Header() {
               alt={author.profilePicture.alt}
               className={`profile-picture ${
                 isAuthorModalOmitted ? "" : "hovered"
-              }`} 
+              }`}
               {...handlers}
             />
           ) : (
@@ -76,45 +76,47 @@ function MainMenuToggle({ isExpanded, onClick }) {
 }
 
 function Nav({ onClickOnLink }) {
+  const sections = [
+    {
+      name: "Introduction",
+      href: "#intro-fragment",
+      title: "Read a quick introduction about me",
+    },
+    {
+      name: "About",
+      href: "#about-fragment",
+      title: "Know me in more details",
+    },
+    {
+      name: "Projects",
+      href: "#projects-fragment",
+      title: "See all of my projects",
+    },
+    {
+      name: "Services",
+      href: "#services-fragment",
+      title: "See all the services that I can provide you with",
+    },
+    {
+      name: "Contact",
+      href: "#contact-fragment",
+      title: "Contact me",
+    },
+  ];
+
   return (
     <nav id="main-nav" aria-label="Main menu">
       <menu id="main-menu">
-        <li>
-          <a
-            href="#intro-fragment"
-            title="Go to the introduction section"
-            onClick={onClickOnLink}
-          >
-            Introduction
-          </a>
-        </li>
-        <li>
-          <a
-            href="#skills-fragment"
-            title="Go to the skills section"
-            onClick={onClickOnLink}
-          >
-            Skills
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects-fragment"
-            title="Go to the projects section"
-            onClick={onClickOnLink}
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            href="#services-fragment"
-            title="Go to the services section"
-            onClick={onClickOnLink}
-          >
-            Services
-          </a>
-        </li>
+        {sections.map((s) => {
+          const { name, title, href } = s;
+          return (
+            <li key={name}>
+              <a href={href} title={title} onClick={onClickOnLink}>
+                {name}
+              </a>
+            </li>
+          );
+        })}
       </menu>
     </nav>
   );

@@ -1,6 +1,7 @@
 import projects from "./projects.js";
-import skills from "./skills.js";
+import technologies from "./technologies.js";
 import services from "./services.js";
+import skills from "./skills.js";
 
 const author = {
    name: "Rafael Maia",
@@ -30,8 +31,9 @@ const author = {
       twitter: "https://www.twitter.com/rafaeldevvv"
    },
    projects,
-   skills,
-   services
+   technologies,
+   services,
+   skills
 }
 
 export default author;

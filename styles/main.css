@@ -295,7 +295,7 @@ nav */
   width: 100%;
 }
 
-@media (min-width: 39em) {
+@media (min-width: 42em) {
   #main-nav {
     position: static;
     background: none;
