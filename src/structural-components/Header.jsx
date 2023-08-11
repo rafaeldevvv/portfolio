@@ -78,11 +78,6 @@ function MainMenuToggle({ isExpanded, onClick }) {
 function Nav({ onClickOnLink }) {
   const sections = [
     {
-      name: "Introduction",
-      href: "#intro-fragment",
-      title: "Read a quick introduction about me",
-    },
-    {
       name: "About",
       href: "#about-fragment",
       title: "Know me in more details",
@@ -131,12 +126,14 @@ function AuthorModal({ author, isOmitted }) {
       <h2>Author's Info</h2>
       <hr />
       <p className="author-location icon-and-text">
-        <i className="fa-solid fa-location-dot icon"></i>
+        <i className="fa-solid fa-location-dot icon" aria-hidden="true"></i>
+        <span className="sr-only">Location: </span>
         {author.location.country}, {author.location.state}
       </p>
       <hr />
       <p className="author-job icon-and-text">
-        <i className="fa-solid fa-briefcase icon"></i>
+        <i className="fa-solid fa-briefcase icon" aria-hidden="true"></i>
+        <span className="sr-only">Job: </span>
         {author.job}
       </p>
       <p className="author-status icon-and-text">
@@ -144,12 +141,14 @@ function AuthorModal({ author, isOmitted }) {
           className={`status-hint ${author.status.className} icon`}
           aria-hidden="true"
         ></span>
+        <span className="sr-only">Status: </span>
         {author.status.text}
       </p>
       <hr />
       <div className="languages-container">
         <p className="icon-and-text">
-          <i className="fa-solid fa-globe icon"></i>
+          <i className="fa-solid fa-globe icon" aria-hidden="true"></i>
+          <span className="sr-only"></span>
           Languages:
         </p>
         <ul className="author-languages">
