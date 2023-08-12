@@ -16,4 +16,5 @@ ul, menu {
 
 img {
    max-width: 100%;
+   display: block;
 }

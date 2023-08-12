@@ -13,13 +13,12 @@ export default function IntroSection() {
         </h1>
         <p>{author.introduction}</p>
       </div>
-      <div className="hero-container">
-        {author.hero ? (
-          <img src={author.hero.src} alt={author.hero.alt} className="hero" />
-        ) : (
-          <div className="pseudo-hero"></div>
-        )}
-      </div>
+
+      <img
+        src={author.introImage.src}
+        alt={author.introImage.alt}
+        className="intro-image"
+      />
     </header>
   );
 }

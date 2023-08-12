@@ -120,16 +120,16 @@ p {
 .percentage-list {
   .button-and-percentage {
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .percentage-container {
     width: 100%;
     background-color: black;
     height: 13px;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     overflow: hidden;
-    padding: .2rem;
+    padding: 0.2rem;
   }
 
   .percentage {
@@ -143,11 +143,14 @@ p {
     background-color: gray;
     color: white;
     border-radius: 50%;
-    
+
     &:hover {
       background-color: black;
     }
   }
+}
+
+.mobile-image {
 }
 
 /* MAIN ELEMENTS */
@@ -401,14 +404,14 @@ section {
 
     border-left: 6px solid gray;
     border-bottom: 2px solid gray;
-    padding: 0 0 .5rem 1.3rem;
+    padding: 0 0 0.5rem 1.3rem;
     max-width: 300px;
   }
 
   h2 + p {
     font-size: 1.1rem;
     border-left: 4px dashed gray;
-    padding-inline-start: .5rem;
+    padding-inline-start: 0.5rem;
   }
 }
 
@@ -432,7 +435,8 @@ intro */
 #main-article-header {
   display: flex;
   flex-direction: column-reverse;
-  gap: 2rem;
+  justify-content: space-between;
+  gap: 3rem;
   margin-bottom: 8rem;
 
   h1 {
@@ -445,22 +449,13 @@ intro */
     line-height: 1.2;
   }
 
-  .pseudo-hero {
+  .intro-image {
+    object-position: 50% 0;
+    object-fit: cover;
     aspect-ratio: 1;
-    background-color: black;
-    position: relative;
-    border-radius: 4rem;
     max-width: 350px;
+    width: 100%;
     margin-inline: auto;
-  }
-  .pseudo-hero::before {
-    content: "R";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 15rem;
-    color: white;
   }
 }
 
@@ -473,20 +468,31 @@ intro */
       font-size: 2.3rem;
     }
 
-    .pseudo-hero {
-      width: 320px;
+    .intro-image {
+      max-width: none;
+      width: 380px;
     }
   }
 }
+
+@media (min-width: 48em) and (orientation: portrait) and (max-width: 58em) {
+  #main-article-header {
+    .intro-image {
+      width: 140px;
+      aspect-ratio: 14 / 30;
+    }
+  }
+}
+
 @media (min-width: 64em) {
   #main-article-header {
     h1 {
       font-size: 2.8rem;
     }
 
-    .pseudo-hero {
-      max-width: 400px;
-      width: 400px;
+    .intro-image {
+      width: 420px;
+      aspect-ratio: 1;
     }
   }
 }
@@ -505,20 +511,22 @@ section#about {
 
 section#technologies {
   h3 {
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
   }
 
   .technologies {
     margin-bottom: 2rem;
   }
 
-  img {
-    aspect-ratio: 1;
-    height: 100%;
+  .about-image {
     object-fit: cover;
     object-position: center;
-    border-radius: .4rem;
+    border-radius: 0.4rem;
     box-shadow: 20px 20px 10px black;
+    max-height: 400px;
+    display: block;
+    margin-inline: auto;
+    aspect-ratio: 1;
   }
 
   @media (min-width: 48em) {
@@ -755,7 +763,7 @@ ul#service-list {
   }
 }
 
-@media (min-width:  48em) {
+@media (min-width: 48em) {
   ul#service-list {
     grid-template-columns: 1fr 1fr;
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext";
-import PercentageList from '../global-components/PercentageList';
+import PercentageList from "../global-components/PercentageList";
 
 export default function AboutSection() {
   const author = useAuthor();
@@ -19,7 +19,11 @@ export default function AboutSection() {
           <div className="technologies">
             <PercentageList items={author.technologies} hasModal={true} />
           </div>
-          <img src={author.aboutModal.src} alt={author.aboutModal.alt} />
+          <img
+            src={author.aboutImage.src}
+            alt={author.aboutImage.alt}
+            className="about-image"
+          />
         </div>
       </section>
     </section>
