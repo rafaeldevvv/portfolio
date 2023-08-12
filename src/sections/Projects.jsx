@@ -40,6 +40,7 @@ export function ProjectList({ projects }) {
     return projectRefs.current;
   }
 
+  // useScrollEvent, useDocumentScroll, useMobileScroll
   useEffect(() => {
     if (matchMedia("(pointer:fine)").matches) return;
 

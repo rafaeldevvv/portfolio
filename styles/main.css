@@ -59,6 +59,7 @@ p {
   overflow: hidden;
   -webkit-clip-path: inset(50%);
           clip-path: inset(50%);
+  clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
 }
@@ -107,6 +108,37 @@ p {
 
 .github-background {
   background-color: var(--github-color, hsl(0, 50%, 95%));
+}
+
+.flex {
+  display: flex;
+}
+
+.percentage-list .button-and-percentage {
+  align-items: center;
+  gap: 0.5rem;
+}
+.percentage-list .percentage-container {
+  width: 100%;
+  background-color: black;
+  height: 13px;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  padding: 0.2rem;
+}
+.percentage-list .percentage {
+  background-color: white;
+  height: 100%;
+}
+.percentage-list .percentage-button {
+  aspect-ratio: 1;
+  width: 30px;
+  background-color: gray;
+  color: white;
+  border-radius: 50%;
+}
+.percentage-list .percentage-button:hover {
+  background-color: black;
 }
 
 /* MAIN ELEMENTS */
@@ -334,9 +366,8 @@ section h2 {
 }
 section h2 + p {
   font-size: 1.1rem;
-  border-left: 4px dotted gray;
+  border-left: 4px dashed gray;
   padding-inline-start: 0.5rem;
-  max-width: 300px;
 }
 
 section + section {
@@ -357,7 +388,7 @@ intro */
   display: flex;
   flex-direction: column-reverse;
   gap: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 #main-article-header h1 {
   font-size: 2rem;
@@ -406,6 +437,44 @@ intro */
     width: 400px;
   }
 }
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+About
+*/
+section#about h3 {
+  font-size: 1.5rem;
+}
+
+section#technologies h3 {
+  margin-bottom: 0.6rem;
+}
+section#technologies .technologies {
+  margin-bottom: 2rem;
+}
+section#technologies img {
+  aspect-ratio: 1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.4rem;
+  box-shadow: 20px 20px 10px black;
+}
+@media (min-width: 48em) {
+  section#technologies .technologies {
+    margin-bottom: 0;
+  }
+  section#technologies .tech-and-modal {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
 /* 
 ################################################################################################################
 ################################################################################################################
