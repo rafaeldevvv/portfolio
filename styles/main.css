@@ -349,13 +349,10 @@ nav */
 Main */
 main {
   margin-top: 80px;
-  padding-block: 5rem;
+  padding-block: 5rem 0;
 }
 
 /* Sections */
-section {
-  margin-block: 2rem;
-}
 section h2 {
   margin-bottom: 0.5rem;
   font-size: 1.7rem;
@@ -385,11 +382,13 @@ section + section {
 ################################################################################################################
 intro */
 #main-article-header {
+  margin-bottom: 8rem;
+}
+#main-article-header .container {
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   gap: 3rem;
-  margin-bottom: 8rem;
 }
 #main-article-header h1 {
   font-size: 2rem;
@@ -410,8 +409,8 @@ intro */
   margin-inline: auto;
 }
 
-@media (min-width: 48em) {
-  #main-article-header {
+@media (min-width: 40em) {
+  #main-article-header .container {
     flex-direction: row;
     align-items: center;
   }
@@ -423,7 +422,7 @@ intro */
     width: 380px;
   }
 }
-@media (min-width: 48em) and (orientation: portrait) and (max-width: 58em) {
+@media (min-width: 40em) and (max-width: 54em) {
   #main-article-header .intro-image {
     width: 140px;
     aspect-ratio: 14/30;
@@ -445,6 +444,9 @@ About
 */
 section#about h3 {
   font-size: 1.5rem;
+}
+section#about h2 + p {
+  margin-bottom: 2rem;
 }
 
 section#technologies h3 {
@@ -606,6 +608,87 @@ ul#service-list {
     grid-template-columns: 1fr 1fr;
   }
 }
+/* 
+################################################################################################################
+################################################################################################################
+################################################################################################################
+Contact
+ */
+section#contact {
+  background-image: linear-gradient(to bottom, white 50%, black 50%);
+  padding-block: 3rem;
+  color: white;
+  padding-inline: 2rem;
+}
+section#contact .section-wrapper {
+  max-width: 600px;
+  margin-inline: auto;
+  background-color: hsl(0, 0%, 5%);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  margin-inline: auto;
+}
+section#contact h2,
+section#contact p {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+  max-width: none;
+}
+section#contact form p {
+  text-align: left;
+}
+section#contact h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+section#contact p:not(form p) {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+#email-form p:first-of-type {
+  margin-bottom: 0.5rem;
+}
+#email-form label {
+  display: block;
+  margin-bottom: 0.1rem;
+}
+#email-form input,
+#email-form textarea {
+  border-radius: 0.2rem;
+  width: 100%;
+  display: block;
+  border: 0;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-family: "Inconsolata", monospace;
+}
+#email-form input {
+  height: 40px;
+}
+#email-form textarea {
+  min-height: 100px;
+}
+#email-form button[type=submit] {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  background-color: white;
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: hsl(0, 50%, 10%);
+}
+#email-form button[type=submit]:hover {
+  box-shadow: 0 0 10px white;
+}
+
 /* 
 ################################################################################################################
 ################################################################################################################

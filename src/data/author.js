@@ -19,8 +19,9 @@ const author = {
    learning: "Accessibility",
    job: "Freelance front-end developer",
    languages: ["Portuguese", "English"],
-   introduction: "Welcome to my web world! I create stunning, high-performance sites. As a freelance front-end developer, I craft engaging and accessible experiences that work on any device for everyone to enjoy them. Let's bring your vision to life with creativity and cutting-edge tech!",
+   introduction: "Welcome to my website! I create beautiful and fast websites. As a freelance web developer, I create enjoyable experiences that work on any device for everyone. Let's make your ideas real with creativity and the latest technology!",
    about: "Hey there! I'm Rafael Maia, and I'm on a journey to becoming a skilled freelance front-end developer. Web page creation is my true passion. My approach is all about simplicity and meaningful design.",
+   contactSectionText: "You can reach out to me on my social media profiles, particularly through WhatsApp, or send me an email by using the form below.",
    aboutImage: {
       src:"images/about.jpg",
       alt: "A guy looking to the left with a black turtleneck"

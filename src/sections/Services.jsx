@@ -6,19 +6,21 @@ export default function ServicesSection() {
 
   return (
     <section id="services">
-      <h2 className="fragment-father">
-        Services
-        <span className="fragment" id="services-fragment"></span>
-      </h2>
-      <ul id="service-list">
-        {services.map(s => {
-          return (
-            <li key={s.name}>
-              <Service service={s} />
-            </li>
-          )
-        })}
-      </ul>
+      <div className="container">
+        <h2 className="fragment-father">
+          Services
+          <span className="fragment" id="services-fragment"></span>
+        </h2>
+        <ul id="service-list">
+          {services.map((s) => {
+            return (
+              <li key={s.name}>
+                <Service service={s} />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   );
 }
@@ -31,8 +33,10 @@ function Service({ service }) {
       <button
         className="btn primary-btn"
         type="button"
-        aria-label={`Read more about &quot;${service.name}&quot; service`} 
-      >Read more &gt;&gt;</button>
+        aria-label={`Read more about &quot;${service.name}&quot; service`}
+      >
+        Read more &gt;&gt;
+      </button>
     </div>
   );
 }

@@ -17,12 +17,14 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects">
-      <h2 id="projects-heading" className="fragment-father">
-        Projects
-        <span className="fragment" id="projects-fragment" />
-      </h2>
-      <p>View my work</p>
-      <ProjectList projects={projectsOrderedByDate} />
+      <div className="container">
+        <h2 id="projects-heading" className="fragment-father">
+          Projects
+          <span className="fragment" id="projects-fragment" />
+        </h2>
+        <p>View my work</p>
+        <ProjectList projects={projectsOrderedByDate} />
+      </div>
     </section>
   );
 }
@@ -91,7 +93,7 @@ export function ProjectList({ projects }) {
       const lastProjectImage = lastProject.querySelector(".project-image");
 
       lastProjectImage.onload = function () {
-      lastProject.scrollIntoView(scrollOptions);
+        lastProject.scrollIntoView(scrollOptions);
       };
     } else {
       setNumberOfProjectsShown(4);
