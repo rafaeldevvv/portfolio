@@ -167,7 +167,7 @@ export function ProjectList({ projects }) {
 export function Project({ project, isHovered }) {
   return (
     <div className={`project ${isHovered ? "hover" : ""}`}>
-      <h3 className={`${isHovered ? "project-name" : "sr-only"}`}>
+      <h3 className={`${isHovered ? "project-name" : "sr-only"}`}>  
         {project.name}
       </h3>
       <button className="project-button" type="button" aria-label="Open modal">

@@ -152,7 +152,6 @@ p {
 
 /* MAIN ELEMENTS */
 .container {
-  padding-inline: var(--global-padding, 3rem);
   max-width: 1100px;
   margin-inline: auto;
 }
@@ -168,6 +167,7 @@ header */
   z-index: 999;
   background-color: rgba(0, 0, 0, 1);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  padding-inline: var(--global-padding, 3rem);
 
   .container {
     height: var(--heading-height, 80px);
@@ -393,6 +393,8 @@ main {
 
 /* Sections */
 section {
+  padding-inline: var(--global-padding, 3rem);
+  
   h2 {
     margin-bottom: 0.5rem;
     font-size: 1.7rem;
@@ -428,6 +430,7 @@ section + section {
 ################################################################################################################
 intro */
 #main-article-header {
+  padding-inline: var(--global-padding, 3rem);
   margin-bottom: 8rem;
 
   .container {
@@ -719,10 +722,10 @@ section#contact {
   color: white;
   padding-inline: 2rem;
 
-  .section-wrapper {
+  .section-inner-container {
     max-width: 600px;
     margin-inline: auto;
-    background-color: hsl(0, 0%, 5%);
+    background-color: hsl(0, 0%, 10%);
     border-radius: 2rem;
     padding: 1.5rem;
     margin-inline: auto;
@@ -801,6 +804,14 @@ section#contact {
   }
 }
 
+@media (min-width: 30em) {
+  section#contact {
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
 /* 
 ################################################################################################################
 ################################################################################################################
@@ -810,6 +821,7 @@ footer {
   background-color: black;
   color: #999;
   padding-block: 5rem;
+  padding-inline: var(--global-padding, 3rem);
 
   .socials {
     margin-top: 3rem;
