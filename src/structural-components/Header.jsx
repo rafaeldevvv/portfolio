@@ -13,10 +13,10 @@ export default function Header() {
 
   const handlers = {
     onMouseOut: function (e) {
-      setIsAuthorModalOmitted(true);
+      if (matchMedia("(pointer:fine)")) setIsAuthorModalOmitted(true);
     },
     onMouseEnter: function (e) {
-      setIsAuthorModalOmitted(false);
+      if (matchMedia("(pointer:fine)")) setIsAuthorModalOmitted(false);
     },
     onClick: function (e) {
       setIsAuthorModalOmitted(!isAuthorModalOmitted);
