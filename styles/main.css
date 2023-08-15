@@ -166,19 +166,8 @@ header */
   justify-content: space-between;
   align-items: center;
 }
-#global-header .profile-picture-container {
-  position: relative;
-}
-#global-header .profile-picture {
-  width: 50px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-}
-#global-header .profile-picture.fake {
-  background-color: white;
-}
-#global-header .profile-picture.hovered {
-  outline: 7px solid hsla(0, 0%, 100%, 0.3);
+#global-header .logo {
+  height: 50px;
 }
 
 #author-modal {
@@ -353,10 +342,10 @@ main {
 }
 
 /* Sections */
-section {
+section:not(section section) {
   padding-inline: var(--global-padding, 3rem);
 }
-section h2 {
+section:not(section section) h2 {
   margin-bottom: 0.5rem;
   font-size: 1.7rem;
   border-left: 6px solid gray;
@@ -364,7 +353,7 @@ section h2 {
   padding: 0 0 0.5rem 1.3rem;
   max-width: 300px;
 }
-section h2 + p {
+section:not(section section) h2 + p {
   font-size: 1.1rem;
   border-left: 4px dashed gray;
   padding-inline-start: 0.5rem;

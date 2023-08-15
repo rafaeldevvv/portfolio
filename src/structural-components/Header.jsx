@@ -1,52 +1,20 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useAuthor } from "../AuthorContext";
 
 export default function Header() {
   const author = useAuthor();
+  const profileRef = useRef(null);
 
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isAuthorModalOmitted, setIsAuthorModalOmitted] = useState(true);
 
   function handleClick() {
     setIsExpanded(!isExpanded);
   }
 
-  const handlers = {
-    onMouseOut: function (e) {
-      if (matchMedia("(pointer:fine)")) setIsAuthorModalOmitted(true);
-    },
-    onMouseEnter: function (e) {
-      if (matchMedia("(pointer:fine)")) setIsAuthorModalOmitted(false);
-    },
-    onClick: function (e) {
-      setIsAuthorModalOmitted(!isAuthorModalOmitted);
-    },
-  };
-
   return (
     <header className={isExpanded ? "show-nav" : ""} id="global-header">
       <div className="container">
-        <div className="profile-picture-container">
-          {author.profilePicture ? (
-            <img
-              src={author.profilePicture.src}
-              alt={author.profilePicture.alt}
-              className={`profile-picture ${
-                isAuthorModalOmitted ? "" : "hovered"
-              }`}
-              {...handlers}
-            />
-          ) : (
-            <div
-              className={`profile-picture fake ${
-                isAuthorModalOmitted ? "" : "hovered"
-              }`}
-              {...handlers}
-            ></div>
-          )}
-
-          <AuthorModal author={author} isOmitted={isAuthorModalOmitted} />
-        </div>
+        <img className="logo" src={author.logo.src} alt={author.logo.alt} />
         <MainMenuToggle isExpanded={isExpanded} onClick={handleClick} />
         <Nav onClickOnLink={handleClick} />
       </div>
@@ -122,45 +90,13 @@ function AuthorModal({ author, isOmitted }) {
     <div
       id={isOmitted ? "" : "author-modal"}
       className={isOmitted ? "sr-only" : ""}
+      aria-labelledby="author-info"
+      onClick={(e) => {
+        e.stopPropagation();
+        console.log("clicked modal");
+      }}
     >
-      <h2>Author's Info</h2>
-      <hr />
-      <p className="author-location icon-and-text">
-        <i className="fa-solid fa-location-dot icon" aria-hidden="true"></i>
-        <span className="sr-only">Location: </span>
-        {author.location.country}, {author.location.state}
-      </p>
-      <hr />
-      <p className="author-job icon-and-text">
-        <i className="fa-solid fa-briefcase icon" aria-hidden="true"></i>
-        <span className="sr-only">Job: </span>
-        {author.job}
-      </p>
-      <p className="author-status icon-and-text">
-        <span
-          className={`status-hint ${author.status.className} icon`}
-          aria-hidden="true"
-        ></span>
-        <span className="sr-only">Status: </span>
-        {author.status.text}
-      </p>
-      <hr />
-      <div className="languages-container">
-        <p className="icon-and-text">
-          <i className="fa-solid fa-globe icon" aria-hidden="true"></i>
-          <span className="sr-only"></span>
-          Languages:
-        </p>
-        <ul className="author-languages">
-          {author.languages.map((l) => {
-            return (
-              <li className="language" key={l}>
-                {l}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      
     </div>
   );
 }

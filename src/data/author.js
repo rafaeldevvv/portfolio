@@ -7,6 +7,10 @@ const author = {
    name: "Rafael Maia",
    fullName: "Rafael Maia Sant'Anna Cuerci",
    shortName: "Rafael",
+   logo: {
+      src: 'images/logo.png',
+      alt: "A text in which RAFAEL is written in uppercase, and to the left of this word, there is a circle,within which there's an less than symbol, a forward slash and a greater than symbol, in this order from left to right."
+   },
    location: {
       country: "Brazil",
       state: "Espírito Santo",
@@ -23,7 +27,7 @@ const author = {
    about: "Hey there! I'm Rafael Maia, and I'm on a journey to becoming a skilled freelance front-end developer. Web page creation is my true passion. My approach is all about simplicity and meaningful design.",
    contactSectionText: "You can reach out to me on my social media profiles, particularly through WhatsApp, or send me an email by using the form below.",
    aboutImage: {
-      src:"images/about.jpg",
+      src: "images/about.jpg",
       alt: "A guy looking to the left with a black turtleneck"
    },
    profilePicture: null,

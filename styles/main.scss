@@ -176,20 +176,8 @@ header */
     align-items: center;
   }
 
-  .profile-picture-container {
-    position: relative;
-  }
-  .profile-picture {
-    width: 50px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-
-    &.fake {
-      background-color: white;
-    }
-    &.hovered {
-      outline: 7px solid hsla(0, 0%, 100%, 0.3);
-    }
+  .logo {
+    height: 50px;
   }
 }
 
@@ -392,7 +380,7 @@ main {
 }
 
 /* Sections */
-section {
+section:not(section section) {
   padding-inline: var(--global-padding, 3rem);
   
   h2 {
