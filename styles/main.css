@@ -114,7 +114,21 @@ p {
   display: flex;
 }
 
-.percentage-list .button-and-percentage {
+.percentage-list li:not(:first-of-type) {
+  margin-top: 0.5rem;
+}
+.percentage-list li:not(:first-of-type).no-margin {
+  margin-top: 0;
+}
+.percentage-list .item-name {
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.percentage-list .item-name.no-margin {
+  margin-bottom: 0;
+}
+.percentage-list .percentage-and-button {
+  display: flex;
   align-items: center;
   gap: 0.5rem;
 }
@@ -359,7 +373,7 @@ section:not(section section) h2 + p {
   padding-inline-start: 0.5rem;
 }
 
-section + section {
+section + section:not(section section) {
   margin-top: 10rem;
 }
 
@@ -435,18 +449,44 @@ intro */
 ################################################################################################################
 About
 */
-section#about h3 {
-  font-size: 1.5rem;
+section#about .location-and-job-row {
+  margin-bottom: 1rem;
 }
 section#about h2 + p {
   margin-bottom: 2rem;
+}
+section#about h3 {
+  font-size: 1.5rem;
+}
+section#about section + section {
+  margin-top: 2rem;
+}
+
+@media (min-width: 36em) {
+  section#about .location-and-job-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  section#about .location-and-job-row section {
+    margin: 0;
+  }
+  section#job h3 {
+    text-align: right;
+  }
+}
+section#languages h3 {
+  margin-bottom: 0.4rem;
+}
+section#languages .languages-list {
+  max-width: 500px;
 }
 
 section#technologies h3 {
   margin-bottom: 0.6rem;
 }
-section#technologies .technologies {
+section#technologies .technologies-list-container {
   margin-bottom: 2rem;
+  max-width: 600px;
 }
 section#technologies .about-image {
   -o-object-fit: cover;
@@ -461,14 +501,24 @@ section#technologies .about-image {
   aspect-ratio: 1;
 }
 @media (min-width: 48em) {
-  section#technologies .technologies {
-    margin-bottom: 0;
-  }
-  section#technologies .tech-and-modal {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
+  section#technologies .tech-and-image {
+    display: flex;
     gap: 2rem;
-    align-items: center;
+    align-items: start;
+    justify-content: space-between;
+  }
+  section#technologies .technologies-list-container {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  section#technologies .about-image {
+    margin: 0;
+    aspect-ratio: 14/30;
+  }
+}
+@media (min-width: 60em) {
+  section#technologies .about-image {
+    aspect-ratio: 1;
   }
 }
 

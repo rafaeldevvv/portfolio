@@ -5,10 +5,13 @@ export default function PercentageList({ items, hasModal }) {
      <ul className="percentage-list">
        {items.map((i) => {
          const label = `Open a modal with more information about ${i.name}`;
+         const applyNoMarginClass = hasModal ? "no-margin" : "";
          return (
            <li key={i.name}>
+            <span className={`item-name ${applyNoMarginClass}`}>
              {i.name}
-             <div className="button-and-percentage flex">
+            </span>
+             <div className={`percentage-and-button`}>
                <div className="percentage-container">
                  <div
                    className="percentage"
