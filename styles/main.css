@@ -458,8 +458,9 @@ section#about h2 + p {
 section#about h3 {
   font-size: 1.5rem;
 }
-section#about section + section {
-  margin-top: 2rem;
+
+section#location {
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 36em) {
@@ -473,6 +474,9 @@ section#about section + section {
   section#job h3 {
     text-align: right;
   }
+}
+section#languages {
+  margin-bottom: 2rem;
 }
 section#languages h3 {
   margin-bottom: 0.4rem;
