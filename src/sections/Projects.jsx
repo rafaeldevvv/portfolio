@@ -16,9 +16,9 @@ export default function ProjectsSection() {
     );
 
   return (
-    <section id="projects">
+    <section id="projects" aria-labelledby="projects_heading">
       <div className="container">
-        <h2 id="projects-heading" className="fragment-father">
+        <h2 id="projects_heading" className="fragment-father">
           Projects
           <span className="fragment" id="projects-fragment" />
         </h2>

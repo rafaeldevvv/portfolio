@@ -3,7 +3,6 @@ import { useAuthor } from "../AuthorContext";
 
 export default function Header() {
   const author = useAuthor();
-  const profileRef = useRef(null);
 
   const [isExpanded, setIsExpanded] = useState(false);
 

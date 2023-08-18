@@ -6,9 +6,9 @@ export default function AboutSection() {
   const author = useAuthor();
 
   return (
-    <section id="about">
+    <section id="about" aria-labelledby="about_me">
       <div className="container">
-        <h2 className="fragment-father">
+        <h2 className="fragment-father" id="about_me">
           About Me
           <span className="fragment" id="about-fragment" />
         </h2>

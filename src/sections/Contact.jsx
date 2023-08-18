@@ -6,9 +6,9 @@ export default function ContactSection() {
   const author = useAuthor();
 
   return (
-    <section id="contact">
+    <section id="contact" aria-labelledby="contact_me">
       <div className="section-inner-container">
-        <h2 className="fragment-father">
+        <h2 className="fragment-father" id="contact_me">
           Contact me
           <span className="fragment" id="contact-fragment"></span>
         </h2>

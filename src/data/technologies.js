@@ -32,6 +32,13 @@ const technologies = [
       tags: ['react']
    },
    {
+      name: "React Router",
+      initialDate: null,
+      className: 'react-router',
+      percentage: "30",
+      tags: ['react', 'react router']
+   },
+   {
       name: "SASS",
       initialDate: "2022-10-20",
       fontAwesomeIcon: "fa-brands fa-sass",
@@ -49,7 +56,7 @@ const technologies = [
    },
    {
       name: "Bootstrap",
-      initialDate: "unknown",
+      initialDate: null,
       fontAwesomeIcon: "",
       className: "bootstrap",
       percentage: 5,
