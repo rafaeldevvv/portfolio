@@ -430,12 +430,53 @@ section#languages .languages-list {
   max-width: var(--percentage-list-max-width, 600px);
 }
 
-section#technologies h3 {
-  margin-bottom: 0.6rem;
-}
-section#technologies .technologies-list-container {
+section#skills-and-technologies h3 {
   margin-bottom: 2rem;
-  max-width: var(--percentage-list-max-width, 600px);
+}
+section#skills-and-technologies .list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  gap: 1rem;
+}
+section#skills-and-technologies .skill {
+  background-color: black;
+  border: 1px solid black;
+  padding: 0.7rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+section#skills-and-technologies .skill-name-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 70%;
+  margin-inline: auto;
+  border-bottom: 1px dotted white;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
+  text-align: left;
+}
+section#skills-and-technologies .icon {
+  color: white;
+}
+section#skills-and-technologies .proficiency, section#skills-and-technologies .experience, section#skills-and-technologies .skill-name {
+  color: white;
+}
+@media (min-width: 30em) {
+  section#skills-and-technologies .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 50em) {
+  section#skills-and-technologies .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  section#skills-and-technologies .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /*

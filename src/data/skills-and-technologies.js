@@ -1,19 +1,21 @@
 const technologies = [
    {
-      name: "HTML5",
+      name: "HTML",
       initialDate: "2022-10-20",
       fontAwesomeIcon: "fa-brands fa-html5",
       className: "html",
       percentage: 90,
       tags: ['html'],
+      proficiency: "Advanced"
    },
    {
-      name: "CSS3",
+      name: "CSS",
       initialDate: "2022-10-20",
       fontAwesomeIcon: "fa-brands fa-css3",
       className: "css",
       percentage: 90,
       tags: ['css', "sass", 'bootstrap'],
+      proficiency: "Advanced"
    },
    {
       name: "JavaScript",
@@ -22,6 +24,7 @@ const technologies = [
       className: "javascript",
       percentage: 80,
       tags: ['javascript', 'react'],
+      proficiency: "Advanced"
    },
    {
       name: "React",
@@ -30,13 +33,16 @@ const technologies = [
       className: "react",
       percentage: 80,
       tags: ['react'],
+      proficiency: "Advanced"
    },
    {
       name: "React Router",
-      initialDate: null,
+      initialDate: "2023-05-20",
+      fontAwesomeIcon: "fa-brands fa-react",
       className: 'react-router',
-      percentage: "30",
+      percentage: 30,
       tags: ['react', 'react router'],
+      proficiency: "Beginner"
    },
    {
       name: "SASS",
@@ -45,6 +51,7 @@ const technologies = [
       className: "sass",
       percentage: 60,
       tags: ['sass'],
+      proficiency: "Intermediate"
    },
    {
       name: "Git/GitHub",
@@ -53,14 +60,24 @@ const technologies = [
       className: "github",
       percentage: 50,
       tags: ['git'],
+      proficiency: "Intermediate"
    },
    {
       name: "Bootstrap",
       initialDate: null,
-      fontAwesomeIcon: "",
+      fontAwesomeIcon: "fa-brands fa-bootstrap",
       className: "bootstrap",
       percentage: 5,
       tags: ['bootstrap'],
+      proficiency: "Beginner"
+   },
+   {
+      name: "Object-Oriented Programming",
+      initialDate: "2023-04-20",
+      fontAwesomeIcon: "fa-regular fa-file-code",
+      percentage: 90,
+      tags: ['oop'],
+      proficiency: "Advanced"
    }
 ];
 

@@ -22,6 +22,7 @@
 - JavaScript
 - React.js
 - Git/GitHub
+- Font Awesome
 
 ### Learning
 Parent select
@@ -39,6 +40,7 @@ Parent select
 - [Image Compressor](https://imagecompressor.com/)
 - [Image Resizer](https://imageresizer.com/) - This was very useful as my computer does not have sufficient computing resources to keep photoshop and vs code open at the same time.
 - [HTML element reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) - A huge list of html elements.
+- [date-fns package](https://www.npmjs.com/package/date-fns)
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)

@@ -483,14 +483,61 @@ section#languages {
   }
 }
 
-section#technologies {
+section#skills-and-technologies {
   h3 {
-    margin-bottom: 0.6rem;
+    margin-bottom: 2rem;
+  }
+  .list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 1rem;
   }
 
-  .technologies-list-container {
-    margin-bottom: 2rem;
-    max-width: var(--percentage-list-max-width, 600px);
+  .skill {
+    background-color: black;
+    border: 1px solid black;
+    padding: .7rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .skill-name-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin-inline: auto;
+    border-bottom: 1px dotted white;
+    padding-bottom: .3rem;
+    margin-bottom: .6rem;
+    text-align: left;
+  }
+
+  .icon {
+    color: white;
+  }
+
+  .proficiency, .experience, .skill-name {
+    color: white;
+  }
+
+  @media (min-width: 30em) {
+    .list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 50em) {
+    .list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 64em) {
+    .list {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 

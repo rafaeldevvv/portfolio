@@ -1,7 +1,6 @@
 import projects from "./projects.js";
-import technologies from "./technologies.js";
+import skillsAndTech from "./skills-and-technologies.js";
 import services from "./services.js";
-import skills from "./skills.js";
 
 const author = {
    name: "Rafael Maia",
@@ -58,7 +57,7 @@ const author = {
       twitter: "https://www.twitter.com/rafaeldevvv"
    },
    projects,
-   technologies,
+   skillsAndTechnologies: skillsAndTech,
    services
 }
 
