@@ -114,15 +114,14 @@ p {
   display: flex;
 }
 
-.percentage-list li:not(:first-of-type) {
-  margin-top: 0.5rem;
+.dashed-border-paragraph {
+  border-left: 4px dashed gray;
+  padding-inline-start: 0.5rem;
 }
-.percentage-list li:not(:first-of-type).no-margin {
-  margin-top: 0;
-}
+
 .percentage-list .item-name {
-  margin-bottom: 0.3rem;
   display: block;
+  color: black;
 }
 .percentage-list .item-name.no-margin {
   margin-bottom: 0;
@@ -136,7 +135,6 @@ p {
   width: 100%;
   background-color: black;
   height: 13px;
-  border-radius: 0.3rem;
   overflow: hidden;
   padding: 0.2rem;
 }
@@ -153,6 +151,9 @@ p {
 }
 .percentage-list .percentage-button:hover {
   background-color: black;
+}
+.percentage-list .level {
+  text-align: right;
 }
 
 /* MAIN ELEMENTS */
@@ -182,88 +183,6 @@ header */
 }
 #global-header .logo {
   height: 50px;
-}
-
-#author-modal {
-  --background: #fff;
-  position: absolute;
-  background-color: var(--background, #fff);
-  border-radius: 0.7rem;
-  border: 1px solid #999;
-  padding: 1rem;
-  width: 400px;
-  max-width: calc(100vw - var(--global-padding, 3rem) * 2);
-  top: calc(100% + 20px);
-  font-size: 1rem;
-  /*
-    The before pseudo-element is
-    the arrow at the top left corner
-  */
-}
-#author-modal::before {
-  content: "";
-  display: block;
-  width: 20px;
-  aspect-ratio: 1;
-  position: absolute;
-  bottom: 100%;
-  /* 25px because the profile picture is 50px wide */
-  left: 25px;
-  transform: translateY(50%) translateX(-50%) rotate(45deg);
-  background-color: var(--background, #fff);
-  border-top: 1px solid #999;
-  border-left: 1px solid #999;
-}
-#author-modal h2 {
-  margin-bottom: 0.5rem;
-}
-#author-modal p {
-  color: black;
-}
-#author-modal p:not(.languages-container p) {
-  line-height: 0.9;
-  margin-bottom: 0.5rem;
-}
-#author-modal hr {
-  margin-block: 0.7rem;
-}
-#author-modal .icon-and-text {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  align-items: center;
-}
-#author-modal .icon-and-text .icon {
-  justify-self: center;
-}
-#author-modal .status-hint {
-  display: inline-block;
-  border-radius: 50%;
-  width: 13px;
-  aspect-ratio: 1;
-  margin-inline: auto;
-}
-#author-modal .status-hint.available {
-  background-color: lime;
-}
-#author-modal .status-hint.busy {
-  background-color: yellow;
-}
-#author-modal .status-hint.unavailable {
-  background-color: red;
-}
-#author-modal .languages-container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-#author-modal .author-languages {
-  display: flex;
-  flex-wrap: wrap;
-}
-#author-modal .author-languages .language {
-  background-color: #ddd;
-  padding: 0.2rem 0.3rem;
-  margin-inline: 0.2rem;
 }
 
 /* button to toggle nav */
@@ -369,8 +288,6 @@ section:not(section section) h2 {
 }
 section:not(section section) h2 + p {
   font-size: 1.1rem;
-  border-left: 4px dashed gray;
-  padding-inline-start: 0.5rem;
 }
 
 section + section:not(section section) {
@@ -449,32 +366,60 @@ intro */
 ################################################################################################################
 About
 */
-section#about .location-and-job-row {
-  margin-bottom: 1rem;
+section#about {
+  --percentage-list-max-width: 600px;
 }
-section#about h2 + p {
+section#about .paragraphs-and-image {
+  margin-bottom: 3rem;
+}
+section#about .dashed-border-paragraph {
   margin-bottom: 2rem;
 }
 section#about h3 {
   font-size: 1.5rem;
 }
-
-section#location {
-  margin-bottom: 1rem;
+section#about .about-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 0.4rem;
+  box-shadow: 20px 20px 10px black;
+  /*
+    use max-height because max-width would not
+    make the image into portrait mode on ipads
+  */
+  max-height: 400px;
+  display: block;
+  margin-inline: auto;
+  aspect-ratio: 1;
 }
-
-@media (min-width: 36em) {
-  section#about .location-and-job-row {
+@media (min-width: 48em) {
+  section#about .paragraphs-and-image {
+    /* make paragraphs and image be 
+    in a single row */
     display: flex;
+    gap: 2rem;
+    align-items: center;
     justify-content: space-between;
-  }
-  section#about .location-and-job-row section {
     margin: 0;
   }
-  section#job h3 {
-    text-align: right;
+  section#about .about-image {
+    margin: 0;
+    aspect-ratio: 14/30;
   }
 }
+@media (min-width: 58em) {
+  section#about .about-image {
+    aspect-ratio: 20/30;
+  }
+}
+@media (min-width: 68em) {
+  section#about .about-image {
+    aspect-ratio: 1;
+  }
+}
+
 section#languages {
   margin-bottom: 2rem;
 }
@@ -482,7 +427,7 @@ section#languages h3 {
   margin-bottom: 0.4rem;
 }
 section#languages .languages-list {
-  max-width: 500px;
+  max-width: var(--percentage-list-max-width, 600px);
 }
 
 section#technologies h3 {
@@ -490,40 +435,7 @@ section#technologies h3 {
 }
 section#technologies .technologies-list-container {
   margin-bottom: 2rem;
-  max-width: 600px;
-}
-section#technologies .about-image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 0.4rem;
-  box-shadow: 20px 20px 10px black;
-  max-height: 400px;
-  display: block;
-  margin-inline: auto;
-  aspect-ratio: 1;
-}
-@media (min-width: 48em) {
-  section#technologies .tech-and-image {
-    display: flex;
-    gap: 2rem;
-    align-items: start;
-    justify-content: space-between;
-  }
-  section#technologies .technologies-list-container {
-    margin-bottom: 0;
-    width: 100%;
-  }
-  section#technologies .about-image {
-    margin: 0;
-    aspect-ratio: 14/30;
-  }
-}
-@media (min-width: 60em) {
-  section#technologies .about-image {
-    aspect-ratio: 1;
-  }
+  max-width: var(--percentage-list-max-width, 600px);
 }
 
 /*

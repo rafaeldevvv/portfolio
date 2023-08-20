@@ -22,7 +22,7 @@ export default function ProjectsSection() {
           Projects
           <span className="fragment" id="projects-fragment" />
         </h2>
-        <p>View my work</p>
+        <p className="dashed-border-paragraph">View my work</p>
         <ProjectList projects={projectsOrderedByDate} />
       </div>
     </section>

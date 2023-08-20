@@ -117,18 +117,15 @@ p {
   display: flex;
 }
 
+.dashed-border-paragraph {
+  border-left: 4px dashed gray;
+  padding-inline-start: 0.5rem;
+}
+
 .percentage-list {
-  li:not(:first-of-type) {
-    margin-top: 0.5rem;
-
-    &.no-margin {
-      margin-top: 0;
-    }
-  }
-
   .item-name {
-    margin-bottom: 0.3rem;
     display: block;
+    color: black;
 
     &.no-margin {
       margin-bottom: 0;
@@ -145,7 +142,6 @@ p {
     width: 100%;
     background-color: black;
     height: 13px;
-    border-radius: 0.3rem;
     overflow: hidden;
     padding: 0.2rem;
   }
@@ -165,6 +161,10 @@ p {
     &:hover {
       background-color: black;
     }
+  }
+
+  .level {
+    text-align: right;
   }
 }
 
@@ -196,104 +196,6 @@ header */
 
   .logo {
     height: 50px;
-  }
-}
-
-#author-modal {
-  --background: #fff;
-
-  position: absolute;
-  background-color: var(--background, #fff);
-  border-radius: 0.7rem;
-  border: 1px solid #999;
-  padding: 1rem;
-  width: 400px;
-  max-width: calc(100vw - var(--global-padding, 3rem) * 2);
-  top: calc(100% + 20px);
-  font-size: 1rem;
-
-  /*
-    The before pseudo-element is
-    the arrow at the top left corner
-  */
-  &::before {
-    content: "";
-    display: block;
-    width: 20px;
-    aspect-ratio: 1;
-    position: absolute;
-    bottom: 100%;
-    /* 25px because the profile picture is 50px wide */
-    left: 25px;
-
-    transform: translateY(50%) translateX(-50%) rotate(45deg);
-
-    background-color: var(--background, #fff);
-    border-top: 1px solid #999;
-    border-left: 1px solid #999;
-  }
-
-  h2 {
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    color: black;
-  }
-  p:not(.languages-container p) {
-    line-height: 0.9;
-
-    margin-bottom: 0.5rem;
-  }
-
-  hr {
-    margin-block: 0.7rem;
-  }
-
-  .icon-and-text {
-    display: grid;
-    grid-template-columns: 30px 1fr;
-    align-items: center;
-
-    .icon {
-      justify-self: center;
-    }
-  }
-
-  .status-hint {
-    display: inline-block;
-    border-radius: 50%;
-    width: 13px;
-    aspect-ratio: 1;
-    margin-inline: auto;
-
-    &.available {
-      background-color: lime;
-    }
-    &.busy {
-      background-color: yellow;
-    }
-    &.unavailable {
-      background-color: red;
-    }
-  }
-
-  .languages-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .author-languages {
-    display: flex;
-    flex-wrap: wrap;
-
-    .language {
-      background-color: #ddd;
-
-      padding: 0.2rem 0.3rem;
-      margin-inline: 0.2rem;
-    }
   }
 }
 
@@ -413,8 +315,6 @@ section:not(section section) {
 
   h2 + p {
     font-size: 1.1rem;
-    border-left: 4px dashed gray;
-    padding-inline-start: 0.5rem;
   }
 }
 
@@ -512,38 +412,61 @@ intro */
 About
 */
 section#about {
-  .location-and-job-row {
-    margin-bottom: 1rem;
+  --percentage-list-max-width: 600px;
+
+  .paragraphs-and-image {
+    margin-bottom: 3rem;
   }
 
-  h2 + p {
+  .dashed-border-paragraph {
     margin-bottom: 2rem;
   }
 
   h3 {
     font-size: 1.5rem;
   }
-}
 
-section#location {
-  margin-bottom: 1rem;
-}
+  .about-image {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.4rem;
+    box-shadow: 20px 20px 10px black;
+    /*
+      use max-height because max-width would not
+      make the image into portrait mode on ipads
+    */
+    max-height: 400px;
+    display: block;
+    margin-inline: auto;
+    aspect-ratio: 1;
+  }
 
-@media (min-width: 36em) {
-  section#about {
-    .location-and-job-row {
+  @media (min-width: 48em) {
+    .paragraphs-and-image {
+      /* make paragraphs and image be 
+      in a single row */
       display: flex;
+      gap: 2rem;
+      align-items: center;
       justify-content: space-between;
+      margin: 0;
+    }
 
-      section {
-        margin: 0;
-      }
+    .about-image {
+      margin: 0;
+      aspect-ratio: 14 / 30;
     }
   }
 
-  section#job {
-    h3 {
-      text-align: right;
+  @media (min-width: 58em) {
+    .about-image {
+      aspect-ratio: 20 / 30;
+    }
+  }
+
+  @media (min-width: 68em) {
+    .about-image {
+      aspect-ratio: 1;
     }
   }
 }
@@ -556,7 +479,7 @@ section#languages {
   }
 
   .languages-list {
-    max-width: 500px;
+    max-width: var(--percentage-list-max-width, 600px);
   }
 }
 
@@ -567,44 +490,7 @@ section#technologies {
 
   .technologies-list-container {
     margin-bottom: 2rem;
-    max-width: 600px;
-  }
-
-  .about-image {
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0.4rem;
-    box-shadow: 20px 20px 10px black;
-    max-height: 400px;
-    display: block;
-    margin-inline: auto;
-    aspect-ratio: 1;
-  }
-
-  @media (min-width: 48em) {
-    .tech-and-image {
-      display: flex;
-      // grid-template-columns: 1.3fr 1fr;
-      gap: 2rem;
-      align-items: start;
-      justify-content: space-between;
-    }
-
-    .technologies-list-container {
-      margin-bottom: 0;
-      width: 100%;
-    }
-
-    .about-image {
-      margin: 0;
-      aspect-ratio: 14 / 30;
-    }
-  }
-
-  @media (min-width: 60em) {
-    .about-image {
-      aspect-ratio: 1;
-    }
+    max-width: var(--percentage-list-max-width, 600px);
   }
 }
 
