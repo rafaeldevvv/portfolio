@@ -272,7 +272,7 @@ nav */
   }
 }
 
-@media (min-width: 38em) {
+@media (min-width: 40em) {
   #main-nav {
     position: static;
     background: none;
@@ -346,6 +346,10 @@ intro */
     gap: 3rem;
   }
 
+  .content {
+    max-width: 500px;
+  }
+
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -356,13 +360,40 @@ intro */
     line-height: 1.2;
   }
 
+  .image-container {
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+  }
+
   .intro-image {
     object-position: 50% 0;
     object-fit: cover;
     aspect-ratio: 1;
-    max-width: 350px;
-    width: 100%;
+    max-height: 400px;
     margin-inline: auto;
+  }
+  
+  .status {
+    margin: 0;
+    position: absolute;
+    inset: auto auto 0px 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 0 .5rem;
+    width: max-content;
+    color: black;
+    border: 1px solid black;
+
+    &::after {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 0;
+      width: 100%;
+      content: "";
+      background-color: lime;
+      height: 5px;
+    }
   }
 }
 
@@ -372,23 +403,26 @@ intro */
       flex-direction: row;
       align-items: center;
     }
-
+    
     h1 {
       font-size: 2.3rem;
     }
-
+    
     .intro-image {
+      height: 350px;
       max-width: none;
-      width: 380px;
+      margin-inline: 0;
+      width: auto;
+      aspect-ratio: 14 / 30;
     }
   }
 }
 
-@media (min-width: 40em) and (max-width: 54em) {
+@media (min-width: 55em) {
   #main-article-header {
     .intro-image {
-      width: 140px;
-      aspect-ratio: 14 / 30;
+      height: 400px;
+      aspect-ratio: 20 / 30;
     }
   }
 }
@@ -400,7 +434,7 @@ intro */
     }
 
     .intro-image {
-      width: 420px;
+      aspect-ratio: 1;
     }
   }
 }
@@ -512,6 +546,10 @@ section#skills-and-technologies {
     padding-bottom: .3rem;
     margin-bottom: .6rem;
     text-align: left;
+  }
+
+  .skill-name {
+    line-height: 1.2;
   }
 
   .icon {
@@ -650,6 +688,60 @@ section#projects {
 @media (min-width: 48em) {
   #projects-list {
     --column-repeat: 2;
+  }
+}
+
+/*
+################################################################################################################
+################################################################################################################
+################################################################################################################
+Services */
+section#availability {
+  position: fixed;
+  bottom: 2vh;
+  right: 5vw;
+  padding: 0;
+  margin: 0;
+
+  * {
+    margin: 0; 
+    border: 0;
+    padding: 0;
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 100%;
+    right: .3rem;
+    font-size: 1.2rem;
+    background-color: white;
+    border-radius: .3rem .3rem 0 0;
+    padding: .2rem .5rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px 1px 0 1px;
+  }
+
+  .availability {
+    margin: 0;
+    padding: .3rem .8rem;
+    border-radius: .2rem;
+
+    &.available {
+      background-color: limegreen;
+      color: white;
+      box-shadow: 0 0 10px limegreen;
+    }
+    &.busy {
+      background-color: yellow;
+      color: white;
+      box-shadow: 0 0 10px yellow;
+    }
+    &.unavailable {
+      background-color: red;
+      color: white;
+      box-shadow: 0 0 10px red;
+    }
   }
 }
 

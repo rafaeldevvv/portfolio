@@ -1,5 +1,5 @@
 import projects from "./projects.js";
-import skillsAndTech from "./skills-and-technologies.js";
+import skillsAndTechnologies from "./skills-and-technologies.js";
 import services from "./services.js";
 
 const author = {
@@ -13,7 +13,7 @@ const author = {
       country: "Brazil",
       state: "Espírito Santo",
    },
-   status: {
+   availability: {
       /* available, busy, unavailable */
       className: "available",
       text: "Available to work",
@@ -57,7 +57,7 @@ const author = {
       twitter: "https://www.twitter.com/rafaeldevvv"
    },
    projects,
-   skillsAndTechnologies: skillsAndTech,
+   skillsAndTechnologies,
    services
 }
 

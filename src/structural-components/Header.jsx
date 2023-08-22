@@ -45,22 +45,22 @@ function MainMenuToggle({ isExpanded, onClick }) {
 function Nav({ onClickOnLink }) {
   const sections = [
     {
-      name: "About",
+      label: "About",
       href: "#about-fragment",
       title: "Know me in more details",
     },
     {
-      name: "Projects",
+      label: "Projects",
       href: "#projects-fragment",
       title: "See all of my projects",
     },
     {
-      name: "Services",
+      label: "Services",
       href: "#services-fragment",
       title: "See all the services that I can provide you with",
     },
     {
-      name: "Contact",
+      label: "Contact",
       href: "#contact-fragment",
       title: "Contact me",
     },
@@ -70,32 +70,16 @@ function Nav({ onClickOnLink }) {
     <nav id="main-nav" aria-label="Main menu">
       <menu id="main-menu">
         {sections.map((s) => {
-          const { name, title, href } = s;
+          const { label, title, href } = s;
           return (
-            <li key={name}>
+            <li key={label}>
               <a href={href} title={title} onClick={onClickOnLink}>
-                {name}
+                {label}
               </a>
             </li>
           );
         })}
       </menu>
     </nav>
-  );
-}
-
-function AuthorModal({ author, isOmitted }) {
-  return (
-    <div
-      id={isOmitted ? "" : "author-modal"}
-      className={isOmitted ? "sr-only" : ""}
-      aria-labelledby="author-info"
-      onClick={(e) => {
-        e.stopPropagation();
-        console.log("clicked modal");
-      }}
-    >
-      
-    </div>
   );
 }
