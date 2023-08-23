@@ -373,14 +373,14 @@ intro */
     max-height: 400px;
     margin-inline: auto;
   }
-  
+
   .status {
     margin: 0;
     position: absolute;
     inset: auto auto 0px 50%;
     transform: translateX(-50%);
     background-color: white;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     width: max-content;
     color: black;
     border: 1px solid black;
@@ -403,11 +403,11 @@ intro */
       flex-direction: row;
       align-items: center;
     }
-    
+
     h1 {
       font-size: 2.3rem;
     }
-    
+
     .intro-image {
       height: 350px;
       max-width: none;
@@ -531,7 +531,7 @@ section#skills-and-technologies {
   .skill {
     background-color: black;
     border: 1px solid black;
-    padding: .7rem;
+    padding: 0.7rem;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -543,8 +543,8 @@ section#skills-and-technologies {
     max-width: 70%;
     margin-inline: auto;
     border-bottom: 1px dotted white;
-    padding-bottom: .3rem;
-    margin-bottom: .6rem;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.6rem;
     text-align: left;
   }
 
@@ -556,7 +556,9 @@ section#skills-and-technologies {
     color: white;
   }
 
-  .proficiency, .experience, .skill-name {
+  .proficiency,
+  .experience,
+  .skill-name {
     color: white;
   }
 
@@ -704,7 +706,7 @@ section#availability {
   margin: 0;
 
   * {
-    margin: 0; 
+    margin: 0;
     border: 0;
     padding: 0;
   }
@@ -712,11 +714,11 @@ section#availability {
   h2 {
     position: absolute;
     bottom: 100%;
-    right: .3rem;
+    right: 0.3rem;
     font-size: 1.2rem;
     background-color: white;
-    border-radius: .3rem .3rem 0 0;
-    padding: .2rem .5rem;
+    border-radius: 0.3rem 0.3rem 0 0;
+    padding: 0.2rem 0.5rem;
     border-color: black;
     border-style: solid;
     border-width: 1px 1px 0 1px;
@@ -724,8 +726,8 @@ section#availability {
 
   .availability {
     margin: 0;
-    padding: .3rem .8rem;
-    border-radius: .2rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.2rem;
 
     &.available {
       background-color: limegreen;
@@ -752,46 +754,57 @@ section#availability {
 Services */
 section#services {
   h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+}
+
+section#offerings {
+  margin-top: 2rem;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 1.5rem;
   }
 }
 
 ul#service-list {
   display: grid;
-  grid-auto-rows: min-content;
   gap: 3rem;
 }
 
 .service {
-  max-width: 350px;
-  height: 100%;
+  max-width: 400px;
   margin-inline: auto;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem;
-
   .service-name {
-    font-size: 1.4rem;
-    text-align: left;
+    margin-bottom: 0.5rem;
+    min-height: 55px;
   }
 
   .service-description {
     font-size: 1rem;
   }
-
-  .btn {
-    display: block;
-    align-self: start;
-    text-decoration: underline;
-    align-self: start;
-  }
 }
 
 @media (min-width: 48em) {
+  section#offerings {
+    text-align: left;
+  }
+  
   ul#service-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .service {
+    margin-inline: 0;
   }
 }
 
