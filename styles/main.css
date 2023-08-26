@@ -733,7 +733,11 @@ section#contact {
   background-image: linear-gradient(to bottom, white 50%, black 50%);
   padding-block: 3rem;
   color: white;
-  padding-inline: 2rem;
+  /* 
+    Cancel the default value for padding-inline 
+    set on sections further up the code
+  */
+  padding-inline: 0;
 }
 section#contact .section-inner-container {
   max-width: 600px;
