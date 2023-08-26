@@ -27,7 +27,17 @@ function EmailForm() {
   const author = useAuthor();
 
   return (
-    <form action={`mailto:${author.email}`} id="email-form">
+    <form
+      id="email-form"
+      onSubmit={(e) => {
+        e.preventDefault();
+        const encodedBody = encodeURIComponent(body);
+        const encodedSubject = encodeURIComponent(subject);
+
+        //  window.open(`mailto:${author.email}?body=${encodedBody}&subject=${encodedSubject}`);
+        location.href = `mailto:${author.email}?body=${encodedBody}&subject=${encodedSubject}`;
+      }}
+    >
       <p>
         <label htmlFor="inSubject">Subject</label>
         <input
@@ -35,6 +45,7 @@ function EmailForm() {
           id="inSubject"
           value={subject}
           onChange={(e) => setSubject(e.target.value)}
+          placeholder="e.g. Landing Page"
         />
       </p>
 
@@ -48,9 +59,7 @@ function EmailForm() {
         />
       </p>
 
-      <button className="" type="submit">
-        Send email
-      </button>
+      <button type="submit">Send email</button>
     </form>
   );
 }

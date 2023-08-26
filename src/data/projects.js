@@ -36,7 +36,7 @@ export default [
       description: "A webpage with a background like the Matrix Rain Code",
       image: {
          src: "thumbnails/matrix-rain.png",
-         alt: "A black background with green japanese letters going infinitely down. There's a red slider to control the speed of the letters at the center bottom of the screen"
+         alt: "A black background with green japanese letters going infinitely down. There's a red slider to control the speed of the letters in the center bottom of the screen"
       },
       fun: true,
       difficulty: "normal",
@@ -68,7 +68,7 @@ export default [
       description: "A simple landing page displaying four cards into three columns.",
       image: {
          src: "thumbnails/four-card-feature.png",
-         alt: "A webpage containing four card features displayed in three columns - one card on the left, two in the center above and below, and one on the right"
+         alt: "A webpage containing four card features displayed in three columns - one card on the left, two in the center in a single column, and one on the right"
       },
       fun: false,
       difficulty: "easy", 
@@ -84,7 +84,7 @@ export default [
       description: "Huddle's landing page with a nice purple background inviting people to register themselves to Huddle's service",
       image: {
          src: "thumbnails/huddle-landing-page.png",
-         alt: "Huddle's landing page with a nice purple background inviting people to register themselves to Huddle's service"
+         alt: "Huddle's landing page: a purple background, with some content in the center, including an image of a desktop and mobile devices on the left and text on the right inviting people to register themselves"
       },
       fun: false,
       difficulty: "easy",
@@ -116,7 +116,7 @@ export default [
       description: "A landing page with a signup form validated by JavaScript.",
       image: {
          src: "thumbnails/intro-component.png",
-         alt: "A webpage with a strong pink background with message on the left and a signup form on the right"
+         alt: "A webpage with a strong pink background displaying text on the left and a white form containing four text fields and a green button to claim a free trial on the right"
       },
       fun: true,
       difficulty: "easy",
@@ -132,7 +132,7 @@ export default [
       description: "A component that contains three boxes representing three different plans for a specific service. This component can be toggled to show the price annually or monthly.",
       image: {
          src: "thumbnails/pricing-component.png",
-         alt: "A webpage with three boxes displayed horizontally and vertically aligned in it. Each of the boxes represents a plan for a service. There's a toggle at the top which you can click to change the plans to their respective annual and monthly price."
+         alt: "A webpage with three boxes displayed horizontally. Each of the boxes represents a plan for a service. The plans are split into basic, professional and master, respectively. There's a toggle at the top which you can click to change the plans to their respective annual and monthly price."
       },
       fun: false,
       difficulty: "easy",
@@ -148,7 +148,7 @@ export default [
       description: "A little complex landing page with a lot of background images to be placed responsively correctly.",
       image: {
          src: "thumbnails/insure-page.png",
-         alt: "The introduction section of a landing page that displays some text on the left and a picture of a happy family on the right. There's also a header in which is a logo saying 'insure', the navigation bar and a button to view the service plans provided by the website"
+         alt: "The introduction section of a landing page that displays some text on the left and a picture of a happy family on the right. There's also a header in which is a logo saying 'insure', the navigation bar and a button to view the plans provided by the website"
       },
       fun: false,
       difficulty: "normal",
@@ -164,7 +164,7 @@ export default [
       description: "An awesome landing page with a nice dark theme.",
       image: {
          src: "thumbnails/fylo-page.png",
-         alt: "A nice dark page with an introduction section and a header displaying a logo reading 'Fylo', and a navigation bar"
+         alt: "A dark page with an introduction section and a header displaying a logo reading 'Fylo' and a navigation bar"
       },
       fun: true,
       difficulty: "easy",
@@ -180,7 +180,7 @@ export default [
       description: "An awesome landing page that displays a form which expects a link to be shortened by an external API.",
       image: {
          src: "thumbnails/url-shortening.png",
-         alt: "An introduction section of website displaying a message on the left and an image of a person sit at a table typing into a computer on the right, and below there's a form with a nice purple background where you can enter a link to be shortened"
+         alt: "An introduction section of a webpage displaying a message on the left and an image of a person sit at a table typing into a computer on the right, and below there's a form with a nice purple background where you can enter a link to be shortened"
       },
       fun: true,
       difficulty: "easy",
@@ -196,7 +196,7 @@ export default [
       description: "A slightly complex landing page",
       image: {
          src: "thumbnails/manage-page.png",
-         alt: "Manage's landing page's introduction section, there's text on the right to introduce the company and the page, and some chart images on the right, there's also a header at the top with logo, navigation and and a button to get started, all displayed in this order from left to right"
+         alt: "Manage's landing page's introduction section, there's text on the right to introduce the company and the page, and some chart images on the right, there's also a header at the top with a logo reading 'manage', navigation and and an orange link to get started, all displayed in this order from left to right"
       },
       fun: false,
       difficulty: "easy",
@@ -212,7 +212,7 @@ export default [
       description: "A rather simple landing page with a tabs feature and a FAQs section.",
       image: {
          src: "thumbnails/bookmark-page.png",
-         alt: "The initial part of Bookmark's landing page which displays a header at the top, with a logo and navigation system, and an introductory section which displays some text on the left and a tablet screen with some false text represented by straight lines organized as text on the right"
+         alt: "The initial part of Bookmark's landing page which displays a header at the top, with a logo and navigation system, and an introductory section which displays some text and links on the left and a tablet screen with some false text represented by structured straight lines on the right"
       },
       fun: true,
       difficulty: "easy",
@@ -228,7 +228,7 @@ export default [
       description: "A simple list of jobs.",
       image: {
          src: "thumbnails/job-listing.png",
-         alt: "A page with a thick blue stripe at the top, and below it there's a list of jobs showing the logo of the company offering them, role and some more information"
+         alt: "A page with a thick blue stripe at the top, and below it there's a list of jobs showing  the logo of the company offering them, role and some more information about each job"
       },
       fun: false,
       difficulty: "easy",
@@ -261,7 +261,7 @@ export default [
          "A list of all countries in the world provided by the RESTful countries API. You can click on one of them to see more information about it, search for a specific country, filter the countries and sort them.",
       image: {
          src: "thumbnails/rest-countries.png",
-         alt: "A screenshot of a webpage that displays a list of all countries in the world in a grid of four columns, showing their flags and some information about them below the flag",
+         alt: "A webpage that displays a list of all countries in the world in a grid of four columns, showing their flags and some information about them below the flag. At the top, there's a header displaying some text reading 'Where in the world?' and a button to toggle the page's theme. Below, there's a search section to perform filtering, sorting and searching.",
       },
       fun: true,
       difficulty: "hard",
@@ -277,7 +277,7 @@ export default [
          "A classic Tic Tac Toe game that can be played by two players or against a simple CPU player.",
       image: {
          src: "thumbnails/tic-tac-toe.png",
-         alt: "A Tic Tac Toe game, which consists of a nine-square grid on which players can place 'X' or 'O', screenshot",
+         alt: "A Tic Tac Toe game, which consists of a nine-square grid on which players can place 'X' or 'O'. There is a score section at the top of the board that shows the number of times that X won, O won and how many ties happened.",
       },
       fun: true,
       difficult: "normal",
@@ -292,7 +292,7 @@ export default [
       description: `Control a snake in a two-dimensional map and eat as many fruits as you can to make it longer.`,
       image: {
          src: "thumbnails/snake-game.png",
-         alt: "A screenshot of a page which contains a short red snake inside a chess-like green map with a fruit in one of its squares, all inside a canvas, around which there are buttons and text about the page",
+         alt: "A page which contains a short red snake inside a chess-like green map with a fruit in one of its squares, all inside a canvas, around which there are buttons and text about the page",
       },
       fun: true,
       difficulty: "hard",

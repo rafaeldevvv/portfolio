@@ -373,28 +373,6 @@ intro */
     max-height: 400px;
     margin-inline: auto;
   }
-
-  .status {
-    margin: 0;
-    position: absolute;
-    inset: auto auto 0px 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    padding: 0 0.5rem;
-    width: max-content;
-    color: black;
-    border: 1px solid black;
-
-    &::after {
-      position: absolute;
-      top: calc(100% + 5px);
-      left: 0;
-      width: 100%;
-      content: "";
-      background-color: lime;
-      height: 5px;
-    }
-  }
 }
 
 @media (min-width: 40em) {
@@ -613,83 +591,120 @@ section#projects {
 }
 
 #projects-list {
-  margin-top: 5rem;
+  margin-top: 3rem;
   --column-repeat: 1;
 
   display: grid;
   grid-template-columns: repeat(var(--column-repeat, 1), 1fr);
   gap: 2rem;
+
+  @media (min-width: 38em) {
+    --column-repeat: 2;
+  }
+
+  @media (min-width: 57em) {
+    --column-repeat: 3;
+  }
 }
 
 .project {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  max-width: 430px;
+  --inline-padding: 0.6rem;
+  border: 1px solid black;
+  max-width: 350px;
+  height: 100%;
   margin-inline: auto;
 
-  // this is because there was some
-  // ugly white line at the bottom of the project below
-  // the project's image that was making the
-  // hovering kind of weird
-  height: calc(100% - 3px);
-
-  .project-image {
-    transition-property: transform, filter;
-    transition-duration: 0.2s;
-  }
+  /* 
+  reorder the element so that the source order makes sense
+  to screen reader users 
+  */
+  display: grid;
+  grid-template-areas:
+    "image"
+    "name"
+    "technologies-used"
+    "links";
+  grid-template-rows: repeat(4, max-content);
+  --border: 1px solid black;
 
   .project-name {
-    position: absolute;
-    inset: auto auto 5% 50%;
-    z-index: 1;
-    transform: translateX(-50%);
-    width: 100%;
-
-    font-size: 1.1rem;
-    text-align: center;
-    padding-inline: 1.2rem;
-    color: white;
-
-    // this is because hovering over the
-    // project name would cause the script to
-    // remove the hover class from the project
-    pointer-events: none;
+    border-top: var(--border);
+    grid-area: name;
+    padding-block: 0.5rem;
   }
 
-  .icon {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, 0%);
-    font-size: 2.5rem;
-    color: white;
-  }
-}
-
-.project.hover {
   .project-image {
-    filter: brightness(0.4);
-    transform: scale(1.3);
+    grid-area: image;
   }
 
-  .icon {
+  .technologies-used-wrapper {
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 0.6rem var(--inline-padding);
+    grid-area: technologies-used;
+  }
+
+  p {
+    color: hsl(0, 0%, 10%);
+    margin-bottom: 0.5rem;
+  }
+
+  .technologies-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .technology {
+    background-color: hsl(0, 0%, 95%);
+    padding: 0.2rem 0.4rem 0.3rem;
+  }
+
+  .project-name,
+  .project-description,
+  .project-links {
+    padding-inline: var(--inline-padding);
+  }
+
+  .project-links {
+    display: grid;
+    grid-template-areas:
+      "live-site repo"
+      "challenge challenge";
+    grid-area: links;
+    gap: 0.4rem;
+    padding-block: 1rem;
+  }
+
+  a {
     display: block;
-  }
-}
+    padding-block: 0.7rem;
+    border: 1px solid black;
+    font-size: 0.8rem;
+    color: black;
+    min-width: max-content;
+    transition: 0.2s background-color;
+    text-align: center;
 
-@media (min-width: 30em) {
-  .project {
-    .project-name {
-      font-size: 1.2rem;
+    .icon {
+      margin-inline-start: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    &:hover {
+      background-color: hsl(0, 0%, 75%);
     }
   }
-}
 
-@media (min-width: 48em) {
-  #projects-list {
-    --column-repeat: 2;
+  .live-site-link {
+    grid-area: live-site;
+  }
+  .repo-link {
+    grid-area: repo;
+  }
+  .challenge-link {
+    grid-area: challenge;
   }
 }
 
@@ -697,7 +712,7 @@ section#projects {
 ################################################################################################################
 ################################################################################################################
 ################################################################################################################
-Services */
+Availability */
 section#availability {
   position: fixed;
   bottom: 2vh;
@@ -798,7 +813,7 @@ ul#service-list {
   section#offerings {
     text-align: left;
   }
-  
+
   ul#service-list {
     grid-template-columns: 1fr 1fr;
   }

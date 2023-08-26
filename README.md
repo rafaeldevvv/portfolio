@@ -41,6 +41,8 @@ Parent select
 - [Image Resizer](https://imageresizer.com/) - This was very useful as my computer does not have sufficient computing resources to keep photoshop and vs code open at the same time.
 - [HTML element reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) - A huge list of html elements.
 - [date-fns package](https://www.npmjs.com/package/date-fns)
+- [Stack Overflow - How do i ad html form data to a mailto link](https://stackoverflow.com/questions/52637406/how-do-i-add-html-form-data-to-a-mailto-link) - This helped me figure out how to send emails without spaces being replaced with plus signs.
+- [Stack Overflow - Whatsapp API related question](https://stackoverflow.com/questions/30344476/web-link-to-specific-whatsapp-contact) - How to send messages via whatsapp from my website.
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)

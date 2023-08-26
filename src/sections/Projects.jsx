@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { flushSync } from "react-dom";
 import { useAuthor } from "../AuthorContext.js";
 
@@ -30,8 +30,7 @@ export default function ProjectsSection() {
 }
 
 export function ProjectList({ projects }) {
-  const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(4);
-  const [hoveredProjectName, setHoveredProjectName] = useState(null);
+  const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(3);
   const projectRefs = useRef(null);
 
   function getMap() {
@@ -42,61 +41,36 @@ export function ProjectList({ projects }) {
     return projectRefs.current;
   }
 
-  // useScrollEvent, useDocumentScroll, useMobileScroll
-  useEffect(() => {
-    if (matchMedia("(pointer:fine)").matches) return;
-
-    function handleScroll() {
-      const map = getMap();
-      const names = Array.from(map.keys());
-
-      const nameOfLastProjectInMiddle = names.findLast((n) => {
-        const node = map.get(n);
-        const { top } = node.getBoundingClientRect();
-
-        return top < innerHeight / 2 && top > 0 && top < innerHeight;
-      });
-
-      if (nameOfLastProjectInMiddle) {
-        setHoveredProjectName(nameOfLastProjectInMiddle);
-      } else {
-        setHoveredProjectName(null);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   function handleShowClick() {
     const scrollOptions = { block: "center", behavior: "smooth" };
 
     if (numberOfProjectsShown < projects.length) {
       const nextNumberOfProjectsShown = Math.min(
-        numberOfProjectsShown + 6,
+        numberOfProjectsShown + 3,
         projects.length
       );
 
+      // update dom immediately
       flushSync(() => {
         setNumberOfProjectsShown(nextNumberOfProjectsShown);
       });
 
+      // a ref has the last values regardless of the which render the handler is being run in
       const updatedMap = getMap();
+      const projectNames = Array.from(updatedMap.keys());
 
-      const lastProjectName = Array.from(updatedMap.keys())[
-        nextNumberOfProjectsShown - 1
-      ];
+      // get last project in the dom
+      const lastProjectName = projectNames[nextNumberOfProjectsShown - 1];
       const lastProject = updatedMap.get(lastProjectName);
 
+      // get the last image and then wait for it to load to scroll it into view
       const lastProjectImage = lastProject.querySelector(".project-image");
 
       lastProjectImage.onload = function () {
         lastProject.scrollIntoView(scrollOptions);
       };
     } else {
-      setNumberOfProjectsShown(4);
+      setNumberOfProjectsShown(3);
       const map = getMap();
       const firstProjectName = Array.from(map.keys())[0];
       const firstProject = map.get(firstProjectName);
@@ -112,45 +86,32 @@ export function ProjectList({ projects }) {
 
   return (
     <div>
-      <ul id="projects-list">
+      <ul
+        id="projects-list"
+        aria-live="polite"
+        role="region"
+        aria-relevant="additions removals"
+      >
         {projects.map((p, i) => {
           if (i < numberOfProjectsShown) {
             return (
               <li
                 key={p.name}
-                onPointerEnter={() => {
-                  if (matchMedia("(pointer:fine)").matches)
-                    setHoveredProjectName(p.name);
-                }}
-                onPointerLeave={() => {
-                  if (matchMedia("(pointer:fine)").matches)
-                    setHoveredProjectName(null);
-                }}
                 ref={(node) => {
                   const map = getMap();
-                  if (node) {
-                    map.set(p.name, node);
-                  } else {
-                    map.delete(p.name);
-                  }
+
+                  if (node) map.set(p.name, node);
+                  else map.delete(p.name);
                 }}
               >
-                <Project
-                  project={p}
-                  isHovered={p.name === hoveredProjectName}
-                />
+                <Project project={p} />
               </li>
             );
           }
         })}
       </ul>
       <div className="show-button-container">
-        <button
-          type="button"
-          aria-label={buttonMessage}
-          onClick={handleShowClick}
-          title={buttonMessage}
-        >
+        <button type="button" onClick={handleShowClick} title={buttonMessage}>
           <i
             className={`fa-solid fa-chevron-${
               allProjectsAreShown ? "up" : "down"
@@ -164,21 +125,67 @@ export function ProjectList({ projects }) {
   );
 }
 
-export function Project({ project, isHovered }) {
+export function Project({ project }) {
   return (
-    <div className={`project ${isHovered ? "hover" : ""}`}>
-      <h3 className={`${isHovered ? "project-name" : "sr-only"}`}>  
-        {project.name}
-      </h3>
-      <button className="project-button" type="button" aria-label="Open modal">
-        <img
-          className="project-image"
-          src={project.image.src}
-          alt={project.image.alt}
-        />
-        <i className="fa-regular fa-hand-pointer icon" aria-hidden="true"></i>
-        <span className="sr-only">Open modal</span>
-      </button>
-    </div>
+    <article className="project">
+      <h3 className="project-name">{project.name}</h3>
+      <img
+        className="project-image"
+        src={project.image.src}
+        alt={project.image.alt}
+      />
+      <div className="technologies-used-wrapper">
+        <p>Technologies used</p>
+        <ul className="technologies-used">
+          {project.technologiesUsed.map((t) => {
+            return (
+              <li key={t} className="technology">
+                {t}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <div className="project-links">
+        <a
+          href={project.liveSite}
+          target="_blank"
+          title={`${project.name} project live site`}
+          className="live-site-link"
+        >
+          Live Site
+          <i
+            className="fa-solid fa-arrow-up-right-from-square icon"
+            aria-hidden="true"
+          ></i>
+        </a>
+        <a
+          href={project.repository}
+          target="_blank"
+          title={`Code files, assets and details of ${project.name} project on GitHub`}
+          className="repo-link"
+        >
+          Repo
+          <i
+            className="fa-solid fa-arrow-up-right-from-square icon"
+            aria-hidden="true"
+          ></i>
+        </a>
+        {project.challenge && (
+          <a
+            href={project.challenge}
+            target="_blank"
+            title={`${project.name} project challenge page`}
+            className="challenge-link"
+          >
+            Challenge
+            <i
+              className="fa-solid fa-arrow-up-right-from-square icon"
+              aria-hidden="true"
+            ></i>
+          </a>
+        )}
+      </div>
+    </article>
   );
 }
