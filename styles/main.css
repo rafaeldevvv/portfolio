@@ -740,10 +740,10 @@ section#contact {
   padding-inline: 0;
 }
 section#contact .section-inner-container {
-  max-width: 600px;
+  max-width: 650px;
   margin-inline: auto;
   background-color: hsl(0, 0%, 10%);
-  border-radius: 2rem;
+  border-radius: 0.2rem;
   padding: 1.5rem;
   margin-inline: auto;
 }
@@ -755,6 +755,9 @@ section#contact p {
   text-align: center;
   color: white;
   max-width: none;
+}
+section#contact a {
+  color: limegreen;
 }
 section#contact form p {
   text-align: left;

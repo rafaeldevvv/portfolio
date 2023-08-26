@@ -841,10 +841,10 @@ section#contact {
   padding-inline: 0;
 
   .section-inner-container {
-    max-width: 600px;
+    max-width: 650px;
     margin-inline: auto;
     background-color: hsl(0, 0%, 10%);
-    border-radius: 2rem;
+    border-radius: .2rem;
     padding: 1.5rem;
     margin-inline: auto;
   }
@@ -857,6 +857,10 @@ section#contact {
     text-align: center;
     color: white;
     max-width: none;
+  }
+
+  a {
+    color: limegreen;
   }
 
   form p {

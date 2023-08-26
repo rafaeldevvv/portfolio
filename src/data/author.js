@@ -49,7 +49,8 @@ const author = {
       alt: "A man wearing a suit looking to the right"
    },
    email: "rafaelmaiaw@gmail.com",
-   phoneNumber: "+55 27 996904603",
+   phoneNumber: "5527996904603",
+   formattedPhoneNumber: "+55 27 996904603",
    socials: {
       instagram: "https://www.instagram.com/rafaeldevvv",
       github: "https://github.com/rafaeldevvv",

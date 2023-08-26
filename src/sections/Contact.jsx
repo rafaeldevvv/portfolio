@@ -12,7 +12,18 @@ export default function ContactSection() {
           Contact me
           <span className="fragment" id="contact-fragment"></span>
         </h2>
-        <p>{author.contactSectionText}</p>
+        <p>
+          You can preferably{" "}
+          <a
+            href={`https://wa.me/${author.phoneNumber}`}
+            title={`Contact me through WhatsApp`}
+            target="_blank"
+          >
+            reach out to me through WhatsApp
+          </a>{" "}
+          or any of my social media profiles provided below. Alternatively, use
+          the form below to send me an email.
+        </p>
 
         <EmailForm />
       </div>

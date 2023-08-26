@@ -29,7 +29,7 @@ function ContactInfo() {
         <li className="contact-item">
           <i className="fa-brands fa-whatsapp icon" aria-hidden="true"></i>{" "}
           <span className="sr-only">Contact me via whatsapp:</span>
-          <span className="content">{author.phoneNumber}</span>
+          <span className="content">{author.formattedPhoneNumber}</span>
         </li>
         <li className="contact-item">
           <i className="fa-solid fa-envelope icon" aria-hidden="true"></i>{" "}
