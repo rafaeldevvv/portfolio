@@ -181,6 +181,7 @@ p {
 header */
 #global-header {
   position: fixed;
+  /* auto for bottom */
   inset: 0 0 auto 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 1);

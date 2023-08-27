@@ -133,6 +133,7 @@ export function Project({ project }) {
         className="project-image"
         src={project.image.src}
         alt={project.image.alt}
+        title={`${project.name} screenshot`}
       />
       <div className="technologies-used-wrapper">
         <p>Technologies used</p>
@@ -175,7 +176,7 @@ export function Project({ project }) {
           <a
             href={project.challenge}
             target="_blank"
-            title={`${project.name} project challenge page`}
+            title={`${project.name} challenge page`}
             className="challenge-link"
           >
             Challenge

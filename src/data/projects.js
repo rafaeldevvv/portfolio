@@ -277,7 +277,7 @@ export default [
          "A classic Tic Tac Toe game that can be played by two players or against a simple CPU player.",
       image: {
          src: "thumbnails/tic-tac-toe.png",
-         alt: "A Tic Tac Toe game, which consists of a nine-square grid on which players can place 'X' or 'O'. There is a score section at the top of the board that shows the number of times that X won, O won and how many ties happened.",
+         alt: "A Tic Tac Toe game, which consists of a nine-square grid on which players can place 'X' or 'O'. There is a score section at the top of the board that shows the number of times that X won, O won and how many ties happened. Below the board, there are buttons to restart or quit the game.",
       },
       fun: true,
       difficult: "normal",
