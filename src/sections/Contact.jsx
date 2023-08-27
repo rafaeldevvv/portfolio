@@ -16,7 +16,6 @@ export default function ContactSection() {
           You can preferably{" "}
           <a
             href={`https://wa.me/${author.phoneNumber}`}
-            title={`Contact me through WhatsApp`}
             target="_blank"
           >
             reach out to me through WhatsApp
