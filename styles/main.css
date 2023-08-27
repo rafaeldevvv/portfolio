@@ -34,6 +34,10 @@ p {
   line-height: 1.4;
 }
 
+button {
+  font-family: "Space Mono", Courier, monospace;
+}
+
 /* UTILITIES */
 .btn {
   cursor: pointer;
@@ -506,20 +510,25 @@ section#projects .show-button-container {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   align-items: center;
-  gap: 1rem;
 }
 section#projects .show-button-container::before, section#projects .show-button-container::after {
   content: "";
   display: block;
   width: 100%;
-  background-color: #999;
-  height: 2px;
+  background-color: black;
+  height: 1px;
 }
 section#projects .show-button-container button {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border: 1px solid black;
   border-radius: 2rem;
-  font-size: 2rem;
+}
+section#projects .show-button-container .button-label {
+  font-size: 0.9rem;
+}
+section#projects .show-button-container .icon {
+  font-size: 1.1rem;
+  margin-left: 0.4rem;
 }
 
 #projects-list {

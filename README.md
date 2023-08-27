@@ -6,7 +6,10 @@
    - [Links](#links)
 - [Process](#process)
    - [Built with](#built-with)
-   - [Learning](#learning)
+   - [Useful Resources](#useful-resources)
+- [Owner](#owner)
+- [License](#license)
+   
 
 ## Overview
 ### Screenshots
@@ -23,14 +26,7 @@
 - React.js
 - Git/GitHub
 - Font Awesome
-
-### Learning
-Parent select
-```scss
-&::before {
-
-}
-```
+- Webpack
 
 ### Useful Resources
 - [How I made my portfolio](https://tekolio.com/how-i-made-my-portfolio-in-react/#:~:text=Making%20a%20portfolio%20in%20HTML,we%20have%20as%20React%20developers.)
@@ -43,6 +39,7 @@ Parent select
 - [date-fns package](https://www.npmjs.com/package/date-fns)
 - [Stack Overflow - How do i ad html form data to a mailto link](https://stackoverflow.com/questions/52637406/how-do-i-add-html-form-data-to-a-mailto-link) - This helped me figure out how to send emails without spaces being replaced with plus signs.
 - [Stack Overflow - Whatsapp API related question](https://stackoverflow.com/questions/30344476/web-link-to-specific-whatsapp-contact) - How to send messages via whatsapp from my website.
+- [Possible Heading](https://equalizedigital.com/accessibility-checker/possible-heading/)
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)

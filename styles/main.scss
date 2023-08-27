@@ -39,6 +39,10 @@ p {
   line-height: 1.4;
 }
 
+button {
+  font-family: "Space Mono", Courier, monospace;
+}
+
 /* UTILITIES */
 .btn {
   cursor: pointer;
@@ -571,22 +575,30 @@ section#projects {
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
     align-items: center;
-    gap: 1rem;
 
     &::before,
     &::after {
       content: "";
       display: block;
       width: 100%;
-      background-color: #999;
-      height: 2px;
+      background-color: black;
+      height: 1px;
     }
 
     button {
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 1rem; 
       border: 1px solid black;
       border-radius: 2rem;
-      font-size: 2rem;
+      
+    }
+    
+    .button-label {
+      font-size: .9rem;
+    }
+
+    .icon {
+      font-size: 1.1rem;
+      margin-left: .4rem;
     }
   }
 }

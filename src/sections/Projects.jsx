@@ -111,14 +111,14 @@ export function ProjectList({ projects }) {
         })}
       </ul>
       <div className="show-button-container">
-        <button type="button" onClick={handleShowClick} title={buttonMessage}>
+        <button type="button" onClick={handleShowClick}>
+          <span className="button-label">{buttonMessage}</span>
           <i
             className={`fa-solid fa-chevron-${
               allProjectsAreShown ? "up" : "down"
             } icon`}
             aria-hidden="true"
           ></i>
-          <span className="sr-only">{buttonMessage}</span>
         </button>
       </div>
     </div>
