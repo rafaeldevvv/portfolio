@@ -169,6 +169,7 @@ p {
 header */
 #global-header {
   position: fixed;
+  /* auto for bottom */
   inset: 0 0 auto 0;
   z-index: 999;
   background-color: rgb(0, 0, 0);
@@ -629,7 +630,7 @@ section#projects .show-button-container button {
 Availability */
 section#availability {
   position: fixed;
-  bottom: 2vh;
+  bottom: 3vh;
   right: 5vw;
   padding: 0;
   margin: 0;
@@ -657,19 +658,20 @@ section#availability .availability {
   border-radius: 0.2rem;
 }
 section#availability .availability.available {
-  background-color: limegreen;
+  /* This color because of contrast */
+  background-color: #218721;
   color: white;
-  box-shadow: 0 0 10px limegreen;
+  box-shadow: 0 0 20px -3px limegreen;
 }
 section#availability .availability.busy {
   background-color: yellow;
-  color: white;
-  box-shadow: 0 0 10px yellow;
+  color: black;
+  box-shadow: 0 0 20px -3px yellow;
 }
 section#availability .availability.unavailable {
   background-color: red;
   color: white;
-  box-shadow: 0 0 10px red;
+  box-shadow: 0 0 20px -3px red;
 }
 
 /*

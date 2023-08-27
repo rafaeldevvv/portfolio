@@ -716,7 +716,7 @@ section#projects {
 Availability */
 section#availability {
   position: fixed;
-  bottom: 2vh;
+  bottom: 3vh;
   right: 5vw;
   padding: 0;
   margin: 0;
@@ -746,19 +746,20 @@ section#availability {
     border-radius: 0.2rem;
 
     &.available {
-      background-color: limegreen;
+      /* This color because of contrast */
+      background-color: #218721;
       color: white;
-      box-shadow: 0 0 10px limegreen;
+      box-shadow: 0 0 20px -3px limegreen;
     }
     &.busy {
       background-color: yellow;
-      color: white;
-      box-shadow: 0 0 10px yellow;
+      color: black;
+      box-shadow: 0 0 20px -3px yellow;
     }
     &.unavailable {
       background-color: red;
       color: white;
-      box-shadow: 0 0 10px red;
+      box-shadow: 0 0 20px -3px red;
     }
   }
 }

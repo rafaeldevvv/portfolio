@@ -15,6 +15,7 @@ const author = {
    },
    availability: {
       /* available, busy, unavailable */
+      /* When busy or unavailable write "(Busy|Unavailable) - (reason)" */
       className: "available",
       text: "Available to work",
    },
