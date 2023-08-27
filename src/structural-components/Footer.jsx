@@ -28,12 +28,12 @@ function ContactInfo() {
       <ul id="contact-list">
         <li className="contact-item">
           <i className="fa-brands fa-whatsapp icon" aria-hidden="true"></i>{" "}
-          <span className="sr-only">Contact me via whatsapp:</span>
+          <span className="sr-only">My phone number:</span>
           <span className="content">{author.formattedPhoneNumber}</span>
         </li>
         <li className="contact-item">
           <i className="fa-solid fa-envelope icon" aria-hidden="true"></i>{" "}
-          <span className="sr-only">Send me an email: </span>
+          <span className="sr-only">My email:</span>
           <span className="content">{author.email}</span>
         </li>
       </ul>

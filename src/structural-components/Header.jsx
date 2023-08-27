@@ -13,7 +13,12 @@ export default function Header() {
   return (
     <header className={isExpanded ? "show-nav" : ""} id="global-header">
       <div className="container">
-        <img className="logo" src={author.logo.src} alt={author.logo.alt} aria-label="logo" />
+        <img
+          className="logo"
+          src={author.logo.src}
+          alt={author.logo.alt}
+          title={`${author.shortName}'s logo`}
+        />
         <MainMenuToggle isExpanded={isExpanded} onClick={handleClick} />
         <Nav onClickOnLink={handleClick} />
       </div>

@@ -160,6 +160,11 @@ button {
   text-align: right;
 }
 
+.logo {
+  display: block;
+  max-height: 50px;
+}
+
 /* MAIN ELEMENTS */
 .container {
   max-width: 1100px;
@@ -185,9 +190,6 @@ header */
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-#global-header .logo {
-  height: 50px;
 }
 
 /* button to toggle nav */

@@ -7,7 +7,7 @@ const author = {
    shortName: "Rafael",
    logo: {
       src: 'images/logo.png',
-      alt: "A text in which RAFAEL is written in uppercase, and to the left of this word, there is a circle, within which there's a less than symbol, a forward slash and a greater than symbol, in this order from left to right."
+      alt: "A piece of text displaying RAFAEL in uppercase and an HTML code mark within a circle to the right of it"
    },
    location: {
       country: "Brazil",
