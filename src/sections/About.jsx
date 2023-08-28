@@ -57,7 +57,10 @@ export default function AboutSection() {
 }
 
 function Skill({ skill }) {
-  const initialDate = new Date(skill.initialDate);
+  let initialDate = null;
+  if (skill.initialDate) {
+    initialDate = new Date(skill.initialDate);
+  }
 
   return (
     <div className="skill">
@@ -67,7 +70,7 @@ function Skill({ skill }) {
           <i className={`${skill.fontAwesomeIcon} icon`} aria-hidden="true"></i>
         )}
       </div>
-      {skill.initialDate && (
+      {initialDate && (
         <p className="experience">Since {format(initialDate, "MMMM, yyyy")}</p>
       )}
       <p className="proficiency">Proficiency: {skill.proficiency}</p>

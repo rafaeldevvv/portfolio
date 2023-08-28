@@ -32,19 +32,18 @@ const author = {
       }
    ],
    introduction: "Welcome to my website! I create beautiful and fast websites. As a freelance web developer, I create enjoyable experiences that work on any device for everyone. Let's make your ideas real with creativity and the latest technology!",
-   about: "Hey there! I'm Rafael Maia, and I'm on a journey to becoming a skilled freelance front-end developer. Web page creation is my true passion. My approach is all about simplicity and meaningful design.",
    aboutParagraphs: [
       "Hello, again!",
       "I'm a self-taught front-end developer based in Espírito Santo, Brazil. I'm on a journey to becoming a skilled freelance front-end developer. Web page creation is my true passion. My approach is all about simplicity and meaningful design.",
       "I can develop responsive, performant and accessible pages from scratch, transforming them into modern user-friendly web experiences. I am always striving to learn about the latest technologies and frameworks to keep my knowledge up-to-date."
    ],
-   aboutImage: {
-      src: "images/about.jpg",
-      alt: "A guy looking to the left with a black turtleneck"
-   },
    introImage: {
       src: "images/intro.jpg",
       alt: "A man wearing a suit looking to the right"
+   },
+   aboutImage: {
+      src: "images/about.jpg",
+      alt: "A guy looking to the left with a black turtleneck"
    },
    email: "rafaelmaiaw@gmail.com",
    phoneNumber: "5527996904603",

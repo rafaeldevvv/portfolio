@@ -10,12 +10,6 @@
 
   --heading-height: 80px;
   --global-padding: min(3rem, 6vw);
-
-  --html-color: hsl(13, 78%, 52%);
-  --css-color: hsl(222, 88%, 55%);
-  --javascript-color: hsl(46, 86%, 54%);
-  --sass-color: hsl(330, 51%, 60%);
-  --react-color: hsl(189, 100%, 50%);
 }
 
 /* 
@@ -44,24 +38,6 @@ button {
 }
 
 /* UTILITIES */
-.btn {
-  cursor: pointer;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-  display: inline-block;
-  text-transform: uppercase;
-
-  transition: {
-    property: color, background-color;
-    duration: 0.2s;
-  }
-}
-
-.primary-btn {
-  background-color: black;
-  color: white;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -75,6 +51,8 @@ button {
   border: 0;
 }
 
+/* The fragment is what is referenced by the links in the
+navigation so that the header does not stay on the heading */
 .fragment-father {
   position: relative;
 }
@@ -96,29 +74,6 @@ button {
     inset: 0 auto 0 0;
     background-color: black;
   }
-}
-
-.html-background {
-  background-color: var(--html-color, red);
-}
-.css-background {
-  background-color: var(--css-color, blue);
-}
-.javascript-background {
-  background-color: var(--javascript-color, yellow);
-}
-.react-background {
-  background-color: var(--react-color, aqua);
-}
-.sass-background {
-  background-color: var(--sass-color, pink);
-}
-.github-background {
-  background-color: var(--github-color, hsl(0, 50%, 95%));
-}
-
-.flex {
-  display: flex;
 }
 
 .dashed-border-paragraph {
