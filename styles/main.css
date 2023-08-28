@@ -440,6 +440,10 @@ section#skills-and-technologies .experience,
 section#skills-and-technologies .skill-name {
   color: white;
 }
+section#skills-and-technologies .proficiency,
+section#skills-and-technologies .experience {
+  font-size: 0.9rem;
+}
 @media (min-width: 30em) {
   section#skills-and-technologies .list {
     grid-template-columns: repeat(2, 1fr);
@@ -728,7 +732,7 @@ section#contact p {
 }
 section#contact a {
   /* this color for a better contrast */
-  color: #29A829;
+  color: #29a829;
 }
 section#contact form p {
   text-align: left;
@@ -771,15 +775,18 @@ section#contact p:not(form p) {
   width: 100%;
   text-align: center;
   padding: 1rem;
-  color: white;
-  background-color: white;
   border-radius: 0.2rem;
   text-transform: uppercase;
   font-weight: bold;
-  background-color: hsl(0, 50%, 10%);
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition-property: color, background-color;
+  transition-duration: 0.2s;
 }
 #email-form button[type=submit]:hover {
-  box-shadow: 0 0 10px white;
+  color: black;
+  background-color: white;
 }
 
 @media (min-width: 30em) {

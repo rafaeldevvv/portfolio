@@ -71,7 +71,12 @@ function Skill({ skill }) {
         )}
       </div>
       {initialDate && (
-        <p className="experience">Since {format(initialDate, "MMMM, yyyy")}</p>
+        <p className="experience">
+          Since{" "}
+          <time dateTime={skill.initialDate}>
+            {format(initialDate, "MMMM, yyyy")}
+          </time>
+        </p>
       )}
       <p className="proficiency">Proficiency: {skill.proficiency}</p>
     </div>
