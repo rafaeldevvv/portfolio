@@ -35,10 +35,9 @@ function MainMenuToggle({ isExpanded, onClick }) {
       className="mobile-only"
       type="button"
       id="main-menu-toggle"
-      title={message}
       aria-haspopup="menu"
       aria-expanded={isExpanded}
-      aria-label={message}
+      aria-label={message} // when it is changed in a re-render, the message is announced
       onClick={onClick}
     >
       <i className={`fa-solid ${icon} icon`} aria-hidden="true" />
