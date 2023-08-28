@@ -14,10 +14,7 @@ export default function ContactSection() {
         </h2>
         <p>
           You can preferably{" "}
-          <a
-            href={`https://wa.me/${author.phoneNumber}`}
-            target="_blank"
-          >
+          <a href={`https://wa.me/${author.phoneNumber}`} target="_blank">
             reach out to me through WhatsApp
           </a>{" "}
           or any of my social media profiles provided below. Alternatively, use
@@ -69,7 +66,12 @@ function EmailForm() {
         />
       </p>
 
-      <button type="submit">Send email</button>
+      <button type="submit">
+        <span className="text">Send email</span>
+        <span className="icon">
+          <i className="fa-regular fa-paper-plane"></i>
+        </span>
+      </button>
     </form>
   );
 }

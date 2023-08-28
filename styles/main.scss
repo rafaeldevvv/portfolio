@@ -887,11 +887,15 @@ section#contact {
   }
 
   button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
     margin-top: 1rem;
-    display: block;
     width: 100%;
-    text-align: center;
-    padding: 1rem;
+    height: 50px;
+    
+    padding-inline: 1rem;
     border-radius: 0.2rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -899,6 +903,7 @@ section#contact {
     background-color: transparent;
     border: 1px solid white;
     color: white;
+
     transition: {
       property: color, background-color;
       duration: .2s;
@@ -907,6 +912,10 @@ section#contact {
     &:hover {
       color: black;
       background-color: white;
+    }
+
+    .icon {
+      font-size: 1.2rem;
     }
   }
 }
