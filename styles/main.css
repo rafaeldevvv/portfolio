@@ -705,7 +705,7 @@ section#offerings {
   text-align: center;
 }
 section#offerings h3 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 ul#service-list {
@@ -717,9 +717,12 @@ ul#service-list {
   max-width: 400px;
   margin-inline: auto;
 }
+.service .icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
 .service .service-name {
   margin-bottom: 0.5rem;
-  min-height: 55px;
 }
 .service .service-description {
   font-size: 1rem;

@@ -19,8 +19,6 @@ const author = {
       className: "available",
       text: "Available to work",
    },
-   learning: "Accessibility",
-   job: "Freelance front-end developer",
    spokenLanguages: [
       {
          name: "Portuguese",
@@ -40,7 +38,6 @@ const author = {
       "I'm a self-taught front-end developer based in Espírito Santo, Brazil. I'm on a journey to becoming a skilled freelance front-end developer. Web page creation is my true passion. My approach is all about simplicity and meaningful design.",
       "I can develop responsive, performant and accessible pages from scratch, transforming them into modern user-friendly web experiences. I am always striving to learn about the latest technologies and frameworks to keep my knowledge up-to-date."
    ],
-   contactSectionText: "You can reach out to me on my social media profiles, particularly through WhatsApp, or send me an email by using the form below.",
    aboutImage: {
       src: "images/about.jpg",
       alt: "A guy looking to the left with a black turtleneck"

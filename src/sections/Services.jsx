@@ -37,6 +37,7 @@ export default function ServicesSection() {
 function Service({ service }) {
   return (
     <div className="service">
+      <i className={`${service.fontAwesomeIcon} icon`} aria-hidden="true"></i>
       <h4 className="service-name">{service.name}</h4>
       <p className="service-description">{service.shortDescription}</p>
     </div>

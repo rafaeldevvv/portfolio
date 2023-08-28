@@ -801,7 +801,7 @@ section#offerings {
   text-align: center;
 
   h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -814,9 +814,13 @@ ul#service-list {
   max-width: 400px;
   margin-inline: auto;
 
+  .icon {
+    font-size: 4rem;
+    margin-bottom: .5rem;
+  }
+
   .service-name {
     margin-bottom: 0.5rem;
-    min-height: 55px;
   }
 
   .service-description {
