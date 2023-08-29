@@ -150,40 +150,25 @@ export function Project({ project }) {
       <div className="project-links">
         <a
           href={project.liveSite}
-          target="_blank"
           title={`${project.name} project live site`}
           className="live-site-link"
         >
           Live Site
-          <i
-            className="fa-solid fa-arrow-up-right-from-square icon"
-            aria-hidden="true"
-          ></i>
         </a>
         <a
           href={project.repository}
-          target="_blank"
           title={`Code files, assets and details of ${project.name} project on GitHub`}
           className="repo-link"
         >
           Repo
-          <i
-            className="fa-solid fa-arrow-up-right-from-square icon"
-            aria-hidden="true"
-          ></i>
         </a>
         {project.challenge && (
           <a
             href={project.challenge}
-            target="_blank"
             title={`${project.name} challenge page`}
             className="challenge-link"
           >
             Challenge
-            <i
-              className="fa-solid fa-arrow-up-right-from-square icon"
-              aria-hidden="true"
-            ></i>
           </a>
         )}
       </div>

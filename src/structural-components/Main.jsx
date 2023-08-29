@@ -8,7 +8,7 @@ import Contact from "../sections/Contact.jsx";
 
 export default function Main() {
   return (
-    <main>
+    <main id="main-content">
       <article>
         <Intro />
         <About />
