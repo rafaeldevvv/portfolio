@@ -558,7 +558,7 @@ section#projects .show-button-container .icon {
   display: grid;
   grid-template-areas: "live-site repo" "challenge challenge";
   grid-area: links;
-  gap: 0.4rem;
+  gap: 0.7rem;
   padding-block: 1rem;
 }
 .project a {
