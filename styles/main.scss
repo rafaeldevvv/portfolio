@@ -10,6 +10,7 @@
 
   --heading-height: 80px;
   --global-padding: min(3rem, 6vw);
+  --dark-back-focus-outline: 3px solid white;
 }
 
 /* 
@@ -193,18 +194,25 @@ nav */
     padding-block: 0.3rem;
     display: block;
     position: relative;
+
+    &:focus {
+      outline: var(--dark-back-focus-outline);
+      outline-offset: 4px;
+    }
   }
   a::before {
     content: "";
 
     position: absolute;
-    bottom: 0.05rem;
+    /* Use bottom because of padding block */
+    bottom: 0.06rem;
     left: 50%;
     transform: translateX(-50%);
 
     height: 3px;
     width: 0px;
 
+    /* the color of the link, whatever it is */
     background-color: currentColor;
 
     transition: {
@@ -213,8 +221,10 @@ nav */
       timing-function: ease-in;
     }
   }
-  a:hover::before {
-    width: 100%;
+  a:hover, a:focus {
+    &::before {
+      width: 100%;
+    }
   }
 }
 
@@ -458,6 +468,7 @@ section#skills-and-technologies {
   h3 {
     margin-bottom: 2rem;
   }
+
   .list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -529,6 +540,9 @@ section#skills-and-technologies {
 ################################################################################################################
  Projects */
 section#projects {
+  --button-hover-color: hsl(0, 0%, 75%);
+  --button-dark-back-focus-outline: 3px solid black;
+
   .show-button-container {
     margin-top: 2rem;
     display: grid;
@@ -548,6 +562,20 @@ section#projects {
       padding: 0.5rem 1rem;
       border: 1px solid black;
       border-radius: 2rem;
+
+      transition: {
+        property: background-color;
+        duration: .2s;
+      }
+
+      &:focus {
+        outline: var(--button-dark-back-focus-outline);
+        outline-offset: 1px;
+      }
+
+      &:hover, &:focus {
+        background-color: var(--button-hover-color);
+      }
     }
 
     .button-label {
@@ -644,7 +672,7 @@ section#projects {
       "live-site repo"
       "challenge challenge";
     grid-area: links;
-    gap: .7rem;
+    gap: 0.7rem;
     padding-block: 1rem;
   }
 
@@ -663,8 +691,13 @@ section#projects {
       font-size: 0.8rem;
     }
 
-    &:hover {
-      background-color: hsl(0, 0%, 75%);
+    &:hover,
+    &:focus {
+      background-color: var(--button-hover-color);
+    }
+
+    &:focus {
+      outline: var(--button-dark-back-focus-outline);
     }
   }
 
@@ -838,6 +871,10 @@ section#contact {
   a {
     /* this color for a better contrast */
     color: #29a829;
+
+    &:focus {
+      outline: var(--dark-back-focus-outline);
+    }
   }
 
   form p {
@@ -871,6 +908,7 @@ section#contact {
     display: block;
     border: 0;
     padding: 0.5rem;
+
     font: {
       size: 0.9rem;
       family: "Inconsolata", monospace;
@@ -882,6 +920,16 @@ section#contact {
   }
   textarea {
     min-height: 100px;
+    resize: vertical;
+  }
+
+  input,
+  textarea,
+  button[type="submit"] {
+    &:focus {
+      outline: 3px double white;
+      outline-offset: 2px;
+    }
   }
 
   button[type="submit"] {
@@ -907,7 +955,8 @@ section#contact {
       duration: 0.2s;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: black;
       background-color: white;
     }
@@ -952,10 +1001,16 @@ footer {
       transition-property: color, transform;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
-    }
-    .social-link:hover {
-      color: white;
-      transform: scale(1.2);
+
+      &:hover,
+      &:focus {
+        color: white;
+        transform: scale(1.2);
+      }
+
+      &:focus {
+        outline: var(--dark-back-focus-outline);
+      }
     }
   }
 

@@ -7,6 +7,7 @@
   font-weight: 700;
   --heading-height: 80px;
   --global-padding: min(3rem, 6vw);
+  --dark-back-focus-outline: 3px solid white;
 }
 
 /* 
@@ -180,20 +181,26 @@ nav */
   display: block;
   position: relative;
 }
+#main-menu a:focus {
+  outline: var(--dark-back-focus-outline);
+  outline-offset: 4px;
+}
 #main-menu a::before {
   content: "";
   position: absolute;
-  bottom: 0.05rem;
+  /* Use bottom because of padding block */
+  bottom: 0.06rem;
   left: 50%;
   transform: translateX(-50%);
   height: 3px;
   width: 0px;
+  /* the color of the link, whatever it is */
   background-color: currentColor;
   transition-property: width;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
-#main-menu a:hover::before {
+#main-menu a:hover::before, #main-menu a:focus::before {
   width: 100%;
 }
 
@@ -462,6 +469,10 @@ section#skills-and-technologies .experience {
 ################################################################################################################
 ################################################################################################################
  Projects */
+section#projects {
+  --button-hover-color: hsl(0, 0%, 75%);
+  --button-dark-back-focus-outline: 3px solid black;
+}
 section#projects .show-button-container {
   margin-top: 2rem;
   display: grid;
@@ -479,6 +490,15 @@ section#projects .show-button-container button {
   padding: 0.5rem 1rem;
   border: 1px solid black;
   border-radius: 2rem;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+section#projects .show-button-container button:focus {
+  outline: var(--button-dark-back-focus-outline);
+  outline-offset: 1px;
+}
+section#projects .show-button-container button:hover, section#projects .show-button-container button:focus {
+  background-color: var(--button-hover-color);
 }
 section#projects .show-button-container .button-label {
   font-size: 0.9rem;
@@ -576,8 +596,11 @@ section#projects .show-button-container .icon {
   margin-inline-start: 0.3rem;
   font-size: 0.8rem;
 }
-.project a:hover {
-  background-color: hsl(0, 0%, 75%);
+.project a:hover, .project a:focus {
+  background-color: var(--button-hover-color);
+}
+.project a:focus {
+  outline: var(--button-dark-back-focus-outline);
 }
 .project .live-site-link {
   grid-area: live-site;
@@ -731,6 +754,9 @@ section#contact a {
   /* this color for a better contrast */
   color: #29a829;
 }
+section#contact a:focus {
+  outline: var(--dark-back-focus-outline);
+}
 section#contact form p {
   text-align: left;
 }
@@ -765,6 +791,13 @@ section#contact p:not(form p) {
 }
 #email-form textarea {
   min-height: 100px;
+  resize: vertical;
+}
+#email-form input:focus,
+#email-form textarea:focus,
+#email-form button[type=submit]:focus {
+  outline: 3px double white;
+  outline-offset: 2px;
 }
 #email-form button[type=submit] {
   display: flex;
@@ -784,7 +817,7 @@ section#contact p:not(form p) {
   transition-property: color, background-color;
   transition-duration: 0.2s;
 }
-#email-form button[type=submit]:hover {
+#email-form button[type=submit]:hover, #email-form button[type=submit]:focus {
   color: black;
   background-color: white;
 }
@@ -823,9 +856,12 @@ footer .socials .social-link {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-footer .socials .social-link:hover {
+footer .socials .social-link:hover, footer .socials .social-link:focus {
   color: white;
   transform: scale(1.2);
+}
+footer .socials .social-link:focus {
+  outline: var(--dark-back-focus-outline);
 }
 footer .copyright-notice {
   text-align: center;
