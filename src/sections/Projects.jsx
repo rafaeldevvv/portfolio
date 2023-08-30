@@ -70,7 +70,9 @@ export function ProjectList({ projects }) {
         lastProject.scrollIntoView(scrollOptions);
       };
     } else {
-      setNumberOfProjectsShown(3);
+      flushSync(() => {
+        setNumberOfProjectsShown(3);
+      })
       const map = getMap();
       const firstProjectName = Array.from(map.keys())[0];
       const firstProject = map.get(firstProjectName);
