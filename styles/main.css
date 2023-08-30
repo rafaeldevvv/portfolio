@@ -426,7 +426,7 @@ section#skills-and-technologies .skill {
 section#skills-and-technologies .skill-name-container {
   display: flex;
   justify-content: space-between;
-  max-width: 70%;
+  max-width: 75%;
   margin-inline: auto;
   border-bottom: 1px dotted white;
   padding-bottom: 0.3rem;
@@ -435,6 +435,7 @@ section#skills-and-technologies .skill-name-container {
 }
 section#skills-and-technologies .skill-name {
   line-height: 1.2;
+  font-size: 1.05rem;
 }
 section#skills-and-technologies .icon {
   color: white;
