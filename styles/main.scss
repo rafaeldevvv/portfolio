@@ -490,7 +490,7 @@ About
   .skill-name-container {
     display: flex;
     justify-content: space-between;
-    max-width: 75%;
+    max-width: 85%;
     margin-inline: auto;
     border-bottom: 1px dotted white;
     padding-bottom: 0.3rem;
@@ -782,7 +782,7 @@ Services */
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   h4 {
@@ -878,6 +878,16 @@ Contact
 
     &:focus {
       outline: var(--dark-back-focus-outline);
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+    }
+    &:active {
+      outline: 0;
+      background-color: #29a829;
+      color: white;
     }
   }
 
@@ -1014,6 +1024,12 @@ footer {
 
       &:focus {
         outline: var(--dark-back-focus-outline);
+      }
+
+      &:active {
+        outline: 0;
+        background-color: white;
+        color: black;
       }
     }
   }

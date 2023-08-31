@@ -1,6 +1,5 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext.js";
-import Heading from "../global-components/Heading.jsx";
 
 export default function IntroSection() {
   const author = useAuthor();
@@ -9,11 +8,7 @@ export default function IntroSection() {
     <header id="main-article-header">
       <div className="container">
         <div className="content">
-          <Heading
-            level={1}
-            label={`Hi, I am ${author.name}`}
-            hasLink={false}
-          />
+          <h1>Hi, I am {author.name}</h1>
           <p>{author.introduction}</p>
         </div>
 

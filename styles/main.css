@@ -428,7 +428,7 @@ About
 #skills-and-technologies-section .skill-name-container {
   display: flex;
   justify-content: space-between;
-  max-width: 75%;
+  max-width: 85%;
   margin-inline: auto;
   border-bottom: 1px dotted white;
   padding-bottom: 0.3rem;
@@ -675,7 +675,7 @@ Services */
   margin-bottom: 2rem;
 }
 #services-section h3 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 #services-section h4 {
   font-size: 1.4rem;
@@ -759,6 +759,14 @@ Contact
 }
 #contact-section a:focus {
   outline: var(--dark-back-focus-outline);
+}
+#contact-section a:hover, #contact-section a:focus, #contact-section a:active {
+  text-decoration: none;
+}
+#contact-section a:active {
+  outline: 0;
+  background-color: #29a829;
+  color: white;
 }
 #contact-section form p {
   text-align: left;
@@ -865,6 +873,11 @@ footer .socials .social-link:hover, footer .socials .social-link:focus {
 }
 footer .socials .social-link:focus {
   outline: var(--dark-back-focus-outline);
+}
+footer .socials .social-link:active {
+  outline: 0;
+  background-color: white;
+  color: black;
 }
 footer .copyright-notice {
   text-align: center;
