@@ -39,7 +39,7 @@ export default function AboutSection() {
           </div>
         </section>
 
-        <section id="skills-and-technologies">
+        <section id="skills-and-technologies-section">
           <h3>Skills and technologies</h3>
           <ul className="list">
             {author.skillsAndTechnologies.map((s) => {

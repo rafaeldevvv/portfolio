@@ -12,12 +12,12 @@ export default function ServicesSection() {
           <span className="fragment" id="services-fragment"></span>
         </h2>
 
-        <section id="price">
+        <section id="price-section">
           <h3>Price</h3>
           <p>$10 per hour on any project</p>
         </section>
 
-        <section id="offerings">
+        <section id="offerings-section">
           <h3>Offerings</h3>
           <ul id="service-list">
             {services.map((s) => {
