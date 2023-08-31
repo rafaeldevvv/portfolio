@@ -16,7 +16,7 @@ export default function ProjectsSection() {
     );
 
   return (
-    <section id="projects" aria-labelledby="projects_heading">
+    <section id="projects-section" aria-labelledby="projects_heading">
       <div className="container">
         <h2 id="projects_heading" className="fragment-father">
           Projects

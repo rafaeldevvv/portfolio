@@ -43,6 +43,7 @@
 - [Favicon not showing - Stack Overflow](https://stackoverflow.com/questions/11797094/favicon-not-showing)
 - [Tips for designing focus indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 - [WebAIM - Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MDN AI Help](https://developer.mozilla.org/en-US/plus/ai-help)
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)

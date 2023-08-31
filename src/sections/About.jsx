@@ -8,7 +8,7 @@ export default function AboutSection() {
   const author = useAuthor();
 
   return (
-    <section id="about" aria-labelledby="about_me">
+    <section id="about-section" aria-labelledby="about_me">
       <div className="container">
         <h2 className="fragment-father" id="about_me">
           About Me
@@ -32,7 +32,7 @@ export default function AboutSection() {
           />
         </div>
 
-        <section id="languages">
+        <section id="languages-section">
           <h3>Spoken Languages</h3>
           <div className="languages-list">
             <PercentageList items={author.spokenLanguages} />

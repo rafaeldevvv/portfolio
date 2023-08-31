@@ -38,8 +38,8 @@ const author = {
       "I can develop responsive, performant and accessible pages from scratch, transforming them into modern user-friendly web experiences. I am always striving to learn about the latest technologies and frameworks to keep my knowledge up-to-date."
    ],
    introImage: {
-      src: "images/intro.jpg",
-      alt: "A man wearing a suit looking to the right"
+      src: "images/intro.jpeg",
+      alt: "A man with light brown hair wearing a white T-shirt looking to the left"
    },
    aboutImage: {
       src: "images/about.jpg",

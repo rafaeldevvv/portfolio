@@ -23,7 +23,8 @@ Extra large screens, TV – 1201px, and more.
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Space Mono", Courier, monospace;
   line-height: 1.1;
   color: black;
@@ -221,7 +222,8 @@ nav */
       timing-function: ease-in;
     }
   }
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     &::before {
       width: 100%;
     }
@@ -566,7 +568,7 @@ section#projects {
 
       transition: {
         property: background-color;
-        duration: .2s;
+        duration: 0.2s;
       }
 
       &:focus {
@@ -574,7 +576,8 @@ section#projects {
         outline-offset: 1px;
       }
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: var(--button-hover-color);
       }
     }

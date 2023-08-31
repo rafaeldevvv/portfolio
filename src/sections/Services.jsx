@@ -5,7 +5,7 @@ export default function ServicesSection() {
   const { services } = useAuthor();
 
   return (
-    <section id="services" aria-labelledby="services_heading">
+    <section id="services-section" aria-labelledby="services_heading">
       <div className="container">
         <h2 className="fragment-father" id="services_heading">
           Services

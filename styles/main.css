@@ -19,7 +19,8 @@ Extra large screens, TV – 1201px, and more.
  */
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Space Mono", Courier, monospace;
   line-height: 1.1;
   color: black;
@@ -200,7 +201,8 @@ nav */
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
-#main-menu a:hover::before, #main-menu a:focus::before {
+#main-menu a:hover::before,
+#main-menu a:focus::before {
   width: 100%;
 }
 
