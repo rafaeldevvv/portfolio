@@ -15,7 +15,7 @@ export default function Socials() {
                title={`${author.shortName}'s ${s} page`}
              >
                <i className={`fa-brands fa-${s} icon`} aria-hidden="true"></i>
-               <span className="sr-only">{s}</span>
+               <span className="sr-only">{`${author.name} on ${s}`}</span>
              </a>
            </li>
          );
