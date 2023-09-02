@@ -252,7 +252,11 @@ nav */
 Main */
 main {
   margin-top: 80px;
-  padding-block: 5rem 0;
+  padding-block: 4rem 0;
+
+  @media (min-width: 48em) {
+    padding-block: 8rem 0;
+  }
 }
 
 /* Sections */
@@ -304,24 +308,13 @@ intro */
 
   .content {
     max-width: 550px;
+    text-align: center;
+    margin-inline: auto;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     margin-bottom: 1rem;
-
-    position: relative;
-    padding-left: 20px;
-
-    // parent selector, add info about it in readme.md
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 7px;
-      inset: 0 auto 0 0;
-      background-color: black;
-    }
   }
 
   p {
@@ -329,10 +322,30 @@ intro */
     line-height: 1.2;
   }
 
-  .image-container {
+  .image-wrapper {
     position: relative;
     width: max-content;
     max-width: 100%;
+    margin-inline: auto;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border: 2px solid black;
+      z-index: -1;
+    }
+
+    &::before {
+      left: -20px;
+      top: -20px;
+    }
+    &::after {
+      bottom: -20px;
+      right: -20px;
+    }
   }
 
   .intro-image {
@@ -340,48 +353,71 @@ intro */
     object-fit: cover;
     aspect-ratio: 1;
     max-height: 400px;
-    margin-inline: auto;
+    height: 200px;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.6);
+  }
+}
+
+@media (min-width: 30em) {
+  #main-article-header {
+    .intro-image {
+      height: 275px;
+    }
   }
 }
 
 @media (min-width: 40em) {
+  #main-article-header {
+    .intro-image {
+      max-width: none;
+      margin-inline: 0;
+      width: auto;
+    }
+  }
+}
+
+@media (min-width: 48em) {
   #main-article-header {
     .container {
       flex-direction: row;
       align-items: center;
     }
 
+    .content {
+      text-align: left;
+      margin-inline: 0;
+    }
+
     h1 {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
+      position: relative;
+      padding-left: 20px;
+
+      // parent selector, add info about it in readme.md
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 7px;
+        inset: 0 auto 0 0;
+        background-color: black;
+      }
     }
 
     .intro-image {
-      height: 350px;
-      max-width: none;
-      margin-inline: 0;
-      width: auto;
-      aspect-ratio: 14 / 30;
+      height: 225px;
     }
   }
 }
 
 @media (min-width: 55em) {
   #main-article-header {
-    .intro-image {
-      height: 400px;
-      aspect-ratio: 20 / 30;
-    }
-  }
-}
-
-@media (min-width: 64em) {
-  #main-article-header {
     h1 {
       font-size: 2.8rem;
     }
 
     .intro-image {
-      aspect-ratio: 1;
+      height: 275px;
     }
   }
 }
@@ -409,7 +445,7 @@ About
 
   .about-image {
     object-fit: cover;
-    object-position: center;
+    object-position: top;
     border-radius: 0.4rem;
     box-shadow: 20px 20px 10px black;
     /*
@@ -498,7 +534,7 @@ About
 
   .skill-name {
     line-height: 1.2;
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .icon {
@@ -514,6 +550,7 @@ About
   .proficiency,
   .experience {
     font-size: 0.9rem;
+    // white-space: nowrap;
   }
 
   @media (min-width: 30em) {

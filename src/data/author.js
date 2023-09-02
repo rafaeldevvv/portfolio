@@ -38,12 +38,12 @@ const author = {
       "I can develop responsive, performant and accessible pages from scratch, transforming them into modern user-friendly web experiences. I am always striving to learn about the latest technologies and frameworks to keep my knowledge up-to-date."
    ],
    introImage: {
-      src: "images/intro.jpeg",
-      alt: "A man with light brown hair wearing a white T-shirt looking to the left"
+      src: "images/intro-subtle.jpg",
+      alt: "Rafael Maia, a white man with a light brown hair and a subtle smile"
    },
    aboutImage: {
-      src: "images/about.jpg",
-      alt: "A guy looking to the left with a black turtleneck"
+      src: "images/about.jpeg",
+      alt: "Rafael Maia, a white man with light brown hair wearing a white T-shirt looking to the left"
    },
    email: "rafaelmaiaw@gmail.com",
    phoneNumber: "5527996904603",
