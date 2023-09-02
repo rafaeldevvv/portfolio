@@ -42,7 +42,7 @@ const author = {
       alt: "Rafael Maia, a white man with a light brown hair and a subtle smile"
    },
    aboutImage: {
-      src: "images/about.jpeg",
+      src: "images/about.jpg",
       alt: "Rafael Maia, a white man with light brown hair wearing a white T-shirt looking to the left"
    },
    email: "rafaelmaiaw@gmail.com",
