@@ -13,6 +13,8 @@
 
 ## Overview
 ### Screenshots
+![](./images/screenshot.png)
+
 ### Links
 - [Live Site](https://rafaeldevvv.github.io/portfolio)
 
@@ -45,6 +47,8 @@
 - [WebAIM - Contrast Checker](https://webaim.org/resources/contrastchecker/)
 - [MDN AI Help](https://developer.mozilla.org/en-US/plus/ai-help)
 - [Pexels](https://www.pexels.com/)
+- [Stack Overflow - Open Graph og:image not pulling images](https://stackoverflow.com/questions/8855361/fb-opengraph-ogimage-not-pulling-images-possibly-https)
+- [Open Graph Data checker](https://www.opengraph.xyz/)
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)
