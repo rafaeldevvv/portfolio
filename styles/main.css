@@ -609,6 +609,7 @@ About
 .project .project-links {
   display: grid;
   grid-template-areas: "live-site repo" "challenge challenge";
+  grid-template-columns: repeat(auto-fit, 50%);
   grid-area: links;
   gap: 0.7rem;
   padding-block: 1rem;
@@ -908,6 +909,27 @@ footer .socials .social-link:active {
   background-color: white;
   color: black;
 }
+footer .freelance-socials {
+  margin-top: 2rem;
+  text-align: center;
+}
+footer .freelance-socials p {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+footer .freelance-socials a {
+  color: #999;
+}
+footer .freelance-socials a:focus {
+  outline: var(--dark-back-focus-outline);
+}
+footer .freelance-socials a:hover, footer .freelance-socials a:focus {
+  text-decoration: none;
+  color: white;
+}
+footer .freelance-socials li + li {
+  margin-top: 0.3rem;
+}
 footer .copyright-notice {
   text-align: center;
   margin-top: 2rem;
@@ -938,7 +960,10 @@ footer .copyright-notice {
     justify-content: end;
   }
   footer .copyright-notice {
-    margin-top: 4rem;
+    margin-top: 2rem;
+    text-align: left;
+  }
+  footer .freelance-socials {
     text-align: left;
   }
   #contact-list {

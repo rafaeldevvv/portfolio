@@ -54,6 +54,10 @@ const author = {
       youtube: "https://www.youtube.com/channel/UC_QOvDZdUskTSJ59eMDjuEg",
       twitter: "https://www.twitter.com/rafaeldevvv"
    },
+   freelanceSocials: {
+      upwork: "https://www.upwork.com/freelancers/~01a4dc9692c96839dc",
+      fiverr: "https://www.fiverr.com/rafael787"
+   },
    projects,
    skillsAndTechnologies,
    services

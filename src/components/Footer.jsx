@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext";
-import Socials from "../global-components/Socials";
+import Socials from "./Socials";
+import capitalize from "../utils/capitalize.js";
 
 export default function Footer() {
   const author = useAuthor();
@@ -12,6 +13,7 @@ export default function Footer() {
           <ContactInfo />
           <Socials />
         </div>
+        <FreelanceSocials />
         <p className="copyright-notice">
           <small>&copy; 2023 {author.name}. All rights reserved</small>
         </p>
@@ -38,5 +40,29 @@ function ContactInfo() {
         </li>
       </ul>
     </address>
+  );
+}
+
+function FreelanceSocials() {
+  const author = useAuthor();
+
+  return (
+    <>
+      <ul className="freelance-socials">
+        <p>Freelance Profiles</p>
+        {Object.keys(author.freelanceSocials).map((fs) => {
+          return (
+            <li key={fs}>
+              <a
+                href={author.freelanceSocials[fs]}
+                title={`See ${author.name}'s profile on ${fs}`}
+              >
+                {capitalize(fs)} Profile
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </>
   );
 }

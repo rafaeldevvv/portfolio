@@ -2,6 +2,10 @@ import React, { useState, useRef } from "react";
 import { flushSync } from "react-dom";
 import { useAuthor } from "../AuthorContext.js";
 
+function ifTruthy(a, b) {
+  return a ? b : "null";
+}
+
 export default function ProjectsSection() {
   const { projects } = useAuthor();
 
@@ -72,7 +76,7 @@ export function ProjectList({ projects }) {
     } else {
       flushSync(() => {
         setNumberOfProjectsShown(3);
-      })
+      });
       const map = getMap();
       const firstProjectName = Array.from(map.keys())[0];
       const firstProject = map.get(firstProjectName);
@@ -149,14 +153,16 @@ export function Project({ project }) {
           })}
         </ul>
       </div>
-      <div className="project-links">
-        <a
-          href={project.liveSite}
-          title={`${project.name} project live site`}
-          className="live-site-link"
-        >
-          Live Site
-        </a>
+      <div className={`project-links`}>
+        {project.liveSite && (
+          <a
+            href={project.liveSite}
+            title={`${project.name} project live site`}
+            className="live-site-link"
+          >
+            Live Site
+          </a>
+        )}
         <a
           href={project.repository}
           title={`Code files, assets and details of ${project.name} project on GitHub`}

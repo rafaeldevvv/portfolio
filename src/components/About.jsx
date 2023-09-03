@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext";
-import PercentageList from "../global-components/PercentageList";
+import PercentageList from "./PercentageList";
 
 import { format } from "date-fns";
 

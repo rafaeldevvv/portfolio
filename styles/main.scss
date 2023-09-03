@@ -710,6 +710,7 @@ About
     grid-template-areas:
       "live-site repo"
       "challenge challenge";
+    grid-template-columns: repeat(auto-fit, 50%);
     grid-area: links;
     gap: 0.7rem;
     padding-block: 1rem;
@@ -1069,6 +1070,34 @@ footer {
     }
   }
 
+  .freelance-socials {
+    margin-top: 2rem;
+    text-align: center;
+
+    p {
+      color: white;
+      margin-bottom: .5rem;
+    }
+
+    a {
+      color: #999;
+
+      &:focus {
+        outline: var(--dark-back-focus-outline);
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    li + li {
+      margin-top: .3rem;
+    }
+  }
+
   .copyright-notice {
     text-align: center;
     margin-top: 2rem;
@@ -1105,7 +1134,11 @@ footer {
     }
 
     .copyright-notice {
-      margin-top: 4rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .freelance-socials {
       text-align: left;
     }
   }

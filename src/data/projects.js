@@ -55,7 +55,7 @@ export default [
          alt: "A webpage with a light blue background in the middle of which there's a component divided into three sections - a wide one above and two smaller ones below"
       },
       fun: false,
-      difficulty: "easy", 
+      difficulty: "easy",
       completionDate: "2023-02-23",
       technologiesUsed: ['html', 'css', 'grid layout'],
       tags: ['html', 'css', 'grid layout', 'responsive', 'accessibility', 'spa', "static web app"]
@@ -71,7 +71,7 @@ export default [
          alt: "A webpage containing four card features displayed in three columns - one card on the left, two in the center in a single column, and one on the right"
       },
       fun: false,
-      difficulty: "easy", 
+      difficulty: "easy",
       completionDate: "2023-02-23",
       technologiesUsed: ['html', 'css', 'grid layout'],
       tags: ['html', 'css', 'grid layout', "responsive", "accessibility", "spa", 'static web app', 'landing page']
@@ -218,7 +218,7 @@ export default [
       difficulty: "easy",
       completionDate: "2023-04-15",
       technologiesUsed: ["html", "css", 'javascript', 'sass/scss', 'flexbox'],
-      tags: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'responsive', 'landing page','accessibility', 'spa', 'cross-browser']
+      tags: ["html", "css", 'javascript', 'sass/scss', 'flexbox', 'responsive', 'landing page', 'accessibility', 'spa', 'cross-browser']
    },
    {
       name: "Job listings with filtering",
@@ -289,7 +289,7 @@ export default [
       name: "Snake Game",
       repository: "https://github.com/rafaeldevvv/snake-game",
       liveSite: "https://rafaeldevvv.github.io/snake-game/",
-      description: `Control a snake in a two-dimensional map and eat as many fruits as you can to make it longer.`,
+      description: "Control a snake in a two-dimensional map and eat as many fruits as you can to make it longer.",
       image: {
          src: "thumbnails/snake-game.png",
          alt: "A page which contains a short red snake inside a chess-like green map with a fruit in one of its squares, all inside a canvas, around which there are buttons and text about the page",
@@ -300,4 +300,18 @@ export default [
       technologiesUsed: ['html', 'css', 'javascript', 'canvas'],
       tags: ['html', 'css', 'javascript', 'canvas', 'game', 'responsive', 'interactive', 'spa', 'cross-browser', 'performance', 'git']
    },
+   {
+      name: "My Portfolio",
+      repository: "https://github.com/rafaeldevvv/portfolio",
+      description: "My very own portfolio",
+      image: {
+         src: "images/screenshot.png",
+         alt: "A page with a white background and black header introducing Rafael Maia with a picture of his face on the right, and some text on the left"
+      },
+      fun: true,
+      difficulty: "easy",
+      completionDate: "2023-09-03",
+      technologiesUsed: ["html", "css", "javascript", "react", "sass", "git/github", "flexbox", "grid layout", "jsx"],
+      tags: ["spa", "html", "css", "javascript", "sass", "interactive", "responsive", "cross-browser", "performance", "git"]
+   }
 ];
