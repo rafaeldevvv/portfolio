@@ -2,10 +2,6 @@ import React, { useState, useRef } from "react";
 import { flushSync } from "react-dom";
 import { useAuthor } from "../AuthorContext.js";
 
-function ifTruthy(a, b) {
-  return a ? b : "null";
-}
-
 export default function ProjectsSection() {
   const { projects } = useAuthor();
 

@@ -49,7 +49,7 @@ function FreelanceSocials() {
   return (
     <>
       <ul className="freelance-socials">
-        <p>Freelance Profiles</p>
+        <p>Freelance Socials</p>
         {Object.keys(author.freelanceSocials).map((fs) => {
           return (
             <li key={fs}>
