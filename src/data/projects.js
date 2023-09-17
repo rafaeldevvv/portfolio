@@ -312,6 +312,21 @@ export default [
       difficulty: "easy",
       completionDate: "2023-09-03",
       technologiesUsed: ["html", "css", "javascript", "react", "sass", "git/github", "flexbox", "grid layout", "jsx"],
-      tags: ["spa", "html", "css", "javascript", "sass", "interactive", "responsive", "cross-browser", "performance", "git"]
+      tags: ["spa", "html", "css", "javascript", "sass", "interactive", "responsive", "cross-browser", "performance", "git", "accessibility"]
+   },
+   {
+      name: "Quiz App",
+      repository: "https://github.com/rafaeldevvv/open-trivia-quiz",
+      liveSite: "https://rafaeldevvv.github.io/open-trivia-quiz",
+      description: "A simple quiz made with questions provided by the Open Trivia DB API",
+      image: {
+         src: "thumbnails/open-trivia-quiz.png",
+         alt: "Open Trivia DB Quiz: A dark blue background with a form to configure the questions and start the quiz"
+      },
+      fun: true,
+      difficulty: "medium",
+      completionDate: "2023-09-17",
+      technologiesUsed:["html", "css", "javascript", "react", "sass", "jsx", "webpack", "git/github", "external api"],
+      tags: ["spa", "html", "css", "javascript", "sass", "interactive", "responsive", "cross-browser", "performance", "git", "accessibility"]
    }
 ];
