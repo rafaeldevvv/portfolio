@@ -570,7 +570,7 @@ About
   */
   display: grid;
   grid-template-areas: "image" "name" "technologies-used" "links";
-  grid-template-rows: repeat(4, max-content);
+  grid-template-rows: repeat(3, max-content) 1fr;
   --border: 1px solid black;
 }
 .project .project-name {
@@ -583,7 +583,6 @@ About
 }
 .project .technologies-used-wrapper {
   border-top: var(--border);
-  border-bottom: var(--border);
   padding: 0.6rem var(--inline-padding);
   grid-area: technologies-used;
 }
@@ -610,8 +609,11 @@ About
   display: grid;
   grid-template-areas: "live-site repo" "challenge challenge";
   grid-template-columns: repeat(auto-fit, 50%);
-  grid-area: links;
+  grid-template-rows: max-content max-content;
   gap: 0.7rem;
+  grid-area: links;
+  align-self: end;
+  border-top: var(--border);
   padding-block: 1rem;
 }
 .project a {
