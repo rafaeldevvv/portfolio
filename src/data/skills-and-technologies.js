@@ -67,9 +67,9 @@ const technologies = [
       name: "Object-Oriented Programming",
       initialDate: "2023-04-20",
       fontAwesomeIcon: "fa-regular fa-file-code",
-      percentage: 90,
+      percentage: 70,
       tags: ['oop'],
-      proficiency: "Advanced"
+      proficiency: "Intermediate"
    }
 ];
 
