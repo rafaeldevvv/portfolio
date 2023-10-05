@@ -328,5 +328,21 @@ export default [
       completionDate: "2023-09-17",
       technologiesUsed:["html", "css", "javascript", "react", "sass", "jsx", "webpack", "git/github", "external api"],
       tags: ["spa", "html", "css", "javascript", "sass", "interactive", "responsive", "cross-browser", "performance", "git", "accessibility"]
+   },
+   {
+      name: "Multi-step form",
+      repository: "https://github.com/rafaeldevvv/front-end-mentor-multi-step-form",
+      liveSite: "https://rafaeldevvv.github.io/front-end-mentor-multi-step-form",
+      challenge: "https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ",
+      description: "A multi-step-form",
+      image: {
+         src: "thumbnails/multi-step-form.png",
+         alt: "A page with a light blue background with a box in the middle containing a list of steps and an initial step called personal info with three inputs"
+      },
+      fun: true,
+      difficulty: "easy",
+      completionDate: "2023-10-04",
+      technologiesUsed: ["html", "css", "javascript", "typescript", "sass", "react", "webpack", "git/github", "flexbox", "grid layout"],
+      tags: ["spa", "html", "css", "javascript", "sass", "interactive", "responsive", "cross-browser", "performance", "git", "accessibility", "typescript", "webpack"]
    }
 ];

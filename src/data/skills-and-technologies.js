@@ -56,12 +56,12 @@ const technologies = [
       proficiency: "Intermediate"
    },
    {
-      name: "Bootstrap",
-      initialDate: null,
-      fontAwesomeIcon: "fa-brands fa-bootstrap",
-      percentage: 5,
-      tags: ['bootstrap'],
-      proficiency: "Beginner"
+      name: "TypeScript",
+      initialDate: "2023-09-11",
+      fontAwesomeIcon: "fa-regular fa-keyboard",
+      percentage: 20,
+      tags: ["javascript", "typescript"],
+      proficiency: "Beginner",
    },
    {
       name: "Object-Oriented Programming",
@@ -70,7 +70,7 @@ const technologies = [
       percentage: 70,
       tags: ['oop'],
       proficiency: "Intermediate"
-   }
+   },
 ];
 
 export default technologies;

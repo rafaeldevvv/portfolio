@@ -886,10 +886,13 @@ footer .socials {
   margin-top: 3rem;
   padding-inline: 20%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  row-gap: 1rem;
 }
-footer .socials .social-link {
+footer .social-link {
   display: block;
   color: #999;
   font-size: 1.7rem;
@@ -897,14 +900,14 @@ footer .socials .social-link {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-footer .socials .social-link:hover, footer .socials .social-link:focus {
+footer .social-link:hover, footer .social-link:focus {
   color: white;
   transform: scale(1.2);
 }
-footer .socials .social-link:focus {
+footer .social-link:focus {
   outline: var(--dark-back-focus-outline);
 }
-footer .socials .social-link:active {
+footer .social-link:active {
   outline: 0;
   background-color: white;
   color: black;
@@ -950,6 +953,7 @@ footer .copyright-notice {
   footer .contact-and-socials-container {
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
   }
   footer .socials {
     padding: 0;
