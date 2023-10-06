@@ -760,6 +760,7 @@ About
 ################################################################################################################
 Availability */
 #availability-section {
+  z-index: 1;
   position: fixed;
   bottom: 3vh;
   right: 5vw;
@@ -1040,13 +1041,13 @@ footer {
 
   .socials {
     margin-top: 3rem;
-    padding-inline: 20%;
+    padding-inline: 15%;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 2rem;
-    row-gap: 1rem;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
   }
 
   .social-link {
@@ -1102,11 +1103,12 @@ footer {
     }
   }
 
-  .copyright-notice {
-    text-align: center;
-    margin-top: 2rem;
-    color: #999;
-  }
+}
+
+.copyright-notice {
+  text-align: center;
+  margin-top: 2rem;
+  color: #999;
 }
 
 #contact-list {
@@ -1125,27 +1127,37 @@ footer {
 @media (min-width: 33em) {
   footer {
     .contact-and-socials-container {
+      position: relative;
       display: flex;
       justify-content: space-between;
       gap: 2rem;
     }
-
+    
     .socials {
       padding: 0;
       margin: 0;
-      width: max-content;
-      gap: 1rem;
-      justify-content: end;
+
+      flex-direction: column;
+      align-items: center;
+      row-gap: .8rem;
+
+      position: absolute;
+      right: 0;
+      z-index: 0;
     }
 
-    .copyright-notice {
-      margin-top: 2rem;
-      text-align: left;
+    .social-link {
+      margin-inline: auto;
     }
-
+    
     .freelance-socials {
       text-align: left;
     }
+  }
+
+  .copyright-notice {
+    margin-top: 2rem;
+    text-align: left;
   }
 
   #contact-list {

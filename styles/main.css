@@ -651,6 +651,7 @@ About
 ################################################################################################################
 Availability */
 #availability-section {
+  z-index: 1;
   position: fixed;
   bottom: 3vh;
   right: 5vw;
@@ -884,13 +885,13 @@ footer {
 }
 footer .socials {
   margin-top: 3rem;
-  padding-inline: 20%;
+  padding-inline: 15%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  row-gap: 1rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 1.5rem;
 }
 footer .social-link {
   display: block;
@@ -933,7 +934,8 @@ footer .freelance-socials a:hover, footer .freelance-socials a:focus {
 footer .freelance-socials li + li {
   margin-top: 0.3rem;
 }
-footer .copyright-notice {
+
+.copyright-notice {
   text-align: center;
   margin-top: 2rem;
   color: #999;
@@ -951,6 +953,7 @@ footer .copyright-notice {
 
 @media (min-width: 33em) {
   footer .contact-and-socials-container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 2rem;
@@ -958,16 +961,21 @@ footer .copyright-notice {
   footer .socials {
     padding: 0;
     margin: 0;
-    width: -moz-max-content;
-    width: max-content;
-    gap: 1rem;
-    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.8rem;
+    position: absolute;
+    right: 0;
+    z-index: 0;
   }
-  footer .copyright-notice {
-    margin-top: 2rem;
-    text-align: left;
+  footer .social-link {
+    margin-inline: auto;
   }
   footer .freelance-socials {
+    text-align: left;
+  }
+  .copyright-notice {
+    margin-top: 2rem;
     text-align: left;
   }
   #contact-list {

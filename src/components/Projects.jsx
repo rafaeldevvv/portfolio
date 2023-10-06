@@ -30,7 +30,8 @@ export default function ProjectsSection() {
 }
 
 export function ProjectList({ projects }) {
-  const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(6);
+  const initialNumberOfProjects = 6;
+  const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(initialNumberOfProjects);
   const projectRefs = useRef(null);
 
   function getMap() {
@@ -71,7 +72,7 @@ export function ProjectList({ projects }) {
       };
     } else {
       flushSync(() => {
-        setNumberOfProjectsShown(6);
+        setNumberOfProjectsShown(initialNumberOfProjects);
       });
       const map = getMap();
       const firstProjectName = Array.from(map.keys())[0];
