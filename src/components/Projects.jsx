@@ -159,15 +159,25 @@ export function Project({ project }) {
             target="_blank"
           >
             Live Site
+            <span className="sr-only">(Live site opens in a separate tab)</span>
+            <i
+              className="fa-solid fa-arrow-up-right-from-square icon-external"
+              aria-hidden="true"
+            ></i>
           </a>
         )}
         <a
           href={project.repository}
-          title={`Code files, assets and details of ${project.name} project on GitHub`}
+          title={`Code files, assets and details of ${project.name} project on its GitHub repository`}
           className="repo-link"
           target="_blank"
         >
           Repo
+          <span className="sr-only">(Repository opens in a separate tab)</span>
+          <i
+            className="fa-solid fa-arrow-up-right-from-square icon-external"
+            aria-hidden="true"
+          ></i>
         </a>
         {project.challenge && (
           <a
@@ -177,6 +187,13 @@ export function Project({ project }) {
             target="_blank"
           >
             Challenge
+            <span className="sr-only">
+              (Challenge page opens in a separate tab)
+            </span>
+            <i
+              className="fa-solid fa-arrow-up-right-from-square icon-external"
+              aria-hidden="true"
+            ></i>
           </a>
         )}
       </div>

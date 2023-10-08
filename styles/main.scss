@@ -751,11 +751,6 @@ About
     transition: 0.2s background-color;
     text-align: center;
 
-    .icon {
-      margin-inline-start: 0.3rem;
-      font-size: 0.8rem;
-    }
-
     &:hover,
     &:focus {
       background-color: var(--button-hover-color);
@@ -764,6 +759,11 @@ About
     &:focus {
       outline: var(--button-dark-back-focus-outline);
     }
+  }
+
+  .icon-external {
+    font-size: .65rem;
+    margin-inline-start: .2rem;
   }
 
   .live-site-link {

@@ -643,15 +643,15 @@ About
   transition: 0.2s background-color;
   text-align: center;
 }
-.project a .icon {
-  margin-inline-start: 0.3rem;
-  font-size: 0.8rem;
-}
 .project a:hover, .project a:focus {
   background-color: var(--button-hover-color);
 }
 .project a:focus {
   outline: var(--button-dark-back-focus-outline);
+}
+.project .icon-external {
+  font-size: 0.65rem;
+  margin-inline-start: 0.2rem;
 }
 .project .live-site-link {
   grid-area: live-site;
