@@ -800,7 +800,7 @@ Availability */
     position: absolute;
     bottom: 100%;
     right: 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: white;
     border-radius: 0.3rem 0.3rem 0 0;
     padding: 0.2rem 0.5rem;
@@ -813,6 +813,7 @@ Availability */
     margin: 0;
     padding: 0.3rem 0.8rem;
     border-radius: 0.2rem;
+    font-size: .9rem;
 
     &.available {
       /* This color because of contrast */
@@ -829,6 +830,24 @@ Availability */
       background-color: red;
       color: white;
       box-shadow: 0 0 20px -3px red;
+    }
+  }
+
+  @media (min-width: 30em) {
+    h2 {
+      font-size: 1.1rem;
+    }
+    .availability {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 48em) {
+    h2 {
+      font-size: 1.2rem;
+    }
+    .availability {
+      font-size: 1.1rem;
     }
   }
 }
@@ -1073,7 +1092,7 @@ Footer */
 footer {
   background-color: black;
   color: #999;
-  padding-block: 5rem;
+  padding-block: 6rem;
   padding-inline: var(--global-padding, 3rem);
 
   .socials {
@@ -1184,6 +1203,7 @@ footer {
 
     .social-link {
       margin-inline: auto;
+      font-size: 1.4rem;
     }
 
     .freelance-socials {
