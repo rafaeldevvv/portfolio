@@ -5,7 +5,6 @@
   font-size: 18px;
   font-family: "Inconsolata", Courier, monospace;
   font-weight: 700;
-  --heading-height: 80px;
   --global-padding: min(3rem, 6vw);
   --dark-back-focus-outline: 3px solid white;
 }
@@ -17,6 +16,16 @@ Small screens, laptops – 769px — 1024px(64em).
 Desktops, large screens – 1025px — 1200px.
 Extra large screens, TV – 1201px, and more.
  */
+html {
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -48,15 +57,22 @@ button {
   position: absolute;
 }
 
-/* The fragment is what is referenced by the links in the
-navigation so that the header does not stay on the heading */
-.fragment-father {
-  position: relative;
+.anchor-target:hover .icon-link,
+.anchor-target:active .icon-link {
+  position: static;
 }
 
-.fragment {
+.icon-link {
   position: absolute;
-  top: calc(0px - var(--heading-height, 80px));
+  left: -10000px;
+  margin-inline-start: 0.4rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+.icon-link:focus {
+  position: static;
+  outline: 3px solid black;
+  border-radius: 0.1rem;
 }
 
 .dashed-border-paragraph {
@@ -118,7 +134,7 @@ navigation so that the header does not stay on the heading */
 ################################################################################################################
 header */
 #global-header {
-  position: fixed;
+  position: sticky;
   /* auto for bottom */
   inset: 0 0 auto 0;
   z-index: 999;
@@ -127,7 +143,7 @@ header */
   padding-inline: var(--global-padding, 3rem);
 }
 #global-header .container {
-  height: var(--heading-height, 80px);
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -225,7 +241,6 @@ nav */
 ################################################################################################################
 Main */
 main {
-  margin-top: 80px;
   padding-block: 4rem 0;
 }
 @media (min-width: 48em) {
@@ -238,13 +253,16 @@ main {
 section:not(section section) {
   padding-inline: var(--global-padding, 3rem);
 }
-section:not(section section) h2 {
+section:not(section section) .anchor-target-wrapper {
   margin-bottom: 0.5rem;
-  font-size: 1.7rem;
   border-left: 6px solid gray;
   border-bottom: 2px solid gray;
-  padding: 0 0 0.5rem 1.3rem;
+  padding-bottom: 0.5rem;
+  padding-inline-start: 1.3rem;
   max-width: 300px;
+}
+section:not(section section) h2 {
+  font-size: 1.7rem;
 }
 section:not(section section) h2 + p {
   font-size: 1.1rem;
@@ -702,7 +720,7 @@ Availability */
 ################################################################################################################
 ################################################################################################################
 Services */
-#services-section h2 {
+#services-section .anchor-target-wrapper {
   margin-bottom: 2rem;
 }
 #services-section h3 {
@@ -766,6 +784,7 @@ Contact
     set on sections further up the code
   */
   padding-inline: 0;
+  /*  */
 }
 #contact-section .section-inner-container {
   max-width: 650px;
@@ -775,29 +794,39 @@ Contact
   padding: 1.5rem;
   margin-inline: auto;
 }
-#contact-section h2,
-#contact-section p {
+#contact-section .anchor-target-wrapper {
   border: 0;
   padding: 0;
   margin: 0;
+}
+#contact-section p {
+  padding: 0;
+  margin: 0;
+}
+#contact-section .anchor-target-wrapper,
+#contact-section h2,
+#contact-section p {
   text-align: center;
   color: white;
   max-width: none;
 }
-#contact-section a {
+#contact-section a:not(.icon-link) {
   /* this color for a better contrast */
   color: #29a829;
 }
-#contact-section a:focus {
+#contact-section a:not(.icon-link):focus {
   outline: var(--dark-back-focus-outline);
 }
-#contact-section a:hover, #contact-section a:focus, #contact-section a:active {
+#contact-section a:not(.icon-link):hover, #contact-section a:not(.icon-link):focus, #contact-section a:not(.icon-link):active {
   text-decoration: none;
 }
-#contact-section a:active {
+#contact-section a:not(.icon-link):active {
   outline: 0;
   background-color: #29a829;
   color: white;
+}
+#contact-section .icon-link:focus {
+  outline-color: white;
 }
 #contact-section form p {
   text-align: left;

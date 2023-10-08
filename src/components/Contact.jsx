@@ -1,17 +1,15 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext";
 import { useState } from "react";
+import SectionHeading from "./SectionHeading";
 
 export default function ContactSection() {
   const author = useAuthor();
 
   return (
-    <section id="contact-section" aria-labelledby="contact_me">
+    <section id="contact-section" aria-labelledby="contact-me">
       <div className="section-inner-container">
-        <h2 className="fragment-father" id="contact_me">
-          Contact me
-          <span className="fragment" id="contact-fragment"></span>
-        </h2>
+        <SectionHeading content="Contact Me" id="contact-me" />
         <p>
           You can preferably{" "}
           <a href={`https://wa.me/${author.phoneNumber}`} target="_blank">

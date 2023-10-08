@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import { flushSync } from "react-dom";
 import { useAuthor } from "../AuthorContext.js";
+import SectionHeading from "./SectionHeading";
 
 export default function ProjectsSection() {
   const { projects } = useAuthor();
@@ -16,12 +17,9 @@ export default function ProjectsSection() {
     );
 
   return (
-    <section id="projects-section" aria-labelledby="projects_heading">
+    <section id="projects-section" aria-labelledby="projects">
       <div className="container">
-        <h2 id="projects_heading" className="fragment-father">
-          Projects
-          <span className="fragment" id="projects-fragment" />
-        </h2>
+        <SectionHeading content="Projects" id="projects" />
         <p className="dashed-border-paragraph">View my work</p>
         <ProjectList projects={projectsOrderedByDate} />
       </div>
@@ -31,7 +29,9 @@ export default function ProjectsSection() {
 
 export function ProjectList({ projects }) {
   const initialNumberOfProjects = 6;
-  const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(initialNumberOfProjects);
+  const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(
+    initialNumberOfProjects
+  );
   const projectRefs = useRef(null);
 
   function getMap() {
@@ -156,6 +156,7 @@ export function Project({ project }) {
             href={project.liveSite}
             title={`${project.name} project live site`}
             className="live-site-link"
+            target="_blank"
           >
             Live Site
           </a>
@@ -164,6 +165,7 @@ export function Project({ project }) {
           href={project.repository}
           title={`Code files, assets and details of ${project.name} project on GitHub`}
           className="repo-link"
+          target="_blank"
         >
           Repo
         </a>
@@ -172,6 +174,7 @@ export function Project({ project }) {
             href={project.challenge}
             title={`${project.name} challenge page`}
             className="challenge-link"
+            target="_blank"
           >
             Challenge
           </a>

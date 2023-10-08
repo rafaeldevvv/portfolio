@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext";
 import PercentageList from "./PercentageList";
+import SectionHeading from "./SectionHeading";
 
 import { format } from "date-fns";
 
@@ -8,12 +9,9 @@ export default function AboutSection() {
   const author = useAuthor();
 
   return (
-    <section id="about-section" aria-labelledby="about_me">
+    <section id="about-section" aria-labelledby="about-me">
       <div className="container">
-        <h2 className="fragment-father" id="about_me">
-          About Me
-          <span className="fragment" id="about-fragment" />
-        </h2>
+        <SectionHeading content="About Me" id="about-me" />
 
         <div className="paragraphs-and-image">
           <div className="paragraphs">

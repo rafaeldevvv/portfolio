@@ -8,7 +8,6 @@
     weight: 700;
   }
 
-  --heading-height: 80px;
   --global-padding: min(3rem, 6vw);
   --dark-back-focus-outline: 3px solid white;
 }
@@ -20,6 +19,15 @@ Small screens, laptops – 769px — 1024px(64em).
 Desktops, large screens – 1025px — 1200px.
 Extra large screens, TV – 1201px, and more.
  */
+
+html {
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
 
 h1,
 h2,
@@ -51,14 +59,26 @@ button {
   position: absolute;
 }
 
-/* The fragment is what is referenced by the links in the
-navigation so that the header does not stay on the heading */
-.fragment-father {
-  position: relative;
+.anchor-target:hover,
+.anchor-target:active {
+  .icon-link {
+    position: static;
+  }
 }
-.fragment {
+
+.icon-link {
   position: absolute;
-  top: calc(0px - var(--heading-height, 80px));
+  left: -10000px;
+
+  margin-inline-start: 0.4rem;
+  font-size: 1rem;
+  color: #aaa;
+
+  &:focus {
+    position: static;
+    outline: 3px solid black;
+    border-radius: .1rem;
+  }
 }
 
 .dashed-border-paragraph {
@@ -129,7 +149,7 @@ navigation so that the header does not stay on the heading */
 ################################################################################################################
 header */
 #global-header {
-  position: fixed;
+  position: sticky;
   /* auto for bottom */
   inset: 0 0 auto 0;
   z-index: 999;
@@ -138,7 +158,7 @@ header */
   padding-inline: var(--global-padding, 3rem);
 
   .container {
-    height: var(--heading-height, 80px);
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -251,7 +271,6 @@ nav */
 ################################################################################################################
 Main */
 main {
-  margin-top: 80px;
   padding-block: 4rem 0;
 
   @media (min-width: 48em) {
@@ -263,14 +282,17 @@ main {
 section:not(section section) {
   padding-inline: var(--global-padding, 3rem);
 
-  h2 {
+  .anchor-target-wrapper {
     margin-bottom: 0.5rem;
-    font-size: 1.7rem;
-
     border-left: 6px solid gray;
     border-bottom: 2px solid gray;
-    padding: 0 0 0.5rem 1.3rem;
+    padding-bottom: 0.5rem;
+    padding-inline-start: 1.3rem;
     max-width: 300px;
+  }
+
+  h2 {
+    font-size: 1.7rem;
   }
 
   h2 + p {
@@ -484,6 +506,7 @@ About
   @media (min-width: 68em) {
     .about-image {
       aspect-ratio: 1;
+
     }
   }
 }
@@ -816,7 +839,7 @@ Availability */
 ################################################################################################################
 Services */
 #services-section {
-  h2 {
+  .anchor-target-wrapper {
     margin-bottom: 2rem;
   }
 
@@ -901,17 +924,26 @@ Contact
     margin-inline: auto;
   }
 
-  h2,
-  p {
+  .anchor-target-wrapper {
     border: 0;
     padding: 0;
     margin: 0;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .anchor-target-wrapper,
+  h2,
+  p {
     text-align: center;
     color: white;
     max-width: none;
   }
 
-  a {
+  a:not(.icon-link) {
     /* this color for a better contrast */
     color: #29a829;
 
@@ -928,6 +960,11 @@ Contact
       background-color: #29a829;
       color: white;
     }
+  }
+
+  /*  */
+  .icon-link:focus {
+    outline-color: white;
   }
 
   form p {
@@ -1081,7 +1118,7 @@ footer {
 
     p {
       color: white;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
     a {
@@ -1099,10 +1136,9 @@ footer {
     }
 
     li + li {
-      margin-top: .3rem;
+      margin-top: 0.3rem;
     }
   }
-
 }
 
 .copyright-notice {
@@ -1132,14 +1168,14 @@ footer {
       justify-content: space-between;
       gap: 2rem;
     }
-    
+
     .socials {
       padding: 0;
       margin: 0;
 
       flex-direction: column;
       align-items: center;
-      row-gap: .8rem;
+      row-gap: 0.8rem;
 
       position: absolute;
       right: 0;
@@ -1149,7 +1185,7 @@ footer {
     .social-link {
       margin-inline: auto;
     }
-    
+
     .freelance-socials {
       text-align: left;
     }

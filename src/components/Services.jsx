@@ -1,16 +1,14 @@
 import React from "react";
 import { useAuthor } from "../AuthorContext.js";
+import SectionHeading from "./SectionHeading";
 
 export default function ServicesSection() {
   const { services } = useAuthor();
 
   return (
-    <section id="services-section" aria-labelledby="services_heading">
+    <section id="services-section" aria-labelledby="services">
       <div className="container">
-        <h2 className="fragment-father" id="services_heading">
-          Services
-          <span className="fragment" id="services-fragment"></span>
-        </h2>
+        <SectionHeading content="Services" id="services" />
 
         <section id="price-section">
           <h3>Price</h3>

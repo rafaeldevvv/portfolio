@@ -50,22 +50,22 @@ function Nav({ onClickOnLink }) {
   const sections = [
     {
       label: "About",
-      href: "#about-fragment",
+      href: "#about-me",
       title: "Know me in more details",
     },
     {
       label: "Projects",
-      href: "#projects-fragment",
+      href: "#projects",
       title: "See all of my projects",
     },
     {
       label: "Services",
-      href: "#services-fragment",
+      href: "#services",
       title: "See all the services that I can provide you with",
     },
     {
       label: "Contact",
-      href: "#contact-fragment",
+      href: "#contact-me",
       title: "Contact me",
     },
   ];
