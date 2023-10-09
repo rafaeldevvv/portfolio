@@ -48,21 +48,28 @@ function FreelanceSocials() {
 
   return (
     <>
-      <ul className="freelance-socials">
+      <div className="freelance-socials-wrapper">
         <p>Freelance Socials</p>
-        {Object.keys(author.freelanceSocials).map((fs) => {
-          return (
-            <li key={fs}>
-              <a
-                href={author.freelanceSocials[fs]}
-                title={`See ${author.name}'s profile on ${fs}`}
-              >
-                {capitalize(fs)} Profile
-              </a>
-            </li>
-          );
-        })}
-      </ul>
+        <ul className="freelance-socials">
+          {Object.keys(author.freelanceSocials).map((fs) => {
+            return (
+              <li key={fs}>
+                <a
+                  href={author.freelanceSocials[fs]}
+                  title={`See ${author.name}'s profile on ${fs}`}
+                  target="_blank"
+                >
+                  {capitalize(fs)} Profile{" "}
+                  <i
+                    className="fa-solid fa-arrow-up-right-from-square icon-external"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 }

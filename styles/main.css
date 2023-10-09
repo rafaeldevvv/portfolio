@@ -959,11 +959,11 @@ footer .social-link:active {
   background-color: white;
   color: black;
 }
-footer .freelance-socials {
+footer .freelance-socials-wrapper {
   margin-top: 2rem;
   text-align: center;
 }
-footer .freelance-socials p {
+footer .freelance-socials-wrapper p {
   color: white;
   margin-bottom: 0.5rem;
 }
@@ -979,6 +979,9 @@ footer .freelance-socials a:hover, footer .freelance-socials a:focus {
 }
 footer .freelance-socials li + li {
   margin-top: 0.3rem;
+}
+footer .icon-external {
+  font-size: 0.7rem;
 }
 
 .copyright-notice {
@@ -1018,7 +1021,7 @@ footer .freelance-socials li + li {
     margin-inline: auto;
     font-size: 1.4rem;
   }
-  footer .freelance-socials {
+  footer .freelance-socials-wrapper {
     text-align: left;
   }
   .copyright-notice {

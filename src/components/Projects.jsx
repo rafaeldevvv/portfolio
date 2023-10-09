@@ -92,7 +92,6 @@ export function ProjectList({ projects }) {
       <ul
         id="projects-list"
         aria-live="polite"
-        role="region"
         aria-relevant="additions removals"
       >
         {projects.map((p, i) => {
@@ -152,51 +151,41 @@ export function Project({ project }) {
       </div>
       <div className={`project-links`}>
         {project.liveSite && (
-          <a
+          <ProjectLink
+            content="Live Site"
             href={project.liveSite}
             title={`${project.name} project live site`}
             className="live-site-link"
-            target="_blank"
-          >
-            Live Site
-            <span className="sr-only">(Live site opens in a separate tab)</span>
-            <i
-              className="fa-solid fa-arrow-up-right-from-square icon-external"
-              aria-hidden="true"
-            ></i>
-          </a>
+          />
         )}
-        <a
+        <ProjectLink
+          content="Repo"
           href={project.repository}
           title={`Code files, assets and details of ${project.name} project on its GitHub repository`}
           className="repo-link"
-          target="_blank"
-        >
-          Repo
-          <span className="sr-only">(Repository opens in a separate tab)</span>
-          <i
-            className="fa-solid fa-arrow-up-right-from-square icon-external"
-            aria-hidden="true"
-          ></i>
-        </a>
+        />
         {project.challenge && (
-          <a
+          <ProjectLink
+            content="Challenge"
             href={project.challenge}
             title={`${project.name} challenge page`}
             className="challenge-link"
-            target="_blank"
-          >
-            Challenge
-            <span className="sr-only">
-              (Challenge page opens in a separate tab)
-            </span>
-            <i
-              className="fa-solid fa-arrow-up-right-from-square icon-external"
-              aria-hidden="true"
-            ></i>
-          </a>
+          />
         )}
       </div>
     </article>
+  );
+}
+
+export function ProjectLink({ href, title, className, content }) {
+  return (
+    <a href={href} className={className} title={title}>
+      {content}{" "}
+      <span className="sr-only">({content} opens in a separate tab)</span>
+      <i
+        className="fa-solid fa-arrow-up-right-from-square icon-external"
+        aria-hidden="true"
+      ></i>
+    </a>
   );
 }

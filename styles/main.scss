@@ -1131,7 +1131,7 @@ footer {
     }
   }
 
-  .freelance-socials {
+  .freelance-socials-wrapper {
     margin-top: 2rem;
     text-align: center;
 
@@ -1139,7 +1139,9 @@ footer {
       color: white;
       margin-bottom: 0.5rem;
     }
+  }
 
+  .freelance-socials {
     a {
       color: #999;
 
@@ -1157,6 +1159,10 @@ footer {
     li + li {
       margin-top: 0.3rem;
     }
+  }
+
+  .icon-external {
+    font-size: .7rem;
   }
 }
 
@@ -1206,7 +1212,7 @@ footer {
       font-size: 1.4rem;
     }
 
-    .freelance-socials {
+    .freelance-socials-wrapper {
       text-align: left;
     }
   }
