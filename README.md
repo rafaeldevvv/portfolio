@@ -9,7 +9,9 @@
    - [Useful Resources](#useful-resources)
 - [Owner](#owner)
 - [License](#license)
-   
+
+## Introduction
+Welcome to my portfolio's repository. Here you can see all the code written for the page.
 
 ## Overview
 ### Screenshots
@@ -55,6 +57,7 @@
 - [Working with the History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API/Working_with_the_History_API)
 - [Stop Using Fixed Headers and Start Using Sticky Ones](https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-1k30)
 - [One line CSS solution to prevent anchor links from scrolling behind a sticky or fixed header](https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html)
+- [How to focus an element without triggering screen reader](https://stackoverflow.com/questions/68567802/how-to-focus-an-element-without-triggering-screen-reader)
 
 ## Owner
 - Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)

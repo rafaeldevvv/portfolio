@@ -1,8 +1,4 @@
-package-lock.json
-package.json
 scratch.html
-webpack.config.js
-.babelrc
 node_modules
 TODO.txt
 scratch
