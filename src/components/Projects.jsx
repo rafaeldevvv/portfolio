@@ -32,7 +32,7 @@ export function ProjectList({ projects }) {
   const [numberOfProjectsShown, setNumberOfProjectsShown] = useState(
     initialNumberOfProjects
   );
-  const projectRefs = useRef(null);
+  const projectRefs = useRef(null); // these are the list items
 
   function getMap() {
     if (!projectRefs.current) {
@@ -60,6 +60,11 @@ export function ProjectList({ projects }) {
       const updatedMap = getMap();
       const projectNames = Array.from(updatedMap.keys());
 
+      // get the first new project and focus it
+      const firstNewProjectName = projectNames[numberOfProjectsShown];
+      const firstNewProject = updatedMap.get(firstNewProjectName);
+      firstNewProject.focus();
+
       // get last project in the dom
       const lastProjectName = projectNames[nextNumberOfProjectsShown - 1];
       const lastProject = updatedMap.get(lastProjectName);
@@ -79,6 +84,7 @@ export function ProjectList({ projects }) {
       const firstProject = map.get(firstProjectName);
 
       firstProject.scrollIntoView(scrollOptions);
+      firstProject.focus();
     }
   }
 
@@ -105,6 +111,8 @@ export function ProjectList({ projects }) {
                   if (node) map.set(p.name, node);
                   else map.delete(p.name);
                 }}
+                tabIndex="-1"
+                className="no-focus-ring"
               >
                 <Project project={p} />
               </li>

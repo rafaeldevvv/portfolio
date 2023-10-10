@@ -86,6 +86,10 @@ button {
   padding-inline-start: 0.5rem;
 }
 
+.no-focus-ring {
+  outline: 0;
+}
+
 .percentage-list {
   .item-name {
     display: block;
