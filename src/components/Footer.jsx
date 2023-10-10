@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
         <FreelanceSocials />
         <p className="copyright-notice">
-          <small>&copy; 2023 {author.name}. All rights reserved</small>
+          <small>Copyright &copy; 2023 {author.name}. All rights reserved</small>
         </p>
       </div>
     </footer>

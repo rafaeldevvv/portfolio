@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - [Overview](#overview)
-   - [Screenshots](#screenshots)
+   - [Screenshot](#screenshot)
    - [Links](#links)
 - [Process](#process)
    - [Built with](#built-with)
@@ -14,7 +14,7 @@
 Welcome to my portfolio's repository. Here you can see all the code written for the page.
 
 ## Overview
-### Screenshots
+### Screenshot
 ![](./images/screenshot.png)
 
 ### Links
@@ -31,6 +31,8 @@ Welcome to my portfolio's repository. Here you can see all the code written for 
 - Git/GitHub
 - Font Awesome
 - Webpack
+- Babel
+- JSX
 
 ### Useful Resources
 - [How I made my portfolio](https://tekolio.com/how-i-made-my-portfolio-in-react/#:~:text=Making%20a%20portfolio%20in%20HTML,we%20have%20as%20React%20developers.)
