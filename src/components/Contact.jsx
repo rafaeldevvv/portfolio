@@ -11,12 +11,9 @@ export default function ContactSection() {
       <div className="section-inner-container">
         <SectionHeading content="Contact Me" id="contact-me" />
         <p>
-          You can preferably{" "}
-          <a href={`https://wa.me/${author.phoneNumber}`} target="_blank">
-            reach out to me through WhatsApp
-          </a>{" "}
-          or any of my social media profiles provided below. Alternatively, use
-          the form below to send me an email.
+          You can reach out to me through any of my social media
+          profiles provided below or you can use the form below to send me
+          an email.
         </p>
 
         <EmailForm />

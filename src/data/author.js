@@ -46,8 +46,6 @@ const author = {
       alt: "Rafael Maia, a white man with light brown hair wearing a white T-shirt looking to the left"
    },
    email: "rafaeldeveloperr@gmail.com",
-   phoneNumber: "5527996904603",
-   formattedPhoneNumber: "+55 27 996904603",
    socials: {
       instagram: "https://www.instagram.com/rafaeldevvv",
       github: "https://github.com/rafaeldevvv",

@@ -1182,10 +1182,10 @@ footer {
   }
 
   .contact-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 25px max-content;
     align-items: center;
     justify-content: center;
-    gap: 0.3rem;
   }
 }
 

@@ -15,7 +15,9 @@ export default function Footer() {
         </div>
         <FreelanceSocials />
         <p className="copyright-notice">
-          <small>Copyright &copy; 2023 {author.name}. All rights reserved</small>
+          <small>
+            Copyright &copy; 2023 {author.name}. All rights reserved
+          </small>
         </p>
       </div>
     </footer>
@@ -29,9 +31,11 @@ function ContactInfo() {
     <address>
       <ul id="contact-list">
         <li className="contact-item">
-          <i className="fa-brands fa-whatsapp icon" aria-hidden="true"></i>{" "}
-          <span className="sr-only">My phone number:</span>
-          <span className="content">{author.formattedPhoneNumber}</span>
+          <i className="fa-solid fa-location-dot icon" aria-hidden="true"></i>{" "}
+          <span className="sr-only">My location:</span>
+          <span className="content">
+            {author.location.state}, {author.location.country}
+          </span>
         </li>
         <li className="contact-item">
           <i className="fa-solid fa-envelope icon" aria-hidden="true"></i>{" "}

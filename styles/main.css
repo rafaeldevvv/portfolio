@@ -998,10 +998,10 @@ footer .icon-external {
   margin-top: 0.6rem;
 }
 #contact-list .contact-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 25px max-content;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
 }
 
 @media (min-width: 33em) {
