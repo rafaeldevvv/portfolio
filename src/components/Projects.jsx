@@ -187,7 +187,7 @@ export function Project({ project }) {
 
 export function ProjectLink({ href, title, className, content }) {
   return (
-    <a href={href} className={className} title={title}>
+    <a href={href} className={className} title={title} target="_blank">
       {content}{" "}
       <span className="sr-only">({content} opens in a separate tab)</span>
       <i
