@@ -3,7 +3,7 @@ const technologies = [
       name: "HTML",
       initialDate: "2022-10-20",
       fontAwesomeIcon: "fa-brands fa-html5",
-      percentage: 90,
+      percentage: 85,
       tags: ['html'],
       proficiency: "Advanced"
    },
@@ -11,7 +11,7 @@ const technologies = [
       name: "CSS",
       initialDate: "2022-10-20",
       fontAwesomeIcon: "fa-brands fa-css3",
-      percentage: 90,
+      percentage: 80,
       tags: ['css', "sass", 'bootstrap'],
       proficiency: "Advanced"
    },
@@ -19,7 +19,7 @@ const technologies = [
       name: "JavaScript",
       initialDate: "2022-12-17",
       fontAwesomeIcon: "fa-brands fa-js",
-      percentage: 80,
+      percentage: 70,
       tags: ['javascript', 'react'],
       proficiency: "Advanced"
    },
@@ -35,7 +35,7 @@ const technologies = [
       name: "React Router",
       initialDate: "2023-05-20",
       fontAwesomeIcon: "fa-brands fa-react",
-      percentage: 30,
+      percentage: 15,
       tags: ['react', 'react router'],
       proficiency: "Beginner"
    },
@@ -59,8 +59,16 @@ const technologies = [
       name: "TypeScript",
       initialDate: "2023-09-11",
       fontAwesomeIcon: "fa-regular fa-keyboard",
-      percentage: 20,
+      percentage: 70,
       tags: ["javascript", "typescript"],
+      proficiency: "Intermediate",
+   },
+   {
+      name: "Next.js",
+      initialDate: "2023-09-30",
+      fontAwesomeIcon: "fa-brands fa-react",
+      percentage: 20,
+      tags: ["nextjs"],
       proficiency: "Beginner",
    },
    {
@@ -69,7 +77,7 @@ const technologies = [
       fontAwesomeIcon: "fa-regular fa-file-code",
       percentage: 70,
       tags: ['oop'],
-      proficiency: "Intermediate"
+      proficiency: "Intermediate",
    },
 ];
 
