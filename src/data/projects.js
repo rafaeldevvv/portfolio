@@ -344,5 +344,21 @@ export default [
       completionDate: "2023-10-04",
       technologiesUsed: ["html", "css", "javascript", "typescript", "sass", "react", "webpack", "git/github", "flexbox", "grid layout"],
       tags: ["spa", "html", "css", "javascript", "sass", "interactive", "responsive", "cross-browser", "performance", "git", "accessibility", "typescript", "webpack"]
+   },
+   {
+      name: "Space Tourism",
+      repository: "https://github.com/rafaeldevvv/space-tourism",
+      liveSite: "https://space-tourism-zeta-sable.vercel.app/",
+      challenge: "https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3",
+      description: "A website about space",
+      image: {
+         src: "thumbnails/space-tourism.png",
+         alt: "A page with a dark mood showing part of the surface of Earth together with the space and stars in its background"
+      },
+      fun: true,
+      difficulty: "medium",
+      completionDate: "2023-12-08",
+      technologiesUsed: ["css", "typescript", "react", "next.js", "git/github"],
+      tags: ["nextjs", "typescript", "react", "performance", "accessibility", "git", "interactive", "responsive", "cross-browser"],
    }
 ];
