@@ -360,5 +360,20 @@ export default [
       completionDate: "2023-12-08",
       technologiesUsed: ["css", "typescript", "react", "next.js", "git/github"],
       tags: ["nextjs", "typescript", "react", "performance", "accessibility", "git", "interactive", "responsive", "cross-browser"],
-   }
+   },
+   {
+      name: "Space Invaders",
+      repository: "https://github.com/rafaeldevvv/space-invaders",
+      liveSite: "https://rafaeldevvv.github.io/space-invaders/",
+      description: "Space invaders game with typescript.",
+      image: {
+         src: "thumbnails/space-invaders.png",
+         alt: "A game screen consisting of a set of aliens, the player, walls, and metadata like score"
+      },
+      fun: true,
+      difficulty: "hard",
+      completionDate: "2024-01-31",
+      technologiesUsed: ["css", "typescript", "git/github", "webpack", "eslint", "tsdoc", "html", "postcss"],
+      tags: ["typescript", "performance", "accessibility", "git", "interactive", "responsive", "cross-browser"],
+   },
 ];
