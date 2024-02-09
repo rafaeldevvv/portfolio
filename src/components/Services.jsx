@@ -12,7 +12,7 @@ export default function ServicesSection() {
 
         <section id="price-section">
           <h3>Price</h3>
-          <p>$10 per hour on any project</p>
+          <p>$20 per hour on any project</p>
         </section>
 
         <section id="offerings-section">
