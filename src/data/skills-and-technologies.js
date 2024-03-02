@@ -95,6 +95,14 @@ const technologies = [
       tags: ["webpack"],
       proficiency: "Beginner"
    },
+   {
+      name: "tailwindcss",
+      initialDate: "2023-12-02",
+      fontAwesomeIcon: "fa-brands fa-css3",
+      percentage: 75,
+      tags: ["css", "tailwindcss"],
+      proficiency: "Intermediate"
+   }
 ];
 
 export default technologies;
