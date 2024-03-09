@@ -424,4 +424,20 @@ export default [
       technologiesUsed: ["css", "tailwindcss", "html", "prettier", "javascript"],
       tags: ["html", "css", "tailwindcss", "accessibility", "git", "interactive", "responsive", "cross-browser", "javascript", "prettier"],
    },
+   {
+      name: "Calculator",
+      repository: "https://github.com/rafaeldevvv/calculator",
+      liveSite: "https://rafaeldevvv.github.io/calculator/",
+      challenge: "https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29",
+      description: "A calculator. I don't need to say any more, do I?",
+      image: {
+         src: "thumbnails/calculator.png",
+         alt: "A bluish page with a calculator with lots of keys and the display on top of the keypad",
+      },
+      fun: true,
+      difficulty: "normal",
+      completionDate: "2024-03-08",
+      technologiesUsed: ["css", "html", "typescript", "webpack"],
+      tags: ["html", "css", "accessibility", "git", "interactive", "responsive", "cross-browser", "javascript", "typescript", "webpack"],
+   }
 ];

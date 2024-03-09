@@ -91,7 +91,7 @@ const technologies = [
       name: "Webpack",
       initialDate: "2023-12-13",
       fontAwesomeIcon: "fa-solid fa-boxes-packing",
-      percentage: 20,
+      percentage: 30,
       tags: ["webpack"],
       proficiency: "Beginner"
    },
