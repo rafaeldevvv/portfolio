@@ -439,5 +439,21 @@ export default [
       completionDate: "2024-03-08",
       technologiesUsed: ["css", "html", "typescript", "webpack"],
       tags: ["html", "css", "accessibility", "git", "interactive", "responsive", "cross-browser", "javascript", "typescript", "webpack"],
+   },
+   {
+      name: "E-commerce Product Page",
+      repository: "https://github.com/rafaeldevvv/frontendmentor-ecommerce-product-page",
+      liveSite: "https://rafaeldevvv.github.io/frontendmentor-ecommerce-product-page/",
+      challenge: "https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6",
+      description: "A simple E-commerce Product Page",
+      image: {
+         src: "thumbnails/ecommerce-page.png",
+         alt: "A white orange theme page featuring sneakers",
+      },
+      fun: true,
+      difficulty: "normal",
+      completionDate: "2024-03-31",
+      technologiesUsed: ["html", "css", "tailwindcss", "javascript", "react", "framer motion", "react-toastify", "webpack", "postcss", "prettier"],
+      tags: ["html", "css", "tailwindcss", "javascript", "react", "framer motion", "react-toastify", "webpack", "postcss", "prettier", "accessibility", "responsive", "cross-browser", "interactive", "git"]
    }
 ];

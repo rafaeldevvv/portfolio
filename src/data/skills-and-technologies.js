@@ -16,12 +16,28 @@ const technologies = [
       proficiency: "Advanced"
    },
    {
+      name: "tailwindcss",
+      initialDate: "2023-12-02",
+      fontAwesomeIcon: "fa-brands fa-css3",
+      percentage: 85,
+      tags: ["css", "tailwindcss"],
+      proficiency: "Advanced"
+   },
+   {
       name: "JavaScript",
       initialDate: "2022-12-17",
       fontAwesomeIcon: "fa-brands fa-js",
       percentage: 80,
       tags: ["javascript", "react"],
       proficiency: "Advanced"
+   },
+   {
+      name: "TypeScript",
+      initialDate: "2023-09-11",
+      fontAwesomeIcon: "fa-regular fa-keyboard",
+      percentage: 85,
+      tags: ["javascript", "typescript"],
+      proficiency: "Advanced",
    },
    {
       name: "React",
@@ -32,11 +48,27 @@ const technologies = [
       proficiency: "Advanced"
    },
    {
+      name: "Next.js",
+      initialDate: "2023-09-30",
+      fontAwesomeIcon: "fa-brands fa-react",
+      percentage: 50,
+      tags: ["nextjs", "react"],
+      proficiency: "Intermediate",
+   },
+   {
+      name: "Framer Motion",
+      initialDate: "2024-03-24",
+      fontAwesomeIcon: "fa-brands fa-react",
+      percentage: 30,
+      tags: ["react", "framer-motion"],
+      proficiency: "Beginner",
+   },
+   {
       name: "React Router",
       initialDate: "2023-05-20",
       fontAwesomeIcon: "fa-brands fa-react",
-      percentage: 15,
-      tags: ["react", "react router"],
+      percentage: 10,
+      tags: ["react", "react-router"],
       proficiency: "Beginner"
    },
    {
@@ -54,22 +86,6 @@ const technologies = [
       percentage: 65,
       tags: ["git"],
       proficiency: "Intermediate"
-   },
-   {
-      name: "TypeScript",
-      initialDate: "2023-09-11",
-      fontAwesomeIcon: "fa-regular fa-keyboard",
-      percentage: 85,
-      tags: ["javascript", "typescript"],
-      proficiency: "Advanced",
-   },
-   {
-      name: "Next.js",
-      initialDate: "2023-09-30",
-      fontAwesomeIcon: "fa-brands fa-react",
-      percentage: 50,
-      tags: ["nextjs", "react"],
-      proficiency: "Intermediate",
    },
    {
       name: "Object-Oriented Programming",
@@ -91,18 +107,10 @@ const technologies = [
       name: "Webpack",
       initialDate: "2023-12-13",
       fontAwesomeIcon: "fa-solid fa-boxes-packing",
-      percentage: 30,
+      percentage: 35,
       tags: ["webpack"],
       proficiency: "Beginner"
    },
-   {
-      name: "tailwindcss",
-      initialDate: "2023-12-02",
-      fontAwesomeIcon: "fa-brands fa-css3",
-      percentage: 75,
-      tags: ["css", "tailwindcss"],
-      proficiency: "Intermediate"
-   }
 ];
 
 export default technologies;
