@@ -455,5 +455,21 @@ export default [
       completionDate: "2024-03-31",
       technologiesUsed: ["html", "css", "tailwindcss", "javascript", "react", "framer motion", "react-toastify", "webpack", "postcss", "prettier"],
       tags: ["html", "css", "tailwindcss", "javascript", "react", "framer motion", "react-toastify", "webpack", "postcss", "prettier", "accessibility", "responsive", "cross-browser", "interactive", "git"]
+   },
+   {
+      name: "IP Address Tracker",
+      repository: "https://github.com/rafaeldevvv/frontendmentor-ip-address-tracker",
+      liveSite: "https://rafaeldevvv.github.io/frontendmentor-ip-address-tracker/",
+      challenge: "https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0",
+      description: "A nice IP Address Tracker for you to track your friends.",
+      image: {
+         src: "thumbnails/ip-tracker.png",
+         alt: "A page with a form and a map"
+      },
+      fun: true,
+      difficulty: "easy",
+      completionDate: "2024-04-06",
+      technologiesUsed: ["html", "css", "javascript"],
+      tags: ["html", "css", "javascript", "accessibility", "responsive", "cross-browser", "interactive"]
    }
 ];
