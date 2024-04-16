@@ -6,17 +6,22 @@ export default function Socials() {
 
   return (
     <ul className="socials">
-      {Object.keys(author.socials).map((s) => {
+      {Object.keys(author.socials).map((k) => {
+        const s = author.socials[k];
         return (
-          <li key={s}>
+          <li key={s.name}>
             <a
-              href={author.socials[s]}
+              href={s.url}
               className="social-link"
-              title={`${author.shortName}'s ${s} page`}
+              title={`${author.shortName}'s ${s.name} page`}
               target="_blank"
             >
-              <i className={`fa-brands fa-${s} icon`} aria-hidden="true"></i>
-              <span className="sr-only">{`${author.name} on ${s} (${s} page opens in a separate tab)`}</span>
+              {s.iconName ? (
+                <i className={`${s.iconName} icon`} aria-hidden="true"></i>
+              ) : (
+                <img src={s.iconUrl} alt="" />
+              )}
+              <span className="sr-only">{`${author.name} on ${s.name} (${s.name} page opens in a separate tab)`}</span>
             </a>
           </li>
         );

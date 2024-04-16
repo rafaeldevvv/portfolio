@@ -47,11 +47,36 @@ const author = {
    },
    email: "rafaeldeveloperr@gmail.com",
    socials: {
-      instagram: "https://www.instagram.com/rafaeldevvv",
-      github: "https://github.com/rafaeldevvv",
-      youtube: "https://www.youtube.com/channel/UC_QOvDZdUskTSJ59eMDjuEg",
-      twitter: "https://www.twitter.com/rafaeldevvv",
-      codepen: "https://codepen.io/rafaeldevvv",
+      instagram: {
+         name: 'Instagram',
+         url: "https://www.instagram.com/rafaeldevvv",
+         iconName: 'fa-brands fa-instagram'
+      },
+      github: {
+         name: 'GitHub',
+         url: "https://github.com/rafaeldevvv",
+         iconName: 'fa-brands fa-github'
+      },
+      youtube: {
+         name: 'YouTube',
+         url: "https://www.youtube.com/channel/UC_QOvDZdUskTSJ59eMDjuEg",
+         iconName: 'fa-brands fa-youtube'
+      },
+      x: {
+         name: 'X',
+         url: "https://www.twitter.com/rafaeldevvv",
+         iconName: 'fa-brands fa-x-twitter'
+      },
+      codepen: {
+         name: 'CodePen',
+         url: "https://codepen.io/rafaeldevvv",
+         iconName: 'fa-brands fa-codepen'
+      },
+      leetcode: {
+         name: 'LeetCode',
+         url: "https://leetcode.com/rafaeldevvv",
+         iconUrl: 'images/leet-code-logo.svg'
+      },
    },
    freelanceSocials: {
       upwork: "https://www.upwork.com/freelancers/~01a4dc9692c96839dc",

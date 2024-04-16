@@ -1122,6 +1122,14 @@ footer {
     &:focus {
       color: white;
       transform: scale(1.2);
+
+      img {
+        filter: brightness(5);
+      }
+    }
+
+    img {
+      transition: filter .3s ease-out;
     }
 
     &:focus {
@@ -1191,6 +1199,8 @@ footer {
 
 @media (min-width: 33em) {
   footer {
+    padding-block-end: 9rem;
+
     .contact-and-socials-container {
       position: relative;
       display: flex;

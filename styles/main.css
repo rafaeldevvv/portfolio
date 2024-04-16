@@ -955,6 +955,12 @@ footer .social-link:hover, footer .social-link:focus {
   color: white;
   transform: scale(1.2);
 }
+footer .social-link:hover img, footer .social-link:focus img {
+  filter: brightness(5);
+}
+footer .social-link img {
+  transition: filter 0.3s ease-out;
+}
 footer .social-link:focus {
   outline: var(--dark-back-focus-outline);
 }
@@ -1005,6 +1011,9 @@ footer .icon-external {
 }
 
 @media (min-width: 33em) {
+  footer {
+    padding-block-end: 9rem;
+  }
   footer .contact-and-socials-container {
     position: relative;
     display: flex;

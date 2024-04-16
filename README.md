@@ -11,6 +11,7 @@
   - [Highlights](#highlights)
   - [Useful Resources](#useful-resources)
 - [Owner](#owner)
+- [Donate](#donate)
 - [License](#license)
 
 ## Introduction
@@ -278,12 +279,17 @@ function EmailForm() {
 - [Stop Using Fixed Headers and Start Using Sticky Ones](https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-1k30)
 - [One line CSS solution to prevent anchor links from scrolling behind a sticky or fixed header](https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html)
 - [How to focus an element without triggering screen reader](https://stackoverflow.com/questions/68567802/how-to-focus-an-element-without-triggering-screen-reader)
+- [CoreUI](https://coreui.io/bootstrap/docs/icons/)
 
 ## Owner
 
-- Instagram - [@rafaeldevvv](https://www.instagram.com/rafaeldevvv)
-- Twitter - [@rafaeldevvv](https://www.twitter.com/rafaeldevvv)
-- Email: rafaeldeveloperr@gmail.com
+The name's Rafael Maia. You can find me on [Instagram](https://www.instagram.com/rafaeldevvv), [X](https://www.twitter.com/rafaeldevvv), and [Linkedin](https://www.linkedin.com/in/rafael-maia-b69662263). Or you can send me an email [rafaeldeveloperr@gmail.com](mailto:rafaeldeveloperr@gmail.com).
+
+I am a freelancer, so you can also find me on [Fiverr](https://www.fiverr.com/rafael787) and [Upwork](https://www.upwork.com/freelancers/~01a4dc9692c96839dc).
+
+## Donate
+
+Also, if you liked this project, consider [buying me a coffee](https://www.buymeacoffee.com/rafael.maia) ☕. I'd be grateful if you could support my work 😁👍❤!
 
 ## License
 
