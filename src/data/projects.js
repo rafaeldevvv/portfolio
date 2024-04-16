@@ -471,5 +471,21 @@ export default [
       completionDate: "2024-04-06",
       technologiesUsed: ["html", "css", "javascript"],
       tags: ["html", "css", "javascript", "accessibility", "responsive", "cross-browser", "interactive"]
+   },
+   {
+      name: "News Homepage",
+      repository: 'https://github.com/rafaeldevvv/frontendmentor-news-homepage',
+      liveSite: 'https://rafaeldevvv.github.io/frontendmentor-news-homepage/',
+      challenge: 'https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl',
+      description: 'A simple news homepage using grid layout',
+      image: {
+         src: 'thumbnails/news-homepage.png',
+         alt: 'A mostly-white page featuring news articles with colorful images'
+      },
+      fun: false,
+      difficulty: 'easy',
+      completionDate: '2024-04-15',
+      technologiesUsed: ['html', 'css', 'javascript'],
+      tags: ['html', 'css', 'javascript', 'accessibility', 'responsive', 'cross-browser', 'interactive']
    }
 ];
