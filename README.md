@@ -279,7 +279,7 @@ function EmailForm() {
 - [Stop Using Fixed Headers and Start Using Sticky Ones](https://dev.to/luisaugusto/stop-using-fixed-headers-and-start-using-sticky-ones-1k30)
 - [One line CSS solution to prevent anchor links from scrolling behind a sticky or fixed header](https://getpublii.com/blog/one-line-css-solution-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header.html)
 - [How to focus an element without triggering screen reader](https://stackoverflow.com/questions/68567802/how-to-focus-an-element-without-triggering-screen-reader)
-- [CoreUI](https://coreui.io/bootstrap/docs/icons/)
+- [CoreUI](https://coreui.io/bootstrap/docs/icons/) - I used this to get the [LeetCode icon](https://coreui.io/icons/brand/leetcode/).
 
 ## Owner
 
