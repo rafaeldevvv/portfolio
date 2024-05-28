@@ -487,5 +487,20 @@ export default [
       completionDate: '2024-04-15',
       technologiesUsed: ['html', 'css', 'javascript'],
       tags: ['html', 'css', 'javascript', 'accessibility', 'responsive', 'cross-browser', 'interactive']
+   },
+   {
+      name: 'Dictionary Web App',
+      repository: 'https://github.com/rafaeldevvv/dictionary-web-app',
+      liveSite: 'https://lexicogranary.vercel.app/',
+      description: 'A dictionary web app featuring images, pronunciation and jokes to help you remember the meaning of words.',
+      image: {
+         src: 'thumbnails/dictionary-web-app.png',
+         alt: ''
+      },
+      fun: true,
+      difficulty: 'easy',
+      completionDate: '2024-05-27',
+      technologiesUsed: ['typescript', 'react.js', 'next.js', 'tailwindcss', 'eslint', 'prettier', 'jest'],
+      tags: ['react.js', 'next.js', 'tailwindcss', 'prettier', 'jest', 'eslint', 'css', 'typescript', 'accessibility', 'responsive', 'cross-browser', 'interactive']
    }
 ];
