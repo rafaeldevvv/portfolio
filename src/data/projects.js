@@ -495,12 +495,26 @@ export default [
       description: 'A dictionary web app featuring images, pronunciation and jokes to help you remember the meaning of words.',
       image: {
          src: 'thumbnails/dictionary-web-app.png',
-         alt: ''
+         alt: 'Black page showing images and definitions of the word water'
       },
       fun: true,
       difficulty: 'easy',
       completionDate: '2024-05-27',
       technologiesUsed: ['typescript', 'react.js', 'next.js', 'tailwindcss', 'eslint', 'prettier', 'jest'],
       tags: ['react.js', 'next.js', 'tailwindcss', 'prettier', 'jest', 'eslint', 'css', 'typescript', 'accessibility', 'responsive', 'cross-browser', 'interactive']
-   }
+   },
+   {
+      name: 'Pong',
+      repository: 'https://github.com/rafaeldevvv/pong',
+      description: "The classic pong game. Created by following Harvard's CS50's Introduction to Game Development.",
+      image: {
+         src: 'thumbnails/pong.png',
+         alt: 'Gray screen with a squared white ball and rectangular white paddles'
+      },
+      fun: true,
+      difficulty: 'easy',
+      completionDate: '2024-06-14',
+      technologiesUsed: ['typescript', 'eslint', 'prettier'],
+      tags: ['tailwindcss', 'prettier', 'eslint', 'css', 'typescript', 'accessibility', 'responsive', 'cross-browser', 'interactive']
+   },
 ];
