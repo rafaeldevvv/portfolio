@@ -104,6 +104,20 @@ const technologies = [
     proficiency: "Beginner",
     tags: ["jest", "test"],
   },
+  {
+    name: "Python",
+    initialDate: "2024-04-20",
+    fontAwesomeIcon: "fa-brands fa-python",
+    proficiency: "Beginner",
+    tags: ["python"],
+  },
+  {
+    name: "Lua",
+    initialDate: "2024-06-01",
+    fontAwesomeIcon: "fa-solid fa-moon",
+    proficiency: "Beginner",
+    tags: ["lua"],
+  },
 ];
 
 export default technologies;
