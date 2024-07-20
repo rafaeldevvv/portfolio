@@ -10,7 +10,7 @@
   - [Built with](#built-with)
   - [Highlights](#highlights)
   - [Useful Resources](#useful-resources)
-- [Owner](#owner)
+- [Author](#author)
 - [Donate](#donate)
 - [License](#license)
 
@@ -281,7 +281,7 @@ function EmailForm() {
 - [How to focus an element without triggering screen reader](https://stackoverflow.com/questions/68567802/how-to-focus-an-element-without-triggering-screen-reader)
 - [CoreUI](https://coreui.io/bootstrap/docs/icons/) - I used this to get the [LeetCode icon](https://coreui.io/icons/brand/leetcode/).
 
-## Owner
+## Author
 
 The name's Rafael Maia. You can find me on [Instagram](https://www.instagram.com/rafaeldevvv), [X](https://www.twitter.com/rafaeldevvv), and [Linkedin](https://www.linkedin.com/in/rafael-maia-b69662263). Or you can send me an email [rafaeldeveloperr@gmail.com](mailto:rafaeldeveloperr@gmail.com).
 
@@ -314,5 +314,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-**Note**: Contact me via email rafaeldeveloperr@gmail.com for discussing usage permissions
